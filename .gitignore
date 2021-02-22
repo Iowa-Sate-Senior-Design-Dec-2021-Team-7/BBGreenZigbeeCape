@@ -1,3 +1,6 @@
+### Ignore list for git files
+!.gitkeep
+
 ### Ignore list for KiCAD Projects - from https://medium.com/inventhub/better-manage-kicad-projects-using-git-8d06e1310af8 ###
 #### temp files
 *.000
