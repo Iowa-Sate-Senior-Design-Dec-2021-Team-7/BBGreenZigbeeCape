@@ -1,6 +1,7 @@
 02/22/2021 -- griffens:
 	- Adding basic .gitignore for KiCAD projects and Beaglebone firmware projects
-
+	- Adding directories for hardware, firmware, and software projects so different project structures/resources don't interfere with each other
+	
 02/14/2021 -- griffens:
 	- Adding bi-monthly report 01 to docs/
 
