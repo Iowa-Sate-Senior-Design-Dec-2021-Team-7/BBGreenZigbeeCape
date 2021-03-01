@@ -1,3 +1,6 @@
+### Ignore list for temp files
+~$*
+
 ### Ignore list for git files
 !.gitkeep
 
@@ -21,3 +24,7 @@ fp-info-cache
 *.ses
 
 ### Ignore list for Beaglebone firmware projects
+
+
+### Ignore list for class assignments
+assignments/
