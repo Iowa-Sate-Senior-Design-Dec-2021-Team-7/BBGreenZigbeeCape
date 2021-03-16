@@ -1,3 +1,7 @@
+03/15/2021 -- griffens:
+	- Adding directories 'firmware/beaglebone', 'firmware/cape', and 'firmware/daughterboard' to segment code for each component
+	- Updating README
+
 02/22/2021 -- griffens:
 	- Adding basic .gitignore for KiCAD projects and Beaglebone firmware projects
 	- Adding directories for hardware, firmware, and software projects so different project structures/resources don't interfere with each other

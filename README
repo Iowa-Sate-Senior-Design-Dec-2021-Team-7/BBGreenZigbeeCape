@@ -1,4 +1,5 @@
 --Senior Design--
+_________________________________________________________________________________________
 
 Title: BeagleBone Green Gateway IoT Hub
 
@@ -9,25 +10,32 @@ Project email: sddec21-07@iastate.edu
 Trello board: https://trello.com/b/s8RNrqa7
 
 Devs:
-	- Parker Larson (pjlarsen)
-	- Taylor Weil (tcweil)
-	- Sean Griffen (griffens)
-	- Sterling Hulling (shulling)
+	-- Parker Larson (pjlarsen)
+	-- Taylor Weil (tcweil)
+	-- Sterling Hulling (shulling)
+	-- Sean Griffen (griffens)
 _________________________________________________________________________________________
 
 See CHANGELOG for official release updates/changes
 _________________________________________________________________________________________
 
 Scope:
-	- 
+	-- 
 	
 Stretch scope:
-	- 
+	-- 
 _________________________________________________________________________________________
 
 Requirements (in no particular order):
-	- 
+	-- 
 	
 Stretch Requirements (in no particular order):
-	- 
+	-- 
+_________________________________________________________________________________________
+
+Directory Roles:
+	-- hardware: for pcb designs created and other hardware-specific resources
+	-- firmware: for code being deployed on the BeagleBone Green Gateway, IoT cape, or other created daughter boards
+	-- software: for code not being deployed on a hardware module. i.e. web-servers, apps, and other non-controller code
+	-- docs: for project documents and classwork
 _________________________________________________________________________________________
