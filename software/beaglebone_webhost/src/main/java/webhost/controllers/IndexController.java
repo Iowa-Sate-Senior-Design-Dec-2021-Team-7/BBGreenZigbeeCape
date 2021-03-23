@@ -4,14 +4,14 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import webhost.WebHostApplication;
 import webhost.components.GlobalUtils;
 import webhost.enums.WebHostExceptionType;
+import webhost.exceptions.WebHostException;
 import webhost.http_wrappers.ReturnObjectWrapper;
 import webhost.http_wrappers.UpdateExceptionWrapper;
+import webhost.http_wrappers.UpdateStringWrapper;
 import webhost.services.IndexService;
 
 import java.util.ArrayList;
@@ -84,6 +84,8 @@ public class IndexController {
     @GetMapping("/hello")
     @ResponseBody
     public ReturnObjectWrapper<String> get_helloworld() {
+    
+        log.info("Attempting to say hello to a client");
         
         String toReturn;
         try { toReturn = indexService.get_helloworld(); }
@@ -103,6 +105,51 @@ public class IndexController {
     }
     
     /* ***************************************************** END GET MAPPINGS ****************************************************** */
+    
+    /* **************************************************** START POST MAPPINGS **************************************************** */
+    
+    @PostMapping("/hello/name")
+    @ResponseBody
+    public ReturnObjectWrapper<String> post_helloName(@RequestBody UpdateStringWrapper wrapper) {
+    
+        log.info("Attempting to say hello to client [" + wrapper.getStr() + "]");
+        
+        String result;
+        try { result = indexService.post_helloname(wrapper); }
+        catch(WebHostException e) {
+        
+            UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), e.getType(), 500, e.getMessage());
+            log.error(e.getMessage(), e);
+            ArrayList<UpdateExceptionWrapper> exceptionList = new ArrayList<>();
+            exceptionList.add(exception);
+            return new ReturnObjectWrapper<>(500, null, exceptionList);
+        }
+        catch (Exception e) {
+    
+            UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
+            log.error(e.getMessage(), e);
+            ArrayList<UpdateExceptionWrapper> exceptionList = new ArrayList<>();
+            exceptionList.add(exception);
+            return new ReturnObjectWrapper<>(550, null, exceptionList);
+        }
+    
+        String logMessage = "Said hello to client [" + wrapper.getStr() + "]";
+        return new ReturnObjectWrapper<>(200, GlobalUtils.successHandler(log, logMessage, result), null);
+    }
+    
+    /* ***************************************************** END POST MAPPINGS ***************************************************** */
+    
+    /* **************************************************** START PUT MAPPINGS ***************************************************** */
+    
+    
+    
+    /* ***************************************************** END PUT MAPPINGS ****************************************************** */
+    
+    /* *************************************************** START DELETE MAPPINGS *************************************************** */
+    
+    
+    
+    /* **************************************************** END DELETE MAPPINGS **************************************************** */
     
     /* **************************************************** END INDEX CONTROLLER *************************************************** */
 }

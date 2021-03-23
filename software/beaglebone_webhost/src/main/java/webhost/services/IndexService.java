@@ -3,6 +3,8 @@ package webhost.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import webhost.components.GlobalUtils;
+import webhost.exceptions.WebHostException;
+import webhost.http_wrappers.UpdateStringWrapper;
 
 /**
  * Service for {@code IndexController}
@@ -49,6 +51,24 @@ public class IndexService {
     public String get_helloworld() { return "Hello Client!"; }
     
     /* ******************************************************* END GET HELPERS ***************************************************** */
+    
+    /* ****************************************************** START POST HELPERS *************************************************** */
+    
+    public String post_helloname(UpdateStringWrapper wrapper) throws WebHostException { return "Hello [" + wrapper.getStr() + "]!"; }
+    
+    /* ******************************************************* END POST HELPERS **************************************************** */
+    
+    /* ****************************************************** START PUT HELPERS **************************************************** */
+    
+    
+    
+    /* ******************************************************* END PUT HELPERS ***************************************************** */
+    
+    /* ***************************************************** START DELETE HELPERS ************************************************** */
+    
+    
+    
+    /* ****************************************************** END DELETE HELPERS *************************************************** */
     
     /* *************************************************** END HTML STATIC SERVICE ************************************************* */
 }
