@@ -48,7 +48,7 @@ public class IndexService {
     
     public String get_index() { return htmlPrefix + "index"; }
     
-    public String get_helloworld() { return "Hello Client!"; }
+    public String get_helloworld() { return "Hello!"; }
     
     /* ******************************************************* END GET HELPERS ***************************************************** */
     
