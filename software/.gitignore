@@ -1,0 +1,47 @@
+### Ignore list for temp files
+~$*
+
+### Ignore list for git files
+!.gitkeep
+!beaglebone_webhost/target/*.jar
+!beaglebone_webhost/.mvn/wrapper/maven-wrapper.jar
+
+### Ignore list for Beaglebone firmware projects
+
+
+### Ignore list for Spring webserver
+beaglebone_webhost/target/*
+beaglebone_webhost/out
+*.gz
+*.log
+*.tmp
+bin
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
+
+### Ignore list for class assignments
+assignments/
