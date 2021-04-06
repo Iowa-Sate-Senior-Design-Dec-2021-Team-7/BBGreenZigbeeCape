@@ -117,7 +117,7 @@ L Device:LED D?
 U 1 1 606BD638
 P 3600 6800
 F 0 "D?" V 3639 6682 50  0000 R CNN
-F 1 "RED" V 3548 6682 50  0000 R CNN
+F 1 "Blue" V 3548 6682 50  0000 R CNN
 F 2 "" H 3600 6800 50  0001 C CNN
 F 3 "~" H 3600 6800 50  0001 C CNN
 	1    3600 6800
@@ -452,18 +452,8 @@ Check_Error
 Wire Wire Line
 	1650 7100 1900 7100
 Connection ~ 1650 7100
-Text GLabel 3400 6150 0    50   Input ~ 0
-ZigBee_Transmit
-Text GLabel 3400 6250 0    50   Input ~ 0
-ZigBee_Receive
-Text GLabel 3400 6350 0    50   Input ~ 0
-Server_Status
-Text GLabel 3400 6450 0    50   Input ~ 0
-Error
-Wire Wire Line
-	3400 6450 3600 6450
-Wire Wire Line
-	3600 6450 3600 6650
+Text GLabel 3100 6450 0    50   Input ~ 0
+Aux_1
 Wire Wire Line
 	3600 6950 3600 7050
 Wire Wire Line
@@ -484,18 +474,6 @@ Wire Wire Line
 	5000 6950 5000 7050
 Wire Wire Line
 	5000 7350 5000 7400
-Wire Wire Line
-	3950 6650 3950 6350
-Wire Wire Line
-	3950 6350 3400 6350
-Wire Wire Line
-	3400 6250 4300 6250
-Wire Wire Line
-	4300 6250 4300 6650
-Wire Wire Line
-	3400 6150 4650 6150
-Wire Wire Line
-	4650 6150 4650 6650
 $Comp
 L power:+3.3V #PWR?
 U 1 1 607043D1
@@ -519,4 +497,69 @@ Wire Notes Line
 	5400 5300 600  5300
 Text Notes 600  5300 0    50   ~ 10
 LEDs and Buttons
+$Comp
+L Device:LED D?
+U 1 1 606BD4BD
+P 3250 6800
+F 0 "D?" V 3289 6682 50  0000 R CNN
+F 1 "Blue" V 3198 6682 50  0000 R CNN
+F 2 "" H 3250 6800 50  0001 C CNN
+F 3 "~" H 3250 6800 50  0001 C CNN
+	1    3250 6800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 606BD4C3
+P 3250 7200
+F 0 "R?" H 3320 7246 50  0000 L CNN
+F 1 "1k" H 3320 7155 50  0000 L CNN
+F 2 "" V 3180 7200 50  0001 C CNN
+F 3 "~" H 3250 7200 50  0001 C CNN
+	1    3250 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 606BD4C9
+P 3250 7400
+F 0 "#PWR?" H 3250 7150 50  0001 C CNN
+F 1 "GND" H 3255 7227 50  0000 C CNN
+F 2 "" H 3250 7400 50  0001 C CNN
+F 3 "" H 3250 7400 50  0001 C CNN
+	1    3250 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 6450 3250 6650
+Wire Wire Line
+	3250 6950 3250 7050
+Wire Wire Line
+	3250 7350 3250 7400
+Text GLabel 3100 6350 0    50   Input ~ 0
+Aux_2
+Wire Wire Line
+	3250 6450 3100 6450
+Text GLabel 3100 6050 0    50   Input ~ 0
+Lan_HeartBeat
+Text GLabel 3100 6150 0    50   Input ~ 0
+ZigBee_HeartBeat
+Text GLabel 3100 6250 0    50   Input ~ 0
+Cape_HeartBeat
+Wire Wire Line
+	3100 6350 3600 6350
+Wire Wire Line
+	3600 6350 3600 6650
+Wire Wire Line
+	3950 6650 3950 6250
+Wire Wire Line
+	3950 6250 3100 6250
+Wire Wire Line
+	3100 6150 4300 6150
+Wire Wire Line
+	4300 6150 4300 6650
+Wire Wire Line
+	3100 6050 4650 6050
+Wire Wire Line
+	4650 6050 4650 6650
 $EndSCHEMATC
