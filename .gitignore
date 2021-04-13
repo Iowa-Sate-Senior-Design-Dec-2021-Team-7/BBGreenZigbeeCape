@@ -6,3 +6,6 @@
 
 ### Ignore list for Beaglebone firmware projects
 
+### Ignore list for dia documents
+*.dia.autosave
+*.dia~
