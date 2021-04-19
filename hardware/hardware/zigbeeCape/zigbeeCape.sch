@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -16,56 +16,34 @@ $EndDescr
 $Comp
 L Zigbee:CC1352R U?
 U 2 1 6062844D
-P 2150 3850
-F 0 "U?" H 2375 4865 50  0000 C CNN
-F 1 "CC1352R" H 2375 4774 50  0000 C CNN
-F 2 "" H 2750 5050 50  0001 C CNN
-F 3 "" H 2750 5050 50  0001 C CNN
-	2    2150 3850
+P 9800 5600
+F 0 "U?" H 10025 6615 50  0000 C CNN
+F 1 "CC1352R" H 10025 6524 50  0000 C CNN
+F 2 "" H 10400 6800 50  0001 C CNN
+F 3 "" H 10400 6800 50  0001 C CNN
+	2    9800 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Zigbee:CC1352R U?
 U 1 1 60629828
-P 2100 1800
-F 0 "U?" H 2550 2815 50  0000 C CNN
-F 1 "CC1352R" H 2550 2724 50  0000 C CNN
-F 2 "" H 2700 3000 50  0001 C CNN
-F 3 "" H 2700 3000 50  0001 C CNN
-	1    2100 1800
+P 3950 1800
+F 0 "U?" H 4400 2815 50  0000 C CNN
+F 1 "CC1352R" H 4400 2724 50  0000 C CNN
+F 2 "" H 4550 3000 50  0001 C CNN
+F 3 "" H 4550 3000 50  0001 C CNN
+	1    3950 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR?
 U 1 1 606286D5
-P 1250 2100
-F 0 "#PWR?" H 1250 1950 50  0001 C CNN
-F 1 "+3.3V" H 1265 2273 50  0000 C CNN
-F 2 "" H 1250 2100 50  0001 C CNN
-F 3 "" H 1250 2100 50  0001 C CNN
-	1    1250 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L BeagleBone:BeagleBone_P8 U?
-U 1 1 606B6C2A
-P 9550 6450
-F 0 "U?" H 9550 9215 50  0000 C CNN
-F 1 "BeagleBone_P8" H 9550 9124 50  0000 C CNN
-F 2 "" H 10150 9200 50  0001 C CNN
-F 3 "" H 10150 9200 50  0001 C CNN
-	1    9550 6450
-	1    0    0    -1  
-$EndComp
-$Comp
-L BeagleBone:BeagleBone_P9 U?
-U 1 1 606B7A96
-P 9550 3600
-F 0 "U?" H 9550 6365 50  0000 C CNN
-F 1 "BeagleBone_P9" H 9550 6274 50  0000 C CNN
-F 2 "" H 9050 6250 50  0001 C CNN
-F 3 "" H 9050 6250 50  0001 C CNN
-	1    9550 3600
+P 1350 1900
+F 0 "#PWR?" H 1350 1750 50  0001 C CNN
+F 1 "+3.3V" H 1365 2073 50  0000 C CNN
+F 2 "" H 1350 1900 50  0001 C CNN
+F 3 "" H 1350 1900 50  0001 C CNN
+	1    1350 1900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -117,7 +95,7 @@ L Device:LED D?
 U 1 1 606BD638
 P 3600 6800
 F 0 "D?" V 3639 6682 50  0000 R CNN
-F 1 "RED" V 3548 6682 50  0000 R CNN
+F 1 "Blue" V 3548 6682 50  0000 R CNN
 F 2 "" H 3600 6800 50  0001 C CNN
 F 3 "~" H 3600 6800 50  0001 C CNN
 	1    3600 6800
@@ -452,18 +430,8 @@ Check_Error
 Wire Wire Line
 	1650 7100 1900 7100
 Connection ~ 1650 7100
-Text GLabel 3400 6150 0    50   Input ~ 0
-ZigBee_Transmit
-Text GLabel 3400 6250 0    50   Input ~ 0
-ZigBee_Receive
-Text GLabel 3400 6350 0    50   Input ~ 0
-Server_Status
-Text GLabel 3400 6450 0    50   Input ~ 0
-Error
-Wire Wire Line
-	3400 6450 3600 6450
-Wire Wire Line
-	3600 6450 3600 6650
+Text GLabel 3100 6450 0    50   Input ~ 0
+Aux_1
 Wire Wire Line
 	3600 6950 3600 7050
 Wire Wire Line
@@ -484,18 +452,6 @@ Wire Wire Line
 	5000 6950 5000 7050
 Wire Wire Line
 	5000 7350 5000 7400
-Wire Wire Line
-	3950 6650 3950 6350
-Wire Wire Line
-	3950 6350 3400 6350
-Wire Wire Line
-	3400 6250 4300 6250
-Wire Wire Line
-	4300 6250 4300 6650
-Wire Wire Line
-	3400 6150 4650 6150
-Wire Wire Line
-	4650 6150 4650 6650
 $Comp
 L power:+3.3V #PWR?
 U 1 1 607043D1
@@ -519,4 +475,427 @@ Wire Notes Line
 	5400 5300 600  5300
 Text Notes 600  5300 0    50   ~ 10
 LEDs and Buttons
+$Comp
+L Device:LED D?
+U 1 1 606BD4BD
+P 3250 6800
+F 0 "D?" V 3289 6682 50  0000 R CNN
+F 1 "Blue" V 3198 6682 50  0000 R CNN
+F 2 "" H 3250 6800 50  0001 C CNN
+F 3 "~" H 3250 6800 50  0001 C CNN
+	1    3250 6800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 606BD4C3
+P 3250 7200
+F 0 "R?" H 3320 7246 50  0000 L CNN
+F 1 "1k" H 3320 7155 50  0000 L CNN
+F 2 "" V 3180 7200 50  0001 C CNN
+F 3 "~" H 3250 7200 50  0001 C CNN
+	1    3250 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 606BD4C9
+P 3250 7400
+F 0 "#PWR?" H 3250 7150 50  0001 C CNN
+F 1 "GND" H 3255 7227 50  0000 C CNN
+F 2 "" H 3250 7400 50  0001 C CNN
+F 3 "" H 3250 7400 50  0001 C CNN
+	1    3250 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 6450 3250 6650
+Wire Wire Line
+	3250 6950 3250 7050
+Wire Wire Line
+	3250 7350 3250 7400
+Text GLabel 3100 6350 0    50   Input ~ 0
+Aux_2
+Wire Wire Line
+	3250 6450 3100 6450
+Text GLabel 3100 6050 0    50   Input ~ 0
+Lan_HeartBeat
+Text GLabel 3100 6150 0    50   Input ~ 0
+ZigBee_HeartBeat
+Text GLabel 3100 6250 0    50   Input ~ 0
+Cape_HeartBeat
+Wire Wire Line
+	3100 6350 3600 6350
+Wire Wire Line
+	3600 6350 3600 6650
+Wire Wire Line
+	3950 6650 3950 6250
+Wire Wire Line
+	3950 6250 3100 6250
+Wire Wire Line
+	3100 6150 4300 6150
+Wire Wire Line
+	4300 6150 4300 6650
+Wire Wire Line
+	3100 6050 4650 6050
+Wire Wire Line
+	4650 6050 4650 6650
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J?
+U 1 1 60760740
+P 7700 5700
+F 0 "J?" H 7257 5746 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 7257 5655 50  0000 R CNN
+F 2 "" H 7700 5700 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 7350 4450 50  0001 C CNN
+	1    7700 5700
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 1050 0    50   Input ~ 0
+TMS
+Text GLabel 3400 1250 0    50   Input ~ 0
+TDO
+Text GLabel 3400 1350 0    50   Input ~ 0
+TDI
+Text GLabel 3400 1450 0    50   Input ~ 0
+RESET_n
+Text GLabel 3400 1150 0    50   Input ~ 0
+TCK
+$Comp
+L power:GND #PWR?
+U 1 1 6076F6A2
+P 1350 2550
+F 0 "#PWR?" H 1350 2300 50  0001 C CNN
+F 1 "GND" H 1355 2377 50  0000 C CNN
+F 2 "" H 1350 2550 50  0001 C CNN
+F 3 "" H 1350 2550 50  0001 C CNN
+	1    1350 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60777E5F
+P 3150 2250
+F 0 "C?" H 3265 2296 50  0000 L CNN
+F 1 "22uF" H 3265 2205 50  0000 L CNN
+F 2 "" H 3188 2100 50  0001 C CNN
+F 3 "~" H 3150 2250 50  0001 C CNN
+	1    3150 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60778FDE
+P 2700 2250
+F 0 "C?" H 2815 2296 50  0000 L CNN
+F 1 "0.1uF" H 2815 2205 50  0000 L CNN
+F 2 "" H 2738 2100 50  0001 C CNN
+F 3 "~" H 2700 2250 50  0001 C CNN
+	1    2700 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6077A126
+P 2250 2250
+F 0 "C?" H 2365 2296 50  0000 L CNN
+F 1 "0.1uF" H 2365 2205 50  0000 L CNN
+F 2 "" H 2288 2100 50  0001 C CNN
+F 3 "~" H 2250 2250 50  0001 C CNN
+	1    2250 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6077B233
+P 1800 2250
+F 0 "C?" H 1915 2296 50  0000 L CNN
+F 1 "0.1uF" H 1915 2205 50  0000 L CNN
+F 2 "" H 1838 2100 50  0001 C CNN
+F 3 "~" H 1800 2250 50  0001 C CNN
+	1    1800 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6077C3CD
+P 1350 2250
+F 0 "C?" H 1465 2296 50  0000 L CNN
+F 1 "0.1uF" H 1465 2205 50  0000 L CNN
+F 2 "" H 1388 2100 50  0001 C CNN
+F 3 "~" H 1350 2250 50  0001 C CNN
+	1    1350 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2250 3400 2250
+Wire Wire Line
+	3400 2250 3400 2150
+Wire Wire Line
+	3400 1950 3500 1950
+Connection ~ 3400 1950
+Wire Wire Line
+	3500 2050 3400 2050
+Connection ~ 3400 2050
+Wire Wire Line
+	3400 2050 3400 1950
+Wire Wire Line
+	3500 2150 3400 2150
+Connection ~ 3400 2150
+Wire Wire Line
+	3400 2150 3400 2050
+Wire Wire Line
+	3400 1450 3500 1450
+Wire Wire Line
+	3500 1350 3400 1350
+Wire Wire Line
+	3500 1250 3400 1250
+Wire Wire Line
+	3400 1150 3500 1150
+Wire Wire Line
+	3500 1050 3400 1050
+Wire Wire Line
+	3150 2500 3150 2400
+Connection ~ 3150 2500
+Wire Wire Line
+	3150 2500 3500 2500
+Wire Wire Line
+	3150 2100 3150 1950
+Connection ~ 3150 1950
+Wire Wire Line
+	3150 1950 3400 1950
+Wire Wire Line
+	2700 2100 2700 1950
+Connection ~ 2700 1950
+Wire Wire Line
+	2700 1950 3150 1950
+Wire Wire Line
+	2700 2400 2700 2500
+Connection ~ 2700 2500
+Wire Wire Line
+	2700 2500 3150 2500
+Wire Wire Line
+	2250 2400 2250 2500
+Connection ~ 2250 2500
+Wire Wire Line
+	2250 2500 2700 2500
+Wire Wire Line
+	2250 2100 2250 1950
+Connection ~ 2250 1950
+Wire Wire Line
+	2250 1950 2700 1950
+Wire Wire Line
+	1800 2500 1800 2400
+Wire Wire Line
+	1800 2500 1350 2500
+Wire Wire Line
+	1350 2500 1350 2400
+Connection ~ 1800 2500
+Wire Wire Line
+	1800 2100 1800 1950
+Wire Wire Line
+	1800 1950 1350 1950
+Wire Wire Line
+	1350 1950 1350 2100
+Connection ~ 1800 1950
+Wire Wire Line
+	1800 2500 2250 2500
+Wire Wire Line
+	1800 1950 2250 1950
+Wire Wire Line
+	1350 2550 1350 2500
+Connection ~ 1350 2500
+Wire Wire Line
+	1350 1900 1350 1950
+Connection ~ 1350 1950
+$Comp
+L Device:Crystal Y?
+U 1 1 607C7143
+P 5650 2800
+F 0 "Y?" H 5650 3068 50  0000 C CNN
+F 1 "32.768kHz" H 5650 2977 50  0000 C CNN
+F 2 "" H 5650 2800 50  0001 C CNN
+F 3 "~" H 5650 2800 50  0001 C CNN
+	1    5650 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y?
+U 1 1 607C8108
+P 6550 2800
+F 0 "Y?" H 6550 2532 50  0000 C CNN
+F 1 "48MHz" H 6550 2623 50  0000 C CNN
+F 2 "" H 6550 2800 50  0001 C CNN
+F 3 "~" H 6550 2800 50  0001 C CNN
+	1    6550 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 607D2CA6
+P 5400 3000
+F 0 "C?" H 5515 3046 50  0000 L CNN
+F 1 "12pF" H 5515 2955 50  0000 L CNN
+F 2 "" H 5438 2850 50  0001 C CNN
+F 3 "~" H 5400 3000 50  0001 C CNN
+	1    5400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 607D7D8E
+P 5900 3000
+F 0 "C?" H 6015 3046 50  0000 L CNN
+F 1 "12pF" H 6015 2955 50  0000 L CNN
+F 2 "" H 5938 2850 50  0001 C CNN
+F 3 "~" H 5900 3000 50  0001 C CNN
+	1    5900 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2800 5400 2800
+Wire Wire Line
+	5400 2800 5400 2850
+Wire Wire Line
+	5800 2800 5900 2800
+Wire Wire Line
+	5900 2800 5900 2850
+Wire Wire Line
+	5400 2800 5400 2450
+Wire Wire Line
+	5400 2450 5300 2450
+Connection ~ 5400 2800
+Wire Wire Line
+	5300 2350 5900 2350
+Wire Wire Line
+	5900 2350 5900 2800
+Connection ~ 5900 2800
+$Comp
+L power:GND #PWR?
+U 1 1 607ECB56
+P 5650 3250
+F 0 "#PWR?" H 5650 3000 50  0001 C CNN
+F 1 "GND" H 5655 3077 50  0000 C CNN
+F 2 "" H 5650 3250 50  0001 C CNN
+F 3 "" H 5650 3250 50  0001 C CNN
+	1    5650 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 607ED2C1
+P 6550 3250
+F 0 "#PWR?" H 6550 3000 50  0001 C CNN
+F 1 "GND" H 6555 3077 50  0000 C CNN
+F 2 "" H 6550 3250 50  0001 C CNN
+F 3 "" H 6550 3250 50  0001 C CNN
+	1    6550 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3250 6550 3150
+Wire Wire Line
+	6550 3150 6300 3150
+Wire Wire Line
+	6300 3150 6300 2800
+Wire Wire Line
+	6300 2800 6400 2800
+Wire Wire Line
+	6300 2800 6300 2250
+Wire Wire Line
+	5300 2250 6300 2250
+Connection ~ 6300 2800
+Wire Wire Line
+	6550 3150 6800 3150
+Wire Wire Line
+	6800 3150 6800 2800
+Wire Wire Line
+	6800 2800 6700 2800
+Connection ~ 6550 3150
+Wire Wire Line
+	6800 2800 6800 2150
+Wire Wire Line
+	5300 2150 6800 2150
+Connection ~ 6800 2800
+Wire Wire Line
+	5900 3150 5900 3200
+Wire Wire Line
+	5900 3200 5650 3200
+Wire Wire Line
+	5650 3200 5650 3250
+Wire Wire Line
+	5650 3200 5400 3200
+Wire Wire Line
+	5400 3200 5400 3150
+Connection ~ 5650 3200
+Text GLabel 5450 1750 2    50   Output ~ 0
+DCDC_SW
+Wire Wire Line
+	5300 1750 5450 1750
+$Comp
+L Device:C C?
+U 1 1 608149D8
+P 6950 1850
+F 0 "C?" H 7065 1896 50  0000 L CNN
+F 1 "1uF" H 7065 1805 50  0000 L CNN
+F 2 "" H 6988 1700 50  0001 C CNN
+F 3 "~" H 6950 1850 50  0001 C CNN
+	1    6950 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 608182E5
+P 6950 2050
+F 0 "#PWR?" H 6950 1800 50  0001 C CNN
+F 1 "GND" H 6955 1877 50  0000 C CNN
+F 2 "" H 6950 2050 50  0001 C CNN
+F 3 "" H 6950 2050 50  0001 C CNN
+	1    6950 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1650 6950 1650
+Wire Wire Line
+	6950 1650 6950 1700
+Wire Wire Line
+	6950 2050 6950 2000
+$Sheet
+S 7500 950  1550 1200
+U 60837A8E
+F0 "ZigBeeFiltering" 50
+F1 "ZigBeeFiltering.sch" 50
+F2 "SUB-1_GHz_RF_P" I L 7500 1750 50 
+F3 "SUB-1_GHZ_RF_N" I L 7500 1850 50 
+F4 "RX_TX" O L 7500 2000 50 
+$EndSheet
+Wire Wire Line
+	5300 1450 7150 1450
+Wire Wire Line
+	5300 1350 7000 1350
+Wire Wire Line
+	7000 1350 7000 1300
+Wire Wire Line
+	7000 1300 7150 1300
+Wire Wire Line
+	5300 1250 6900 1250
+Wire Wire Line
+	6900 1250 6900 1000
+Wire Wire Line
+	6900 1000 7150 1000
+Text Notes 1950 1750 0    50   ~ 0
+Can VDDR&VDDR_RF Connect to VDDs\n
+Text Notes 5600 1900 0    50   ~ 0
+Purpose of DCDC_SW
+$Sheet
+S 5650 6650 900  550 
+U 6087B849
+F0 "BeagleBone_Headers" 50
+F1 "BeagleBone_Headers.sch" 50
+F2 "BeagleBone_Reset" I L 5650 6750 50 
+F3 "LAN_Heartbeat" O L 5650 6850 50 
+F4 "SPI_MISO" I L 5650 6950 50 
+F5 "SPI_MOSI" O L 5650 7050 50 
+F6 "SPI_CS" O L 5650 7150 50 
+$EndSheet
 $EndSCHEMATC
