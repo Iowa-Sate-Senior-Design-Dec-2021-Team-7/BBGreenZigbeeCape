@@ -841,7 +841,7 @@ F4 "RX_TX" O L 8000 2450 50
 F5 "2_4_GHZ_RF_N" I L 8000 1900 50 
 F6 "2_4_GHZ_RF_P" I L 8000 1750 50 
 $EndSheet
-Text Notes 3250 2450 0    50   ~ 0
+Text Notes 3100 2450 0    50   ~ 0
 Can VDDR&VDDR_RF Connect to VDDs\n
 Text Notes 5700 3750 0    50   ~ 0
 Purpose of DCDC_SW
@@ -1415,4 +1415,6 @@ F 3 "" H 6150 5900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6150 5800 6150 5900
+Text Notes 2800 3400 0    50   ~ 0
+Place capacitors close to refered pin. 22uf and 0.1uf on pin 34
 $EndSCHEMATC
