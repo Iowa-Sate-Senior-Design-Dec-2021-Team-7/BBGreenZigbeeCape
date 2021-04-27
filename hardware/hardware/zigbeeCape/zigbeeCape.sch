@@ -846,7 +846,7 @@ Can VDDR&VDDR_RF Connect to VDDs\n
 Text Notes 5700 3750 0    50   ~ 0
 Purpose of DCDC_SW
 $Sheet
-S 4000 3750 850  1050
+S 4000 3750 800  1400
 U 6087B849
 F0 "BeagleBone_Headers" 50
 F1 "BeagleBone_Headers.sch" 50
@@ -859,6 +859,8 @@ F7 "Network_Connect" I L 4000 4050 50
 F8 "UART_RX" O L 4000 4200 50 
 F9 "UART_TX" I L 4000 4300 50 
 F10 "SPI_CLK" O L 4000 4700 50 
+F11 "I2C2_SCL" O L 4000 4800 50 
+F12 "I2C2_SDA" B L 4000 4900 50 
 $EndSheet
 Wire Wire Line
 	7900 1850 7900 1900
@@ -952,17 +954,6 @@ F 3 "~" H 2900 800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+3.3V #PWR?
-U 1 1 608A2617
-P 2050 750
-F 0 "#PWR?" H 2050 600 50  0001 C CNN
-F 1 "+3.3V" H 2065 923 50  0000 C CNN
-F 2 "" H 2050 750 50  0001 C CNN
-F 3 "" H 2050 750 50  0001 C CNN
-	1    2050 750 
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 608A4655
 P 1950 2200
@@ -1012,8 +1003,6 @@ Connection ~ 4500 1950
 Wire Wire Line
 	4200 1850 4600 1850
 Connection ~ 4600 1850
-Wire Wire Line
-	2050 850  2050 800 
 Connection ~ 3100 2650
 Connection ~ 3100 3200
 Wire Wire Line
@@ -1031,11 +1020,6 @@ Wire Wire Line
 	4700 1150 4700 1750
 Wire Wire Line
 	2550 1150 3650 1150
-Wire Wire Line
-	2050 800  2750 800 
-Connection ~ 2050 800 
-Wire Wire Line
-	2050 800  2050 750 
 Wire Wire Line
 	3050 800  3650 800 
 Wire Wire Line
@@ -1110,36 +1094,31 @@ Wire Wire Line
 $Comp
 L Device:C C?
 U 1 1 60A4B344
-P 4900 1100
-F 0 "C?" H 5015 1146 50  0000 L CNN
-F 1 "2.2uF" H 5015 1055 50  0000 L CNN
-F 2 "" H 4938 950 50  0001 C CNN
-F 3 "~" H 4900 1100 50  0001 C CNN
-	1    4900 1100
+P 1300 1000
+F 0 "C?" H 1415 1046 50  0000 L CNN
+F 1 "2.2uF" H 1415 955 50  0000 L CNN
+F 2 "" H 1338 850 50  0001 C CNN
+F 3 "~" H 1300 1000 50  0001 C CNN
+	1    1300 1000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4350 900  4900 900 
-Wire Wire Line
-	4900 900  4900 950 
 $Comp
 L power:GND #PWR?
 U 1 1 60A55AE5
-P 4900 1300
-F 0 "#PWR?" H 4900 1050 50  0001 C CNN
-F 1 "GND" H 4905 1127 50  0000 C CNN
-F 2 "" H 4900 1300 50  0001 C CNN
-F 3 "" H 4900 1300 50  0001 C CNN
-	1    4900 1300
+P 4900 1000
+F 0 "#PWR?" H 4900 750 50  0001 C CNN
+F 1 "GND" H 4905 827 50  0000 C CNN
+F 2 "" H 4900 1000 50  0001 C CNN
+F 3 "" H 4900 1000 50  0001 C CNN
+	1    4900 1000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4900 1300 4900 1250
 Wire Wire Line
 	4350 800  4900 800 
 Wire Wire Line
 	4900 800  4900 900 
-Connection ~ 4900 900 
 $Comp
 L Switch:SW_MEC_5E SW?
 U 1 1 60A76337
@@ -1257,19 +1236,8 @@ Text GLabel 6000 5300 0    50   Input ~ 0
 SPI_CS
 Text GLabel 6000 5400 0    50   Input ~ 0
 SPI_CLK
-Text Notes 6450 5850 0    50   ~ 0
+Text Notes 5050 4650 0    50   ~ 0
 Pull up vs Pull Down on SPI clk?\nAre they needed?
-$Comp
-L Device:R R?
-U 1 1 60B56235
-P 7650 4700
-F 0 "R?" H 7720 4746 50  0000 L CNN
-F 1 "10k" H 7720 4655 50  0000 L CNN
-F 2 "" V 7580 4700 50  0001 C CNN
-F 3 "~" H 7650 4700 50  0001 C CNN
-	1    7650 4700
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R?
 U 1 1 60B56B06
@@ -1417,4 +1385,156 @@ Wire Wire Line
 	6150 5800 6150 5900
 Text Notes 2800 3400 0    50   ~ 0
 Place capacitors close to refered pin. 22uf and 0.1uf on pin 34
+Text GLabel 3900 4800 0    50   Output ~ 0
+I2C2_SCL
+Text GLabel 3900 4900 0    50   BiDi ~ 0
+I2C2_SDA
+Wire Wire Line
+	3900 4800 4000 4800
+Wire Wire Line
+	4000 4900 3900 4900
+$Comp
+L Device:R R?
+U 1 1 60B56235
+P 7650 4700
+F 0 "R?" H 7720 4746 50  0000 L CNN
+F 1 "10k" H 7720 4655 50  0000 L CNN
+F 2 "" V 7580 4700 50  0001 C CNN
+F 3 "~" H 7650 4700 50  0001 C CNN
+	1    7650 4700
+	1    0    0    -1  
+$EndComp
+Text Notes 5050 4450 0    50   ~ 0
+Please Check my work on \npullup/pulldown resistors
+$Comp
+L Device:R R?
+U 1 1 608B8299
+P 7550 5750
+F 0 "R?" H 7620 5796 50  0000 L CNN
+F 1 "4.7k" H 7620 5705 50  0000 L CNN
+F 2 "" V 7480 5750 50  0001 C CNN
+F 3 "~" H 7550 5750 50  0001 C CNN
+	1    7550 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 608B8AB3
+P 7250 5750
+F 0 "R?" H 7320 5796 50  0000 L CNN
+F 1 "4.7k" H 7320 5705 50  0000 L CNN
+F 2 "" V 7180 5750 50  0001 C CNN
+F 3 "~" H 7250 5750 50  0001 C CNN
+	1    7250 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 608BA24C
+P 7050 5650
+F 0 "#PWR?" H 7050 5500 50  0001 C CNN
+F 1 "+3.3V" H 7065 5823 50  0000 C CNN
+F 2 "" H 7050 5650 50  0001 C CNN
+F 3 "" H 7050 5650 50  0001 C CNN
+	1    7050 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5600 7550 5550
+Wire Wire Line
+	7550 5550 7250 5550
+Wire Wire Line
+	7250 5550 7250 5600
+Wire Wire Line
+	7250 5550 7150 5550
+Wire Wire Line
+	7150 5550 7150 5700
+Wire Wire Line
+	7150 5700 7050 5700
+Wire Wire Line
+	7050 5700 7050 5650
+Connection ~ 7250 5550
+Wire Wire Line
+	7850 6000 7550 6000
+Wire Wire Line
+	7550 6000 7550 5900
+Wire Wire Line
+	7850 6100 7250 6100
+Wire Wire Line
+	7250 6100 7250 5900
+Text GLabel 7100 6000 0    50   Input ~ 0
+I2C2_SCL
+Text GLabel 7100 6100 0    50   BiDi ~ 0
+I2C2_SDA
+Wire Wire Line
+	7550 6000 7100 6000
+Connection ~ 7550 6000
+Wire Wire Line
+	7250 6100 7100 6100
+Connection ~ 7250 6100
+$Comp
+L power:GND #PWR?
+U 1 1 609261BE
+P 1300 1200
+F 0 "#PWR?" H 1300 950 50  0001 C CNN
+F 1 "GND" H 1305 1027 50  0000 C CNN
+F 2 "" H 1300 1200 50  0001 C CNN
+F 3 "" H 1300 1200 50  0001 C CNN
+	1    1300 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 608A2617
+P 2050 700
+F 0 "#PWR?" H 2050 550 50  0001 C CNN
+F 1 "+3.3V" H 2065 873 50  0000 C CNN
+F 2 "" H 2050 700 50  0001 C CNN
+F 3 "" H 2050 700 50  0001 C CNN
+	1    2050 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 700  2050 750 
+Wire Wire Line
+	2050 800  2750 800 
+Wire Wire Line
+	2050 850  2050 800 
+Connection ~ 2050 800 
+Wire Wire Line
+	2050 750  1300 750 
+Wire Wire Line
+	1300 750  1300 850 
+Connection ~ 2050 750 
+Wire Wire Line
+	2050 750  2050 800 
+Wire Wire Line
+	1300 1200 1300 1150
+Wire Wire Line
+	4900 900  4900 1000
+Connection ~ 4900 900 
+Text GLabel 9600 4850 2    50   Input ~ 0
+ZigBee_Connect
+Text GLabel 9600 4950 2    50   Input ~ 0
+Check_Error
+Text GLabel 9600 5050 2    50   Output ~ 0
+ZigBee_HeartBeat
+Text GLabel 9600 5150 2    50   Output ~ 0
+Cape_HeartBeat
+Text GLabel 9600 5250 2    50   Output ~ 0
+Aux_2
+Text GLabel 9600 5350 2    50   Output ~ 0
+Aux_1
+Wire Wire Line
+	9600 5350 9200 5350
+Wire Wire Line
+	9600 5250 9200 5250
+Wire Wire Line
+	9600 5150 9200 5150
+Wire Wire Line
+	9600 5050 9200 5050
+Wire Wire Line
+	9600 4950 9200 4950
+Wire Wire Line
+	9600 4850 9200 4850
 $EndSCHEMATC
