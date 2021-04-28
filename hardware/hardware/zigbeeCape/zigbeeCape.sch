@@ -1537,4 +1537,6 @@ Wire Wire Line
 	9600 4950 9200 4950
 Wire Wire Line
 	9600 4850 9200 4850
+Text Notes 2900 2550 0    50   ~ 0
+No. VDDR_RF is 1.8v from DCDC_SW. VDDR is 3.3v 
 $EndSCHEMATC
