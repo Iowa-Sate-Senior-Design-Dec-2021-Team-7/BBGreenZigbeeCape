@@ -780,21 +780,9 @@ Wire Wire Line
 Wire Wire Line
 	6750 4250 6650 4250
 Wire Wire Line
-	6650 4250 6650 4350
-Wire Wire Line
-	6650 4350 6750 4350
-Wire Wire Line
-	6750 4450 6650 4450
-Wire Wire Line
 	6650 4550 6750 4550
 Wire Wire Line
 	6750 4650 6650 4650
-Wire Wire Line
-	6650 4350 6650 4450
-Connection ~ 6650 4350
-Connection ~ 6650 4450
-Wire Wire Line
-	6650 4450 6650 4550
 Connection ~ 6650 4550
 Wire Wire Line
 	6650 4550 6650 4650
@@ -806,4 +794,10 @@ Wire Wire Line
 Wire Wire Line
 	7450 4300 7250 4300
 Connection ~ 7450 3400
+Text Notes 5450 4300 0    39   ~ 0
+Remove R21 and R22
+Text Notes 5950 5700 0    39   ~ 0
+Check FL3 replacement and change parts acorrdingly
+Wire Wire Line
+	6650 4250 6650 4550
 $EndSCHEMATC

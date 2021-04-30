@@ -760,28 +760,17 @@ $EndComp
 Wire Wire Line
 	7850 3950 7850 3850
 Wire Wire Line
-	7850 3850 7600 3850
-Wire Wire Line
-	7600 3850 7600 3500
-Wire Wire Line
 	7600 3500 7700 3500
 Wire Wire Line
 	7600 3500 7600 2950
 Wire Wire Line
 	6600 2950 7600 2950
-Connection ~ 7600 3500
-Wire Wire Line
-	7850 3850 8100 3850
-Wire Wire Line
-	8100 3850 8100 3500
 Wire Wire Line
 	8100 3500 8000 3500
-Connection ~ 7850 3850
 Wire Wire Line
 	8100 3500 8100 2850
 Wire Wire Line
 	6600 2850 8100 2850
-Connection ~ 8100 3500
 Wire Wire Line
 	7200 3850 7200 3900
 Wire Wire Line
@@ -934,7 +923,7 @@ L Device:R R3
 U 1 1 6089DCA1
 P 2850 750
 F 0 "R3" V 2643 750 50  0000 C CNN
-F 1 "DNM_10K" V 2734 750 50  0000 C CNN
+F 1 "DNM_10K" V 2750 750 50  0000 C CNN
 F 2 "" V 2780 750 50  0001 C CNN
 F 3 "~" H 2850 750 50  0001 C CNN
 	1    2850 750 
@@ -1532,7 +1521,7 @@ Wire Wire Line
 Connection ~ 1700 3950
 Wire Wire Line
 	2450 3450 2450 3500
-Text GLabel 4200 2300 0    50   Input ~ 0
+Text GLabel 4250 2350 0    50   Input ~ 0
 VDDR
 Wire Wire Line
 	4800 2450 4750 2450
@@ -1540,12 +1529,6 @@ Wire Wire Line
 	4800 2350 4750 2350
 Wire Wire Line
 	4750 2350 4750 2450
-Wire Wire Line
-	4750 2350 4650 2350
-Wire Wire Line
-	4650 2350 4650 2300
-Wire Wire Line
-	4650 2300 4200 2300
 Connection ~ 4750 2350
 $Comp
 L Device:L L1
@@ -1729,4 +1712,10 @@ Wire Wire Line
 	2650 2750 2650 2800
 Text Notes 8450 1050 0    295  ~ 59
 Main Page
+Text Notes 8150 3450 0    39   ~ 0
+Look for grounding with the 48MHz clk
+Text Notes 6750 4400 0    39   ~ 0
+Remove resistors on SPI and UART
+Wire Wire Line
+	4250 2350 4750 2350
 $EndSCHEMATC
