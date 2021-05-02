@@ -685,17 +685,6 @@ F 3 "~" H 6950 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal Y2
-U 1 1 607C8108
-P 7850 3500
-F 0 "Y2" H 7850 3232 50  0000 C CNN
-F 1 "48MHz" H 7850 3323 50  0000 C CNN
-F 2 "" H 7850 3500 50  0001 C CNN
-F 3 "~" H 7850 3500 50  0001 C CNN
-	1    7850 3500
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:C C12
 U 1 1 607D2CA6
 P 6700 3700
@@ -758,15 +747,9 @@ F 3 "" H 7850 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 3950 7850 3850
-Wire Wire Line
-	7600 3500 7700 3500
-Wire Wire Line
 	7600 3500 7600 2950
 Wire Wire Line
 	6600 2950 7600 2950
-Wire Wire Line
-	8100 3500 8000 3500
 Wire Wire Line
 	8100 3500 8100 2850
 Wire Wire Line
@@ -819,8 +802,6 @@ F4 "RX_TX" O L 8000 2450 50
 F5 "2_4_GHZ_RF_N" I L 8000 1900 50 
 F6 "2_4_GHZ_RF_P" I L 8000 1750 50 
 $EndSheet
-Text Notes 5700 3750 0    50   ~ 0
-Purpose of DCDC_SW
 $Sheet
 S 4000 3750 800  1400
 U 6087B849
@@ -1134,165 +1115,18 @@ Wire Wire Line
 	4000 4300 3900 4300
 Wire Wire Line
 	3900 4200 4000 4200
-Text GLabel 6050 4900 0    50   Input ~ 0
+Text GLabel 7650 4900 0    50   Input ~ 0
 UART_RX
-Text GLabel 6000 5000 0    50   Output ~ 0
+Text GLabel 7600 5000 0    50   Output ~ 0
 UART_TX
-Text GLabel 6000 5100 0    50   Output ~ 0
+Text GLabel 7600 5100 0    50   Output ~ 0
 SPI_MISO
-Text GLabel 6000 5200 0    50   Input ~ 0
+Text GLabel 7600 5200 0    50   Input ~ 0
 SPI_MOSI
-Text GLabel 6000 5300 0    50   Input ~ 0
+Text GLabel 7600 5300 0    50   Input ~ 0
 SPI_CS
-Text GLabel 6000 5400 0    50   Input ~ 0
+Text GLabel 7600 5400 0    50   Input ~ 0
 SPI_CLK
-Text Notes 5050 4650 0    50   ~ 0
-Pull up vs Pull Down on SPI clk?\nAre they needed?
-$Comp
-L Device:R R18
-U 1 1 60B56B06
-P 7350 4700
-F 0 "R18" H 7420 4746 50  0000 L CNN
-F 1 "10k" H 7420 4655 50  0000 L CNN
-F 2 "" V 7280 4700 50  0001 C CNN
-F 3 "~" H 7350 4700 50  0001 C CNN
-	1    7350 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R16
-U 1 1 60B574AC
-P 7050 4700
-F 0 "R16" H 7120 4746 50  0000 L CNN
-F 1 "10k" H 7120 4655 50  0000 L CNN
-F 2 "" V 6980 4700 50  0001 C CNN
-F 3 "~" H 7050 4700 50  0001 C CNN
-	1    7050 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R15
-U 1 1 60B5855C
-P 6750 4700
-F 0 "R15" H 6820 4746 50  0000 L CNN
-F 1 "10k" H 6820 4655 50  0000 L CNN
-F 2 "" V 6680 4700 50  0001 C CNN
-F 3 "~" H 6750 4700 50  0001 C CNN
-	1    6750 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R14
-U 1 1 60B58776
-P 6450 4700
-F 0 "R14" H 6520 4746 50  0000 L CNN
-F 1 "10k" H 6520 4655 50  0000 L CNN
-F 2 "" V 6380 4700 50  0001 C CNN
-F 3 "~" H 6450 4700 50  0001 C CNN
-	1    6450 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR025
-U 1 1 60B5A5B0
-P 6450 4400
-F 0 "#PWR025" H 6450 4250 50  0001 C CNN
-F 1 "+3.3V" H 6465 4573 50  0000 C CNN
-F 2 "" H 6450 4400 50  0001 C CNN
-F 3 "" H 6450 4400 50  0001 C CNN
-	1    6450 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7650 4550 7650 4500
-Wire Wire Line
-	7650 4500 7350 4500
-Wire Wire Line
-	7350 4550 7350 4500
-Connection ~ 7350 4500
-Wire Wire Line
-	6450 4500 6450 4400
-Wire Wire Line
-	6450 4500 6750 4500
-Wire Wire Line
-	6450 4500 6450 4550
-Connection ~ 6450 4500
-Wire Wire Line
-	6750 4550 6750 4500
-Connection ~ 6750 4500
-Wire Wire Line
-	6750 4500 7050 4500
-Wire Wire Line
-	7050 4550 7050 4500
-Connection ~ 7050 4500
-Wire Wire Line
-	7050 4500 7350 4500
-Wire Wire Line
-	7650 4850 7650 4900
-Wire Wire Line
-	7650 4900 7850 4900
-Connection ~ 7650 4900
-Wire Wire Line
-	7850 5000 7350 5000
-Wire Wire Line
-	7850 5200 6750 5200
-Wire Wire Line
-	7850 5300 6450 5300
-Wire Wire Line
-	7350 4850 7350 5000
-Connection ~ 7350 5000
-Wire Wire Line
-	7050 4850 7050 5100
-Connection ~ 7050 5100
-Wire Wire Line
-	7050 5100 7850 5100
-Wire Wire Line
-	6750 4850 6750 5200
-Connection ~ 6750 5200
-Wire Wire Line
-	6450 4850 6450 5300
-Connection ~ 6450 5300
-$Comp
-L Device:R R13
-U 1 1 60C3C131
-P 6150 5650
-F 0 "R13" H 6220 5696 50  0000 L CNN
-F 1 "10k" H 6220 5605 50  0000 L CNN
-F 2 "" V 6080 5650 50  0001 C CNN
-F 3 "~" H 6150 5650 50  0001 C CNN
-	1    6150 5650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 5300 6450 5300
-Wire Wire Line
-	6000 5200 6750 5200
-Wire Wire Line
-	6000 5100 7050 5100
-Wire Wire Line
-	6000 5000 7350 5000
-Wire Wire Line
-	6050 4900 7650 4900
-Wire Wire Line
-	6000 5400 6150 5400
-Wire Wire Line
-	6150 5500 6150 5400
-Connection ~ 6150 5400
-Wire Wire Line
-	6150 5400 7850 5400
-$Comp
-L power:GND #PWR023
-U 1 1 60CB9CE2
-P 6150 5900
-F 0 "#PWR023" H 6150 5650 50  0001 C CNN
-F 1 "GND" H 6155 5727 50  0000 C CNN
-F 2 "" H 6150 5900 50  0001 C CNN
-F 3 "" H 6150 5900 50  0001 C CNN
-	1    6150 5900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6150 5800 6150 5900
 Text Notes 2900 3400 0    50   ~ 0
 Place capacitors close to refered pin. 22uf and 0.1uf on pin 34
 Text GLabel 3900 4800 0    50   Output ~ 0
@@ -1303,19 +1137,6 @@ Wire Wire Line
 	3900 4800 4000 4800
 Wire Wire Line
 	4000 4900 3900 4900
-$Comp
-L Device:R R20
-U 1 1 60B56235
-P 7650 4700
-F 0 "R20" H 7720 4746 50  0000 L CNN
-F 1 "10k" H 7720 4655 50  0000 L CNN
-F 2 "" V 7580 4700 50  0001 C CNN
-F 3 "~" H 7650 4700 50  0001 C CNN
-	1    7650 4700
-	1    0    0    -1  
-$EndComp
-Text Notes 5050 4450 0    50   ~ 0
-Please Check my work on \npullup/pulldown resistors
 $Comp
 L Device:R R19
 U 1 1 608B8299
@@ -1712,10 +1533,48 @@ Wire Wire Line
 	2650 2750 2650 2800
 Text Notes 8450 1050 0    295  ~ 59
 Main Page
-Text Notes 8150 3450 0    39   ~ 0
-Look for grounding with the 48MHz clk
-Text Notes 6750 4400 0    39   ~ 0
-Remove resistors on SPI and UART
 Wire Wire Line
 	4250 2350 4750 2350
+$Comp
+L Device:Crystal_GND24 Y?
+U 1 1 60907ED1
+P 7850 3500
+F 0 "Y?" H 8044 3546 50  0000 L CNN
+F 1 "48MHz" H 8044 3455 50  0000 L CNN
+F 2 "" H 7850 3500 50  0001 C CNN
+F 3 "~" H 7850 3500 50  0001 C CNN
+	1    7850 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3500 7700 3500
+Wire Wire Line
+	8000 3500 8100 3500
+Wire Wire Line
+	7850 3300 7850 3200
+Wire Wire Line
+	7850 3200 8300 3200
+Wire Wire Line
+	8300 3200 8300 3750
+Wire Wire Line
+	8300 3750 7850 3750
+Wire Wire Line
+	7850 3750 7850 3950
+Wire Wire Line
+	7850 3750 7850 3700
+Connection ~ 7850 3750
+Wire Wire Line
+	7650 4900 7850 4900
+Wire Wire Line
+	7850 5000 7600 5000
+Wire Wire Line
+	7600 5100 7850 5100
+Wire Wire Line
+	7850 5200 7600 5200
+Wire Wire Line
+	7600 5300 7850 5300
+Wire Wire Line
+	7850 5400 7600 5400
+Text Notes 8200 3100 0    39   ~ 0
+This symbol looks gross.\nMight endup changing it.
 $EndSCHEMATC
