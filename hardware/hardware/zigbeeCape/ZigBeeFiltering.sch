@@ -717,10 +717,10 @@ Connection ~ 2300 3000
 Text Notes 650  1000 0    295  ~ 59
 Zigbee
 $Comp
-L Zigbee:0.8Ghz_and_2.4GHz_Filter U?
+L Zigbee:0.8Ghz_and_2.4GHz_Filter U2
 U 1 1 6091DA9B
 P 6300 4150
-F 0 "U?" H 6150 4625 50  0000 C CNN
+F 0 "U2" H 6150 4625 50  0000 C CNN
 F 1 "0.8Ghz_and_2.4GHz_Filter" H 6150 4534 50  0000 C CNN
 F 2 "" H 6200 4150 50  0001 C CNN
 F 3 "" H 6200 4150 50  0001 C CNN
