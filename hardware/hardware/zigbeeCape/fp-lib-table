@@ -1,4 +1,3 @@
 (fp_lib_table
-  (lib (name zigbeeCape)(type KiCad)(uri "C:/Users/sterl/OneDrive/School/SS 2021/EE 491/Git Repository/sddec21-07/hardware/hardware/zigbeeCape")(options "")(descr ""))
-  (lib (name CC1352R)(type KiCad)(uri ${KIPRJMOD}/CC1352R.pretty)(options "")(descr ""))
+  (lib (name zigbeeCape)(type KiCad)(uri ${KISYSMOD}/ZigbeeCape.pretty)(options "")(descr ""))
 )
