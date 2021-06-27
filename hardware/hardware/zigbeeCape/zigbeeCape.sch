@@ -52,7 +52,7 @@ U 1 1 606B9FBA
 P 1100 5800
 F 0 "SW1" H 1100 6185 50  0000 C CNN
 F 1 "SW_MEC_5E" H 1100 6094 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 1100 6100 50  0001 C CNN
+F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 1100 6100 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 1100 6100 50  0001 C CNN
 	1    1100 5800
 	1    0    0    -1  
@@ -228,7 +228,7 @@ U 1 1 606D1A3D
 P 1100 6500
 F 0 "SW2" H 1100 6885 50  0000 C CNN
 F 1 "SW_MEC_5E" H 1100 6794 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 1100 6800 50  0001 C CNN
+F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 1100 6800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 1100 6800 50  0001 C CNN
 	1    1100 6500
 	1    0    0    -1  
@@ -296,7 +296,7 @@ U 1 1 606D3527
 P 1100 7200
 F 0 "SW3" H 1100 7585 50  0000 C CNN
 F 1 "SW_MEC_5E" H 1100 7494 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 1100 7500 50  0001 C CNN
+F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 1100 7500 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 1100 7500 50  0001 C CNN
 	1    1100 7200
 	1    0    0    -1  
@@ -1008,7 +1008,7 @@ U 1 1 60A32575
 P 4150 900
 F 0 "SW5" H 4150 1285 50  0000 C CNN
 F 1 "SW_MEC_5E" H 4150 1194 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 4150 1200 50  0001 C CNN
+F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 4150 1200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 4150 1200 50  0001 C CNN
 	1    4150 900 
 	1    0    0    -1  
@@ -1043,7 +1043,7 @@ U 1 1 60A76337
 P 2050 3950
 F 0 "SW4" H 2050 4335 50  0000 C CNN
 F 1 "SW_MEC_5E" H 2050 4244 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 2050 4250 50  0001 C CNN
+F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 2050 4250 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 2050 4250 50  0001 C CNN
 	1    2050 3950
 	1    0    0    -1  
@@ -1093,8 +1093,6 @@ Text GLabel 3900 4200 0    50   Output ~ 0
 UART_RX
 Text GLabel 3900 4300 0    50   Input ~ 0
 UART_TX
-Text GLabel 3900 4400 0    50   Input ~ 0
-SPI_MISO
 Text GLabel 3900 4500 0    50   Output ~ 0
 SPI_MOSI
 Text GLabel 3900 4600 0    50   Output ~ 0
@@ -1577,4 +1575,6 @@ Wire Wire Line
 	7850 5400 7600 5400
 Text Notes 8200 3100 0    39   ~ 0
 This symbol looks gross.\nMight endup changing it.
+Text GLabel 3900 4400 0    50   Input ~ 0
+SPI_MISO
 $EndSCHEMATC
