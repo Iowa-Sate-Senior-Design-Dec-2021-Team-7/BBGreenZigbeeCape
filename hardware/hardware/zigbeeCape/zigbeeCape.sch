@@ -807,7 +807,7 @@ S 4000 3750 800  1400
 U 6087B849
 F0 "BeagleBone_Headers" 50
 F1 "BeagleBone_Headers.sch" 50
-F2 "BeagleBone_Reset" I L 4000 3850 50 
+F2 "BeagleBone_Reset" I R 4800 3850 50 
 F3 "LAN_Heartbeat" O L 4000 3950 50 
 F4 "SPI_MISO" I L 4000 4400 50 
 F5 "SPI_MOSI" O L 4000 4500 50 
