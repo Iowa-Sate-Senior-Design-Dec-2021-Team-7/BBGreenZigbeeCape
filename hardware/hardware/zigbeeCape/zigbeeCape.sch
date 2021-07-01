@@ -802,23 +802,6 @@ F4 "RX_TX" O L 8000 2450 50
 F5 "2_4_GHZ_RF_N" I L 8000 1900 50 
 F6 "2_4_GHZ_RF_P" I L 8000 1750 50 
 $EndSheet
-$Sheet
-S 4000 3750 800  1400
-U 6087B849
-F0 "BeagleBone_Headers" 50
-F1 "BeagleBone_Headers.sch" 50
-F2 "BeagleBone_Reset" I R 4800 3850 50 
-F3 "LAN_Heartbeat" O L 4000 3950 50 
-F4 "SPI_MISO" I L 4000 4400 50 
-F5 "SPI_MOSI" O L 4000 4500 50 
-F6 "SPI_CS" O L 4000 4600 50 
-F7 "Network_Connect" I L 4000 4050 50 
-F8 "UART_RX" O L 4000 4200 50 
-F9 "UART_TX" I L 4000 4300 50 
-F10 "SPI_CLK" O L 4000 4700 50 
-F11 "I2C2_SCL" O L 4000 4800 50 
-F12 "I2C2_SDA" B L 4000 4900 50 
-$EndSheet
 Wire Wire Line
 	7900 1850 7900 1900
 Wire Wire Line
@@ -1113,17 +1096,17 @@ Wire Wire Line
 	4000 4300 3900 4300
 Wire Wire Line
 	3900 4200 4000 4200
-Text GLabel 7650 4900 0    50   Input ~ 0
+Text GLabel 7450 5600 0    50   Input ~ 0
 UART_RX
-Text GLabel 7600 5000 0    50   Output ~ 0
+Text GLabel 7450 5500 0    50   Output ~ 0
 UART_TX
-Text GLabel 7600 5100 0    50   Output ~ 0
+Text GLabel 7450 5400 0    50   Output ~ 0
 SPI_MISO
-Text GLabel 7600 5200 0    50   Input ~ 0
+Text GLabel 7450 4900 0    50   Input ~ 0
 SPI_MOSI
-Text GLabel 7600 5300 0    50   Input ~ 0
+Text GLabel 7450 5000 0    50   Input ~ 0
 SPI_CS
-Text GLabel 7600 5400 0    50   Input ~ 0
+Text GLabel 7450 5300 0    50   Input ~ 0
 SPI_CLK
 Text Notes 2900 3400 0    50   ~ 0
 Place capacitors close to refered pin. 22uf and 0.1uf on pin 34
@@ -1138,39 +1121,39 @@ Wire Wire Line
 $Comp
 L Device:R R19
 U 1 1 608B8299
-P 6950 5200
-F 0 "R19" H 7020 5246 50  0000 L CNN
-F 1 "4.7k" H 7020 5155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6880 5200 50  0001 C CNN
-F 3 "~" H 6950 5200 50  0001 C CNN
-	1    6950 5200
+P 6950 4700
+F 0 "R19" H 7020 4746 50  0000 L CNN
+F 1 "4.7k" H 7020 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6880 4700 50  0001 C CNN
+F 3 "~" H 6950 4700 50  0001 C CNN
+	1    6950 4700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R17
 U 1 1 608B8AB3
-P 6600 5200
-F 0 "R17" H 6670 5246 50  0000 L CNN
-F 1 "4.7k" H 6670 5155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6530 5200 50  0001 C CNN
-F 3 "~" H 6600 5200 50  0001 C CNN
-	1    6600 5200
+P 6600 4700
+F 0 "R17" H 6670 4746 50  0000 L CNN
+F 1 "4.7k" H 6670 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6530 4700 50  0001 C CNN
+F 3 "~" H 6600 4700 50  0001 C CNN
+	1    6600 4700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR028
 U 1 1 608BA24C
-P 6600 4900
-F 0 "#PWR028" H 6600 4750 50  0001 C CNN
-F 1 "+3.3V" H 6615 5073 50  0000 C CNN
-F 2 "" H 6600 4900 50  0001 C CNN
-F 3 "" H 6600 4900 50  0001 C CNN
-	1    6600 4900
+P 6600 4400
+F 0 "#PWR028" H 6600 4250 50  0001 C CNN
+F 1 "+3.3V" H 6615 4573 50  0000 C CNN
+F 2 "" H 6600 4400 50  0001 C CNN
+F 3 "" H 6600 4400 50  0001 C CNN
+	1    6600 4400
 	1    0    0    -1  
 $EndComp
-Text GLabel 6500 5500 0    50   Input ~ 0
+Text GLabel 6500 5200 0    50   Input ~ 0
 I2C2_SCL
-Text GLabel 6500 5600 0    50   BiDi ~ 0
+Text GLabel 6500 5100 0    50   BiDi ~ 0
 I2C2_SDA
 $Comp
 L power:GND #PWR014
@@ -1197,7 +1180,7 @@ $EndComp
 Wire Wire Line
 	4900 900  4900 1000
 Connection ~ 4900 900 
-Text GLabel 9600 5450 2    50   Output ~ 0
+Text GLabel 9650 5150 2    50   Output ~ 0
 Cape_HeartBeat
 $Comp
 L power:+3.3V #PWR010
@@ -1504,18 +1487,6 @@ Wire Wire Line
 Wire Wire Line
 	7850 3750 7850 3700
 Connection ~ 7850 3750
-Wire Wire Line
-	7650 4900 7850 4900
-Wire Wire Line
-	7850 5000 7600 5000
-Wire Wire Line
-	7600 5100 7850 5100
-Wire Wire Line
-	7850 5200 7600 5200
-Wire Wire Line
-	7600 5300 7850 5300
-Wire Wire Line
-	7850 5400 7600 5400
 Text Notes 8200 3100 0    39   ~ 0
 This symbol looks gross.\nMight endup changing it.
 Text GLabel 3900 4400 0    50   Input ~ 0
@@ -1541,40 +1512,68 @@ Wire Wire Line
 Wire Wire Line
 	7850 5700 7450 5700
 Wire Wire Line
-	7850 5600 6950 5600
+	6950 4550 6950 4450
 Wire Wire Line
-	6500 5500 6600 5500
+	6950 4450 6600 4450
 Wire Wire Line
-	6950 5350 6950 5600
-Connection ~ 6950 5600
+	6600 4450 6600 4400
 Wire Wire Line
-	6950 5600 6500 5600
-Wire Wire Line
-	6600 5500 6600 5350
-Connection ~ 6600 5500
-Wire Wire Line
-	6600 5500 7850 5500
-Wire Wire Line
-	6950 5050 6950 4950
-Wire Wire Line
-	6950 4950 6600 4950
-Wire Wire Line
-	6600 4950 6600 4900
-Wire Wire Line
-	6600 5050 6600 4950
-Connection ~ 6600 4950
+	6600 4550 6600 4450
+Connection ~ 6600 4450
 Wire Wire Line
 	9200 4850 9600 4850
 Wire Wire Line
 	9600 4950 9200 4950
-Wire Wire Line
-	9200 5450 9600 5450
 NoConn ~ 9200 5050
-NoConn ~ 9200 5150
 NoConn ~ 9200 5250
 NoConn ~ 9200 5350
 Wire Wire Line
 	7450 6000 7850 6000
 Wire Wire Line
 	7850 6100 7450 6100
+Wire Wire Line
+	9200 5150 9650 5150
+Wire Wire Line
+	7450 5600 7850 5600
+Wire Wire Line
+	7450 5500 7850 5500
+Wire Wire Line
+	7450 5400 7850 5400
+Wire Wire Line
+	7450 5300 7850 5300
+Wire Wire Line
+	7450 5000 7850 5000
+Wire Wire Line
+	7450 4900 7850 4900
+Wire Wire Line
+	6500 5200 6600 5200
+Wire Wire Line
+	6500 5100 6950 5100
+Wire Wire Line
+	6950 4850 6950 5100
+Connection ~ 6950 5100
+Wire Wire Line
+	6950 5100 7850 5100
+Wire Wire Line
+	6600 4850 6600 5200
+Connection ~ 6600 5200
+Wire Wire Line
+	6600 5200 7850 5200
+$Sheet
+S 4000 3750 800  1400
+U 6087B849
+F0 "BeagleBone_Headers" 50
+F1 "BeagleBone_Headers.sch" 50
+F2 "BeagleBone_Reset" I L 4000 3850 50 
+F3 "LAN_Heartbeat" O L 4000 3950 50 
+F4 "SPI_MISO" I L 4000 4400 50 
+F5 "SPI_MOSI" O L 4000 4500 50 
+F6 "SPI_CS" O L 4000 4600 50 
+F7 "Network_Connect" I L 4000 4050 50 
+F8 "UART_RX" O L 4000 4200 50 
+F9 "UART_TX" I L 4000 4300 50 
+F10 "SPI_CLK" O L 4000 4700 50 
+F11 "I2C2_SCL" O L 4000 4800 50 
+F12 "I2C2_SDA" B L 4000 4900 50 
+$EndSheet
 $EndSCHEMATC

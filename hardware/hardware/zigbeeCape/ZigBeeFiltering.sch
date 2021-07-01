@@ -612,35 +612,6 @@ F 3 "" H 7400 3650 50  0001 C CNN
 	1    7400 3650
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR043
-U 1 1 608A9A63
-P 8200 3650
-F 0 "#PWR043" H 8200 3400 50  0001 C CNN
-F 1 "GND" H 8205 3477 50  0000 C CNN
-F 2 "" H 8200 3650 50  0001 C CNN
-F 3 "" H 8200 3650 50  0001 C CNN
-	1    8200 3650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7500 3600 7400 3600
-Wire Wire Line
-	7400 3600 7400 3650
-Wire Wire Line
-	7400 3600 7400 3500
-Wire Wire Line
-	7400 3500 7500 3500
-Connection ~ 7400 3600
-Wire Wire Line
-	8100 3500 8200 3500
-Wire Wire Line
-	8200 3500 8200 3600
-Wire Wire Line
-	8100 3600 8200 3600
-Connection ~ 8200 3600
-Wire Wire Line
-	8200 3600 8200 3650
 Wire Wire Line
 	7900 4250 8050 4250
 Wire Wire Line
@@ -772,4 +743,8 @@ Wire Wire Line
 Wire Wire Line
 	6800 4250 7150 4250
 Connection ~ 7150 4250
+Wire Wire Line
+	7400 3650 7400 3550
+Wire Wire Line
+	7400 3550 7500 3550
 $EndSCHEMATC
