@@ -531,72 +531,6 @@ Wire Wire Line
 	3700 3650 3700 3750
 Wire Wire Line
 	4550 3650 4550 3750
-$Comp
-L Device:C C31
-U 1 1 608925A4
-P 7750 4250
-F 0 "C31" V 7498 4250 50  0000 C CNN
-F 1 "100pF" V 7589 4250 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7788 4100 50  0001 C CNN
-F 3 "~" H 7750 4250 50  0001 C CNN
-	1    7750 4250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C30
-U 1 1 60892E78
-P 7150 3950
-F 0 "C30" H 7265 3996 50  0000 L CNN
-F 1 "DNM" H 7265 3905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7188 3800 50  0001 C CNN
-F 3 "~" H 7150 3950 50  0001 C CNN
-	1    7150 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:L L13
-U 1 1 6089332B
-P 8200 4250
-F 0 "L13" V 8390 4250 50  0000 C CNN
-F 1 "3.3nH" V 8299 4250 50  0000 C CNN
-F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 8200 4250 50  0001 C CNN
-F 3 "~" H 8200 4250 50  0001 C CNN
-	1    8200 4250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:L L14
-U 1 1 6089391E
-P 9000 4500
-F 0 "L14" H 9052 4546 50  0000 L CNN
-F 1 "DNM" H 9052 4455 50  0000 L CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 9000 4500 50  0001 C CNN
-F 3 "~" H 9000 4500 50  0001 C CNN
-	1    9000 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C32
-U 1 1 608951FF
-P 8550 4500
-F 0 "C32" H 8665 4546 50  0000 L CNN
-F 1 "DNM" H 8665 4455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8588 4350 50  0001 C CNN
-F 3 "~" H 8550 4500 50  0001 C CNN
-	1    8550 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C33
-U 1 1 608A5A12
-P 9300 4250
-F 0 "C33" V 9552 4250 50  0000 C CNN
-F 1 "5.6pF" V 9461 4250 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 9338 4100 50  0001 C CNN
-F 3 "~" H 9300 4250 50  0001 C CNN
-	1    9300 4250
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	7150 3800 7150 3350
 Wire Wire Line
@@ -612,65 +546,6 @@ F 3 "" H 7400 3650 50  0001 C CNN
 	1    7400 3650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7900 4250 8050 4250
-Wire Wire Line
-	8350 4250 8550 4250
-Wire Wire Line
-	8550 4250 8550 4350
-Wire Wire Line
-	8550 4250 9000 4250
-Wire Wire Line
-	9000 4250 9000 4350
-Connection ~ 8550 4250
-Wire Wire Line
-	9000 4250 9150 4250
-Connection ~ 9000 4250
-$Comp
-L power:GND #PWR044
-U 1 1 608BE07F
-P 8550 4750
-F 0 "#PWR044" H 8550 4500 50  0001 C CNN
-F 1 "GND" H 8555 4577 50  0000 C CNN
-F 2 "" H 8550 4750 50  0001 C CNN
-F 3 "" H 8550 4750 50  0001 C CNN
-	1    8550 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR045
-U 1 1 608C0318
-P 9000 4750
-F 0 "#PWR045" H 9000 4500 50  0001 C CNN
-F 1 "GND" H 9005 4577 50  0000 C CNN
-F 2 "" H 9000 4750 50  0001 C CNN
-F 3 "" H 9000 4750 50  0001 C CNN
-	1    9000 4750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 4650 8550 4750
-Wire Wire Line
-	9000 4650 9000 4750
-$Comp
-L Device:Antenna AE1
-U 1 1 608C74F4
-P 9700 4000
-F 0 "AE1" H 9780 3989 50  0000 L CNN
-F 1 "Antenna" H 9780 3898 50  0000 L CNN
-F 2 "" H 9700 4000 50  0001 C CNN
-F 3 "~" H 9700 4000 50  0001 C CNN
-	1    9700 4000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9450 4250 9700 4250
-Wire Wire Line
-	9700 4250 9700 4200
-Text Notes 8350 5100 0    50   ~ 0
-Last 2 caps and inductor are for Antenna matching\n
-Wire Wire Line
-	7150 4250 7600 4250
 Wire Wire Line
 	7150 4100 7150 4250
 Text Notes 4450 2750 0    50   ~ 0
@@ -742,9 +617,25 @@ Wire Wire Line
 	5850 4300 5850 4400
 Wire Wire Line
 	6800 4250 7150 4250
-Connection ~ 7150 4250
 Wire Wire Line
 	7400 3650 7400 3550
 Wire Wire Line
 	7400 3550 7500 3550
+$Comp
+L Device:C C31
+U 1 1 608925A4
+P 7150 3950
+F 0 "C31" V 6898 3950 50  0000 C CNN
+F 1 "100pF" V 6989 3950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7188 3800 50  0001 C CNN
+F 3 "~" H 7150 3950 50  0001 C CNN
+	1    7150 3950
+	-1   0    0    1   
+$EndComp
+Text Notes 7550 3950 0    50   ~ 0
+I am not sure if C31 is correct.
+Text Notes 7250 4450 0    50   ~ 0
+Removed PCB antenna due to design complications
+Text Notes 7300 4150 0    50   ~ 0
+Need to check demo board BOM for C31
 $EndSCHEMATC
