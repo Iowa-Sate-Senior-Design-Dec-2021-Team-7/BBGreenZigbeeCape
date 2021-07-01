@@ -1138,69 +1138,40 @@ Wire Wire Line
 $Comp
 L Device:R R19
 U 1 1 608B8299
-P 7550 5750
-F 0 "R19" H 7620 5796 50  0000 L CNN
-F 1 "4.7k" H 7620 5705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7480 5750 50  0001 C CNN
-F 3 "~" H 7550 5750 50  0001 C CNN
-	1    7550 5750
+P 6950 5200
+F 0 "R19" H 7020 5246 50  0000 L CNN
+F 1 "4.7k" H 7020 5155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6880 5200 50  0001 C CNN
+F 3 "~" H 6950 5200 50  0001 C CNN
+	1    6950 5200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R17
 U 1 1 608B8AB3
-P 7250 5750
-F 0 "R17" H 7320 5796 50  0000 L CNN
-F 1 "4.7k" H 7320 5705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7180 5750 50  0001 C CNN
-F 3 "~" H 7250 5750 50  0001 C CNN
-	1    7250 5750
+P 6600 5200
+F 0 "R17" H 6670 5246 50  0000 L CNN
+F 1 "4.7k" H 6670 5155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6530 5200 50  0001 C CNN
+F 3 "~" H 6600 5200 50  0001 C CNN
+	1    6600 5200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR028
 U 1 1 608BA24C
-P 7050 5650
-F 0 "#PWR028" H 7050 5500 50  0001 C CNN
-F 1 "+3.3V" H 7065 5823 50  0000 C CNN
-F 2 "" H 7050 5650 50  0001 C CNN
-F 3 "" H 7050 5650 50  0001 C CNN
-	1    7050 5650
+P 6600 4900
+F 0 "#PWR028" H 6600 4750 50  0001 C CNN
+F 1 "+3.3V" H 6615 5073 50  0000 C CNN
+F 2 "" H 6600 4900 50  0001 C CNN
+F 3 "" H 6600 4900 50  0001 C CNN
+	1    6600 4900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7550 5600 7550 5550
-Wire Wire Line
-	7550 5550 7250 5550
-Wire Wire Line
-	7250 5550 7250 5600
-Wire Wire Line
-	7250 5550 7150 5550
-Wire Wire Line
-	7150 5550 7150 5700
-Wire Wire Line
-	7150 5700 7050 5700
-Wire Wire Line
-	7050 5700 7050 5650
-Connection ~ 7250 5550
-Wire Wire Line
-	7850 6000 7550 6000
-Wire Wire Line
-	7550 6000 7550 5900
-Wire Wire Line
-	7850 6100 7250 6100
-Wire Wire Line
-	7250 6100 7250 5900
-Text GLabel 7100 6000 0    50   Input ~ 0
+Text GLabel 6500 5500 0    50   Input ~ 0
 I2C2_SCL
-Text GLabel 7100 6100 0    50   BiDi ~ 0
+Text GLabel 6500 5600 0    50   BiDi ~ 0
 I2C2_SDA
-Wire Wire Line
-	7550 6000 7100 6000
-Connection ~ 7550 6000
-Wire Wire Line
-	7250 6100 7100 6100
-Connection ~ 7250 6100
 $Comp
 L power:GND #PWR014
 U 1 1 609261BE
@@ -1226,30 +1197,8 @@ $EndComp
 Wire Wire Line
 	4900 900  4900 1000
 Connection ~ 4900 900 
-Text GLabel 9600 4850 2    50   Input ~ 0
-ZigBee_Connect
-Text GLabel 9600 4950 2    50   Input ~ 0
-Check_Error
-Text GLabel 9600 5050 2    50   Output ~ 0
-ZigBee_HeartBeat
-Text GLabel 9600 5150 2    50   Output ~ 0
+Text GLabel 9600 5450 2    50   Output ~ 0
 Cape_HeartBeat
-Text GLabel 9600 5250 2    50   Output ~ 0
-Aux_2
-Text GLabel 9600 5350 2    50   Output ~ 0
-Aux_1
-Wire Wire Line
-	9600 5350 9200 5350
-Wire Wire Line
-	9600 5250 9200 5250
-Wire Wire Line
-	9600 5150 9200 5150
-Wire Wire Line
-	9600 5050 9200 5050
-Wire Wire Line
-	9600 4950 9200 4950
-Wire Wire Line
-	9600 4850 9200 4850
 $Comp
 L power:+3.3V #PWR010
 U 1 1 608FC7C3
@@ -1470,18 +1419,12 @@ F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresigh
 	1    2050 1450
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9200 5450
 NoConn ~ 9200 5550
 NoConn ~ 9200 5700
 NoConn ~ 9200 5800
 NoConn ~ 9200 5900
 NoConn ~ 9200 6000
 NoConn ~ 9200 6100
-NoConn ~ 7850 5500
-NoConn ~ 7850 5600
-NoConn ~ 7850 5700
-NoConn ~ 7850 5800
-NoConn ~ 7850 5900
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 60E5191E
@@ -1577,4 +1520,61 @@ Text Notes 8200 3100 0    39   ~ 0
 This symbol looks gross.\nMight endup changing it.
 Text GLabel 3900 4400 0    50   Input ~ 0
 SPI_MISO
+Text GLabel 9600 4950 2    50   Input ~ 0
+Network_Connect
+Text GLabel 9600 4850 2    50   Output ~ 0
+Lan_HeartBeat
+Text GLabel 7450 6100 0    50   Input ~ 0
+ZigBee_Connect
+Text GLabel 7450 6000 0    50   Output ~ 0
+ZigBee_HeartBeat
+Text GLabel 7450 5700 0    50   Input ~ 0
+Aux_1
+Text GLabel 7450 5800 0    50   Output ~ 0
+Aux_2
+Text GLabel 7450 5900 0    50   Input ~ 0
+Check_Error
+Wire Wire Line
+	7850 5900 7450 5900
+Wire Wire Line
+	7450 5800 7850 5800
+Wire Wire Line
+	7850 5700 7450 5700
+Wire Wire Line
+	7850 5600 6950 5600
+Wire Wire Line
+	6500 5500 6600 5500
+Wire Wire Line
+	6950 5350 6950 5600
+Connection ~ 6950 5600
+Wire Wire Line
+	6950 5600 6500 5600
+Wire Wire Line
+	6600 5500 6600 5350
+Connection ~ 6600 5500
+Wire Wire Line
+	6600 5500 7850 5500
+Wire Wire Line
+	6950 5050 6950 4950
+Wire Wire Line
+	6950 4950 6600 4950
+Wire Wire Line
+	6600 4950 6600 4900
+Wire Wire Line
+	6600 5050 6600 4950
+Connection ~ 6600 4950
+Wire Wire Line
+	9200 4850 9600 4850
+Wire Wire Line
+	9600 4950 9200 4950
+Wire Wire Line
+	9200 5450 9600 5450
+NoConn ~ 9200 5050
+NoConn ~ 9200 5150
+NoConn ~ 9200 5250
+NoConn ~ 9200 5350
+Wire Wire Line
+	7450 6000 7850 6000
+Wire Wire Line
+	7850 6100 7450 6100
 $EndSCHEMATC
