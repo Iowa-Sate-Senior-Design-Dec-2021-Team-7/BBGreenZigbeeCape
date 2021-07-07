@@ -1491,10 +1491,6 @@ Text Notes 8200 3100 0    39   ~ 0
 This symbol looks gross.\nMight endup changing it.
 Text GLabel 3900 4400 0    50   Input ~ 0
 SPI_MISO
-Text GLabel 9600 4950 2    50   Input ~ 0
-Network_Connect
-Text GLabel 9600 4850 2    50   Output ~ 0
-Lan_HeartBeat
 Text GLabel 7450 6100 0    50   Input ~ 0
 ZigBee_Connect
 Text GLabel 7450 6000 0    50   Output ~ 0
@@ -1520,10 +1516,6 @@ Wire Wire Line
 Wire Wire Line
 	6600 4550 6600 4450
 Connection ~ 6600 4450
-Wire Wire Line
-	9200 4850 9600 4850
-Wire Wire Line
-	9600 4950 9200 4950
 NoConn ~ 9200 5050
 NoConn ~ 9200 5250
 NoConn ~ 9200 5350
@@ -1576,4 +1568,7 @@ F10 "SPI_CLK" O L 4000 4700 50
 F11 "I2C2_SCL" O L 4000 4800 50 
 F12 "I2C2_SDA" B L 4000 4900 50 
 $EndSheet
+NoConn ~ 9200 4950
+NoConn ~ 9200 4850
+NoConn ~ 9200 5450
 $EndSCHEMATC
