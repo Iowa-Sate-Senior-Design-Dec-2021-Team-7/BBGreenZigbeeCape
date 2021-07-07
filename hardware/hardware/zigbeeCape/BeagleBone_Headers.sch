@@ -39,7 +39,7 @@ Text HLabel 5650 2250 0    50   Input ~ 0
 BeagleBone_Reset
 Text HLabel 7300 1550 2    50   Output ~ 0
 LAN_Heartbeat
-Text HLabel 7300 1650 2    50   Input ~ 0
+Text HLabel 7300 1950 2    50   Input ~ 0
 Network_Connect
 Text HLabel 5650 3650 0    50   Input ~ 0
 UART_TX
@@ -108,7 +108,6 @@ NoConn ~ 7100 2500
 NoConn ~ 7100 2400
 NoConn ~ 7100 1750
 NoConn ~ 7100 1850
-NoConn ~ 7100 1950
 NoConn ~ 7100 2050
 NoConn ~ 7100 2150
 NoConn ~ 7100 2300
@@ -220,8 +219,6 @@ Wire Wire Line
 Wire Wire Line
 	7250 3050 7100 3050
 Wire Wire Line
-	7100 1650 7300 1650
-Wire Wire Line
 	7100 1550 7300 1550
 Wire Wire Line
 	2250 1650 2050 1650
@@ -232,4 +229,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 1550 2050 1650
 Connection ~ 2050 1650
+Wire Wire Line
+	7100 1950 7300 1950
+NoConn ~ 7100 1650
 $EndSCHEMATC
