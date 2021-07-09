@@ -47,10 +47,10 @@ F 3 "" H 2650 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_MEC_5E SW1
+L Switch:SW_MEC_5E SW3
 U 1 1 606B9FBA
 P 1100 5800
-F 0 "SW1" H 1100 6185 50  0000 C CNN
+F 0 "SW3" H 1100 6185 50  0000 C CNN
 F 1 "SW_MEC_5E" H 1100 6094 50  0000 C CNN
 F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 1100 6100 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 1100 6100 50  0001 C CNN
@@ -223,10 +223,10 @@ Wire Wire Line
 	750  5700 750  6100
 Connection ~ 850  5700
 $Comp
-L Switch:SW_MEC_5E SW2
+L Switch:SW_MEC_5E SW1
 U 1 1 606D1A3D
 P 1100 6500
-F 0 "SW2" H 1100 6885 50  0000 C CNN
+F 0 "SW1" H 1100 6885 50  0000 C CNN
 F 1 "SW_MEC_5E" H 1100 6794 50  0000 C CNN
 F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 1100 6800 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 1100 6800 50  0001 C CNN
@@ -291,10 +291,10 @@ Wire Wire Line
 	750  6400 750  6800
 Connection ~ 850  6400
 $Comp
-L Switch:SW_MEC_5E SW3
+L Switch:SW_MEC_5E SW2
 U 1 1 606D3527
 P 1100 7200
-F 0 "SW3" H 1100 7585 50  0000 C CNN
+F 0 "SW2" H 1100 7585 50  0000 C CNN
 F 1 "SW_MEC_5E" H 1100 7494 50  0000 C CNN
 F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 1100 7500 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 1100 7500 50  0001 C CNN
@@ -986,10 +986,10 @@ Connection ~ 3200 2150
 Wire Wire Line
 	3200 2150 3500 2150
 $Comp
-L Switch:SW_MEC_5E SW5
+L Switch:SW_MEC_5E SW4
 U 1 1 60A32575
 P 4150 900
-F 0 "SW5" H 4150 1285 50  0000 C CNN
+F 0 "SW4" H 4150 1285 50  0000 C CNN
 F 1 "SW_MEC_5E" H 4150 1194 50  0000 C CNN
 F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 4150 1200 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 4150 1200 50  0001 C CNN
@@ -1021,10 +1021,10 @@ Wire Wire Line
 Wire Wire Line
 	4900 800  4900 900 
 $Comp
-L Switch:SW_MEC_5E SW4
+L Switch:SW_MEC_5E SW5
 U 1 1 60A76337
 P 2050 3950
-F 0 "SW4" H 2050 4335 50  0000 C CNN
+F 0 "SW5" H 2050 4335 50  0000 C CNN
 F 1 "SW_MEC_5E" H 2050 4244 50  0000 C CNN
 F 2 "zigbeeCape:SMD_PUSH_BUTTON" H 2050 4250 50  0001 C CNN
 F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 2050 4250 50  0001 C CNN
@@ -1487,8 +1487,6 @@ Wire Wire Line
 Wire Wire Line
 	7850 3750 7850 3700
 Connection ~ 7850 3750
-Text Notes 8200 3100 0    39   ~ 0
-This symbol looks gross.\nMight endup changing it.
 Text GLabel 3900 4400 0    50   Input ~ 0
 SPI_MISO
 Text GLabel 7450 6100 0    50   Input ~ 0
@@ -1571,4 +1569,8 @@ $EndSheet
 NoConn ~ 9200 4950
 NoConn ~ 9200 4850
 NoConn ~ 9200 5450
+Text Notes 6450 650  0    50   ~ 0
+Caps could be closer
+Text Notes 5250 1300 0    50   ~ 0
+L1 &C11 -> pin 33\nC13 -> Pin 45\nC16 -> Pin 48
 $EndSCHEMATC

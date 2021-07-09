@@ -548,7 +548,7 @@ F 3 "" H 7400 3650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7150 4100 7150 4250
-Text Notes 4450 2750 0    50   ~ 0
+Text Notes 4400 2600 0    50   ~ 0
 Should we include P11 and P12?
 Text HLabel 2150 3000 0    50   Input ~ 0
 2_4_GHZ_RF_P
@@ -634,8 +634,12 @@ F 3 "~" H 7150 3950 50  0001 C CNN
 $EndComp
 Text Notes 7550 3950 0    50   ~ 0
 I am not sure if C31 is correct.
-Text Notes 7250 4450 0    50   ~ 0
+Text Notes 7300 4450 0    50   ~ 0
 Removed PCB antenna due to design complications
 Text Notes 7300 4150 0    50   ~ 0
 Need to check demo board BOM for C31
+Text Notes 7300 4250 0    50   ~ 0
+Demo board doesn't help, 90% sure this is correct
+Text Notes 4400 2700 0    50   ~ 0
+Plenty of room.  I will add them
 $EndSCHEMATC
