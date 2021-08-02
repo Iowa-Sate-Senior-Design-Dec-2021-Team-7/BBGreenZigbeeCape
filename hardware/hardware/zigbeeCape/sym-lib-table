@@ -204,4 +204,5 @@
   (lib (name Video)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/kicad-symbols-master/Video.lib)(options "")(descr ""))
   (lib (name BeagleBone)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/user-symbols/BeagleBone.lib)(options "")(descr ""))
   (lib (name Zigbee)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/user-symbols/Zigbee.lib)(options "")(descr ""))
+  (lib (name zigbeeCape-rescue)(type Legacy)(uri ${KIPRJMOD}/zigbeeCape-rescue.lib)(options "")(descr ""))
 )
