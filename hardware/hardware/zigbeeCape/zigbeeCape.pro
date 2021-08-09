@@ -1,4 +1,4 @@
-update=8/8/2021 2:55:05 PM
+update=8/8/2021 7:20:26 PM
 version=1
 last_client=kicad
 [general]
@@ -41,7 +41,8 @@ MinHoleToHole=0.25
 TrackWidth1=0.254
 TrackWidth2=0.1524
 TrackWidth3=0.254
-TrackWidth4=0.508
+TrackWidth4=0.381
+TrackWidth5=0.508
 ViaDiameter1=0.5588
 ViaDrill1=0.3048
 ViaDiameter2=0.5588
@@ -244,7 +245,7 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.3175
+Clearance=0.254
 TrackWidth=0.254
 ViaDiameter=0.5588
 ViaDrill=0.3048
