@@ -20,7 +20,7 @@ P 8300 5550
 F 0 "U1" H 8525 6565 50  0000 C CNN
 F 1 "CC1352R" H 8525 6474 50  0000 C CNN
 F 2 "zigbeeCape:CC1352R" H 8900 6750 50  0001 C CNN
-F 3 "" H 8900 6750 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/CC1352P1F3RGZT/296-53598-1-ND/10273328" H 8900 6750 50  0001 C CNN
 	2    8300 5550
 	1    0    0    -1  
 $EndComp
@@ -31,7 +31,7 @@ P 5250 2500
 F 0 "U1" H 5700 3515 50  0000 C CNN
 F 1 "CC1352R" H 5700 3424 50  0000 C CNN
 F 2 "zigbeeCape:CC1352R" H 5850 3700 50  0001 C CNN
-F 3 "" H 5850 3700 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/CC1352P1F3RGZT/296-53598-1-ND/10273328" H 5850 3700 50  0001 C CNN
 	1    5250 2500
 	1    0    0    -1  
 $EndComp
@@ -64,7 +64,7 @@ P 5000 6800
 F 0 "D6" V 5039 6682 50  0000 R CNN
 F 1 "Green" V 4948 6682 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5000 6800 50  0001 C CNN
-F 3 "~" H 5000 6800 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/lumex-opto-components-inc/SML-LXFM0603SUGCTR/7364547?s=N4IgjCBcpgbFoDGUBmBDANgZwKYBoQB7KAbRAGYBOAJgBZ4BdAgBwBcoQBlVgJwEsAdgHMQAXwKxKCEMkjps%2BIqRC0ADJSrkQTEGw7d%2BwsQQCs1E9NnzcBYpDLkTYMCYAc2lu0hdegkePBKVyloGVRMGyV7EFUPXS8fQ38CAFpqSyheAFdFOzILBlEioA" H 5000 6800 50  0001 C CNN
 	1    5000 6800
 	0    -1   -1   0   
 $EndComp
@@ -75,7 +75,7 @@ P 4300 6800
 F 0 "D4" V 4339 6682 50  0000 R CNN
 F 1 "Blue" V 4248 6682 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4300 6800 50  0001 C CNN
-F 3 "~" H 4300 6800 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321" H 4300 6800 50  0001 C CNN
 	1    4300 6800
 	0    -1   -1   0   
 $EndComp
@@ -86,7 +86,7 @@ P 3950 6800
 F 0 "D3" V 3989 6682 50  0000 R CNN
 F 1 "Blue" V 3898 6682 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3950 6800 50  0001 C CNN
-F 3 "~" H 3950 6800 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321" H 3950 6800 50  0001 C CNN
 	1    3950 6800
 	0    -1   -1   0   
 $EndComp
@@ -97,7 +97,7 @@ P 3600 6800
 F 0 "D2" V 3639 6682 50  0000 R CNN
 F 1 "Blue" V 3548 6682 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3600 6800 50  0001 C CNN
-F 3 "~" H 3600 6800 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321" H 3600 6800 50  0001 C CNN
 	1    3600 6800
 	0    -1   -1   0   
 $EndComp
@@ -108,7 +108,7 @@ P 4650 6800
 F 0 "D5" V 4689 6682 50  0000 R CNN
 F 1 "Blue" V 4598 6682 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4650 6800 50  0001 C CNN
-F 3 "~" H 4650 6800 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321" H 4650 6800 50  0001 C CNN
 	1    4650 6800
 	0    -1   -1   0   
 $EndComp
@@ -119,7 +119,7 @@ P 3600 7200
 F 0 "R8" H 3670 7246 50  0000 L CNN
 F 1 "1k" H 3670 7155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3530 7200 50  0001 C CNN
-F 3 "~" H 3600 7200 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077" H 3600 7200 50  0001 C CNN
 	1    3600 7200
 	1    0    0    -1  
 $EndComp
@@ -130,7 +130,7 @@ P 3950 7200
 F 0 "R9" H 4020 7246 50  0000 L CNN
 F 1 "1k" H 4020 7155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3880 7200 50  0001 C CNN
-F 3 "~" H 3950 7200 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077" H 3950 7200 50  0001 C CNN
 	1    3950 7200
 	1    0    0    -1  
 $EndComp
@@ -141,7 +141,7 @@ P 4300 7200
 F 0 "R10" H 4370 7246 50  0000 L CNN
 F 1 "1k" H 4370 7155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4230 7200 50  0001 C CNN
-F 3 "~" H 4300 7200 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077" H 4300 7200 50  0001 C CNN
 	1    4300 7200
 	1    0    0    -1  
 $EndComp
@@ -152,7 +152,7 @@ P 4650 7200
 F 0 "R11" H 4720 7246 50  0000 L CNN
 F 1 "1k" H 4720 7155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4580 7200 50  0001 C CNN
-F 3 "~" H 4650 7200 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077" H 4650 7200 50  0001 C CNN
 	1    4650 7200
 	1    0    0    -1  
 $EndComp
@@ -163,7 +163,7 @@ P 5000 7200
 F 0 "R12" H 5070 7246 50  0000 L CNN
 F 1 "1k" H 5070 7155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4930 7200 50  0001 C CNN
-F 3 "~" H 5000 7200 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077" H 5000 7200 50  0001 C CNN
 	1    5000 7200
 	1    0    0    -1  
 $EndComp
@@ -174,7 +174,7 @@ P 1650 5900
 F 0 "C1" H 1765 5946 50  0000 L CNN
 F 1 "DNM_1uF" H 1765 5855 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1688 5750 50  0001 C CNN
-F 3 "~" H 1650 5900 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KA8NNNC/3886842" H 1650 5900 50  0001 C CNN
 	1    1650 5900
 	1    0    0    -1  
 $EndComp
@@ -240,7 +240,7 @@ P 1650 6600
 F 0 "C2" H 1765 6646 50  0000 L CNN
 F 1 "DNM_1uF" H 1765 6555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1688 6450 50  0001 C CNN
-F 3 "~" H 1650 6600 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KA8NNNC/3886842" H 1650 6600 50  0001 C CNN
 	1    1650 6600
 	1    0    0    -1  
 $EndComp
@@ -308,7 +308,7 @@ P 1650 7300
 F 0 "C3" H 1765 7346 50  0000 L CNN
 F 1 "DNM_1uF" H 1765 7255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1688 7150 50  0001 C CNN
-F 3 "~" H 1650 7300 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KA8NNNC/3886842" H 1650 7300 50  0001 C CNN
 	1    1650 7300
 	1    0    0    -1  
 $EndComp
@@ -480,7 +480,7 @@ P 3250 6800
 F 0 "D1" V 3289 6682 50  0000 R CNN
 F 1 "Blue" V 3198 6682 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3250 6800 50  0001 C CNN
-F 3 "~" H 3250 6800 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321" H 3250 6800 50  0001 C CNN
 	1    3250 6800
 	0    -1   -1   0   
 $EndComp
@@ -491,7 +491,7 @@ P 3250 7200
 F 0 "R6" H 3320 7246 50  0000 L CNN
 F 1 "1k" H 3320 7155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3180 7200 50  0001 C CNN
-F 3 "~" H 3250 7200 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077" H 3250 7200 50  0001 C CNN
 	1    3250 7200
 	1    0    0    -1  
 $EndComp
@@ -556,7 +556,7 @@ P 4450 2950
 F 0 "C10" H 4565 2996 50  0000 L CNN
 F 1 "22uF" H 4565 2905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4488 2800 50  0001 C CNN
-F 3 "~" H 4450 2950 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J226MEA0D/4280542?s=N4IgTCBcDaIOICUCyBGAHGhA2ADAKTDCyQFEBBHAERAF0BfIA" H 4450 2950 50  0001 C CNN
 	1    4450 2950
 	1    0    0    -1  
 $EndComp
@@ -567,7 +567,7 @@ P 4000 2950
 F 0 "C9" H 4115 2996 50  0000 L CNN
 F 1 "0.1uF" H 4115 2905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4038 2800 50  0001 C CNN
-F 3 "~" H 4000 2950 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844" H 4000 2950 50  0001 C CNN
 	1    4000 2950
 	1    0    0    -1  
 $EndComp
@@ -578,7 +578,7 @@ P 3550 2950
 F 0 "C8" H 3665 2996 50  0000 L CNN
 F 1 "0.1uF" H 3665 2905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3588 2800 50  0001 C CNN
-F 3 "~" H 3550 2950 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844" H 3550 2950 50  0001 C CNN
 	1    3550 2950
 	1    0    0    -1  
 $EndComp
@@ -589,7 +589,7 @@ P 3100 2950
 F 0 "C6" H 3215 2996 50  0000 L CNN
 F 1 "0.1uF" H 3215 2905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3138 2800 50  0001 C CNN
-F 3 "~" H 3100 2950 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844" H 3100 2950 50  0001 C CNN
 	1    3100 2950
 	1    0    0    -1  
 $EndComp
@@ -600,7 +600,7 @@ P 2650 2950
 F 0 "C5" H 2765 2996 50  0000 L CNN
 F 1 "0.1uF" H 2765 2905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2688 2800 50  0001 C CNN
-F 3 "~" H 2650 2950 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844" H 2650 2950 50  0001 C CNN
 	1    2650 2950
 	1    0    0    -1  
 $EndComp
@@ -680,7 +680,7 @@ P 6950 3500
 F 0 "Y1" H 6950 3768 50  0000 C CNN
 F 1 "32.768kHz" H 6950 3677 50  0000 C CNN
 F 2 "zigbeeCape:FC-135_Crystal_Unit" H 6950 3500 50  0001 C CNN
-F 3 "~" H 6950 3500 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/micro-crystal-ag/CC5V-T1A-32-768KHZ-7PF-20PPM-TA-QC/10499236" H 6950 3500 50  0001 C CNN
 	1    6950 3500
 	1    0    0    -1  
 $EndComp
@@ -690,8 +690,8 @@ U 1 1 607D2CA6
 P 6700 3700
 F 0 "C12" H 6815 3746 50  0000 L CNN
 F 1 "12pF" H 6815 3655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6738 3550 50  0001 C CNN
-F 3 "~" H 6700 3700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 6738 3550 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H120JA01D/3693831?s=N4IgTCBcDaIOICUCyBGArBgwigEisADAFICCBKAIiALoC%2BQA" H 6700 3700 50  0001 C CNN
 	1    6700 3700
 	1    0    0    -1  
 $EndComp
@@ -701,8 +701,8 @@ U 1 1 607D7D8E
 P 7200 3700
 F 0 "C14" H 7315 3746 50  0000 L CNN
 F 1 "12pF" H 7315 3655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7238 3550 50  0001 C CNN
-F 3 "~" H 7200 3700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 7238 3550 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H120JA01D/3693831?s=N4IgTCBcDaIOICUCyBGArBgwigEisADAFICCBKAIiALoC%2BQA" H 7200 3700 50  0001 C CNN
 	1    7200 3700
 	1    0    0    -1  
 $EndComp
@@ -776,7 +776,7 @@ P 7300 2450
 F 0 "C15" H 7415 2496 50  0000 L CNN
 F 1 "1uF" H 7415 2405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7338 2300 50  0001 C CNN
-F 3 "~" H 7300 2450 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KA8NNNC/3886842" H 7300 2450 50  0001 C CNN
 	1    7300 2450
 	1    0    0    -1  
 $EndComp
@@ -845,7 +845,7 @@ P 2600 1850
 F 0 "R2" H 2670 1896 50  0000 L CNN
 F 1 "10K" H 2670 1805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2530 1850 50  0001 C CNN
-F 3 "~" H 2600 1850 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 2600 1850 50  0001 C CNN
 	1    2600 1850
 	1    0    0    -1  
 $EndComp
@@ -856,7 +856,7 @@ P 2900 1850
 F 0 "R4" H 2970 1896 50  0000 L CNN
 F 1 "10K" H 2970 1805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2830 1850 50  0001 C CNN
-F 3 "~" H 2900 1850 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 2900 1850 50  0001 C CNN
 	1    2900 1850
 	1    0    0    -1  
 $EndComp
@@ -867,7 +867,7 @@ P 3200 1850
 F 0 "R5" H 3270 1896 50  0000 L CNN
 F 1 "10K" H 3270 1805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3130 1850 50  0001 C CNN
-F 3 "~" H 3200 1850 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 3200 1850 50  0001 C CNN
 	1    3200 1850
 	1    0    0    -1  
 $EndComp
@@ -878,7 +878,7 @@ P 3500 1850
 F 0 "R7" H 3570 1896 50  0000 L CNN
 F 1 "10K" H 3570 1805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3430 1850 50  0001 C CNN
-F 3 "~" H 3500 1850 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 3500 1850 50  0001 C CNN
 	1    3500 1850
 	1    0    0    -1  
 $EndComp
@@ -887,9 +887,9 @@ L Device:R R3
 U 1 1 6089DCA1
 P 2850 750
 F 0 "R3" V 2643 750 50  0000 C CNN
-F 1 "DNM_10K" V 2750 750 50  0000 C CNN
+F 1 "DNM_10k" V 2750 750 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2780 750 50  0001 C CNN
-F 3 "~" H 2850 750 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 2850 750 50  0001 C CNN
 	1    2850 750 
 	0    1    1    0   
 $EndComp
@@ -1038,7 +1038,7 @@ P 2600 4050
 F 0 "C4" H 2715 4096 50  0000 L CNN
 F 1 "DNM_2.2uF" H 2715 4005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2638 3900 50  0001 C CNN
-F 3 "~" H 2600 4050 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A225KP8NNNC/3886743" H 2600 4050 50  0001 C CNN
 	1    2600 4050
 	1    0    0    -1  
 $EndComp
@@ -1125,7 +1125,7 @@ P 6950 4700
 F 0 "R19" H 7020 4746 50  0000 L CNN
 F 1 "4.7k" H 7020 4655 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6880 4700 50  0001 C CNN
-F 3 "~" H 6950 4700 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT4K70/1760998" H 6950 4700 50  0001 C CNN
 	1    6950 4700
 	1    0    0    -1  
 $EndComp
@@ -1136,7 +1136,7 @@ P 6600 4700
 F 0 "R17" H 6670 4746 50  0000 L CNN
 F 1 "4.7k" H 6670 4655 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6530 4700 50  0001 C CNN
-F 3 "~" H 6600 4700 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT4K70/1760998" H 6600 4700 50  0001 C CNN
 	1    6600 4700
 	1    0    0    -1  
 $EndComp
@@ -1210,7 +1210,7 @@ P 3300 950
 F 0 "C7" H 3415 996 50  0000 L CNN
 F 1 "2.2uF" H 3415 905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3338 800 50  0001 C CNN
-F 3 "~" H 3300 950 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A225KP8NNNC/3886743" H 3300 950 50  0001 C CNN
 	1    3300 950 
 	1    0    0    -1  
 $EndComp
@@ -1236,7 +1236,7 @@ P 2450 3650
 F 0 "R1" H 2520 3696 50  0000 L CNN
 F 1 "DNM_10k" H 2520 3605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2380 3650 50  0001 C CNN
-F 3 "~" H 2450 3650 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 2450 3650 50  0001 C CNN
 	1    2450 3650
 	1    0    0    -1  
 $EndComp
@@ -1288,7 +1288,7 @@ P 5950 900
 F 0 "L1" V 6140 900 50  0000 C CNN
 F 1 "6.8uH" V 6049 900 50  0000 C CNN
 F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5950 900 50  0001 C CNN
-F 3 "~" H 5950 900 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/taiyo-yuden/CB2012T6R8M/2230244" H 5950 900 50  0001 C CNN
 	1    5950 900 
 	0    -1   -1   0   
 $EndComp
@@ -1299,7 +1299,7 @@ P 6900 1150
 F 0 "C13" H 7015 1196 50  0000 L CNN
 F 1 "0.1uF" H 7015 1105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6938 1000 50  0001 C CNN
-F 3 "~" H 6900 1150 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844" H 6900 1150 50  0001 C CNN
 	1    6900 1150
 	1    0    0    -1  
 $EndComp
@@ -1310,7 +1310,7 @@ P 6250 1150
 F 0 "C11" H 6365 1196 50  0000 L CNN
 F 1 "22uF" H 6365 1105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6288 1000 50  0001 C CNN
-F 3 "~" H 6250 1150 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J226MEA0D/4280542?s=N4IgTCBcDaIOICUCyBGAHGhA2ADAKTDCyQFEBBHAERAF0BfIA" H 6250 1150 50  0001 C CNN
 	1    6250 1150
 	1    0    0    -1  
 $EndComp
@@ -1321,7 +1321,7 @@ P 7350 1150
 F 0 "C16" H 7465 1196 50  0000 L CNN
 F 1 "0.1uF" H 7465 1105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7388 1000 50  0001 C CNN
-F 3 "~" H 7350 1150 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844" H 7350 1150 50  0001 C CNN
 	1    7350 1150
 	1    0    0    -1  
 $EndComp
@@ -1466,7 +1466,7 @@ P 7850 3500
 F 0 "Y2" H 8044 3546 50  0000 L CNN
 F 1 "48MHz" H 8044 3455 50  0000 L CNN
 F 2 "zigbeeCape:SXT32418FD16-48MHZ_Crystal" H 7850 3500 50  0001 C CNN
-F 3 "~" H 7850 3500 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/abracon-llc/ABM12W-48-0000MHZ-7-D1X-T3/7172767?s=N4IgjCBcpgbFoDGUBmBDANgZwKYBoQB7KAbRACZyAOAZgBZyQBdAgBwBcoQBldgJwCWAOwDmIAL4EaAVgQhkkdNnxFSFKmDABOOszadIPfsLGSK0mnIVLcBYpDLa6ABj0gOXXoNESCFgOxWqJi2qg7gNFpUbh6GXia%2BFM5UjNDywcp2atLOAAQA8gAWALZYMQYgAKpCAuz5KACyOGhYAK58OInkYDlBiiEq9mR0VLkNABIAXuVc1bX1TS3tnWYAtKlIUPytg9nM4mapZIh8AJ5Y7Jj7QA" H 7850 3500 50  0001 C CNN
 	1    7850 3500
 	1    0    0    -1  
 $EndComp

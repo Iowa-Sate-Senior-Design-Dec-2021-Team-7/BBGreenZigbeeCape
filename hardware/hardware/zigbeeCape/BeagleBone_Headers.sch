@@ -20,7 +20,7 @@ P 2900 4050
 F 0 "U4" H 2900 6815 50  0000 C CNN
 F 1 "BeagleBone_P8" H 2900 6724 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x23_P2.54mm_Vertical" H 3500 6800 50  0001 C CNN
-F 3 "" H 3500 6800 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC102LFBN-RC/810216" H 3500 6800 50  0001 C CNN
 	1    2900 4050
 	1    0    0    -1  
 $EndComp
@@ -31,7 +31,7 @@ P 6450 4050
 F 0 "U5" H 6450 6815 50  0000 C CNN
 F 1 "BeagleBone_P9" H 6450 6724 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x23_P2.54mm_Vertical" H 5950 6700 50  0001 C CNN
-F 3 "" H 5950 6700 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC102LFBN-RC/810216" H 5950 6700 50  0001 C CNN
 	1    6450 4050
 	1    0    0    -1  
 $EndComp
