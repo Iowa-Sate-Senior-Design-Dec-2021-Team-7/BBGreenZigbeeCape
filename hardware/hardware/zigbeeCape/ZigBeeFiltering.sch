@@ -27,6 +27,7 @@ F 0 "C24" H 3515 4946 50  0000 L CNN
 F 1 "3pF" H 3515 4855 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 3438 4750 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H3R0CA01D/3175191?s=N4IgTCBcDaIOICUCyBGArBgwigEgZgQAZMBBQlAERAF0BfIA" H 3400 4900 50  0001 C CNN
+F 4 "490-5872-1-ND" H 3400 4900 50  0001 C CNN "Digikey Part Number"
 	1    3400 4900
 	0    -1   -1   0   
 $EndComp
@@ -38,6 +39,7 @@ F 0 "L5" H 2253 4946 50  0000 L CNN
 F 1 "3.9nH" H 2253 4855 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 2200 4900 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS3N9S02D/662866?s=N4IgTCBcDaIDIEUDiBGArACQMoGYByAnFgAxgAiIAugL5A" H 2200 4900 50  0001 C CNN
+F 4 "490-2617-1-ND" H 2200 4900 50  0001 C CNN "Digikey Part Number"
 	1    2200 4900
 	0    -1   -1   0   
 $EndComp
@@ -49,6 +51,7 @@ F 0 "C22" H 3115 4296 50  0000 L CNN
 F 1 "100pF" H 3115 4205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 3038 4100 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H101JA01D/3693829?s=N4IgTCBcDaIOICUCyBGArBgwigEigDCgFICChAIiALoC%2BQA" H 3000 4250 50  0001 C CNN
+F 4 "490-5922-1-ND" H 3000 4250 50  0001 C CNN "Digikey Part Number"
 	1    3000 4250
 	1    0    0    -1  
 $EndComp
@@ -60,6 +63,7 @@ F 0 "L6" H 2253 5346 50  0000 L CNN
 F 1 "3.9nH" H 2253 5255 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 2200 5300 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS3N9S02D/662866?s=N4IgTCBcDaIDIEUDiBGArACQMoGYByAnFgAxgAiIAugL5A" H 2200 5300 50  0001 C CNN
+F 4 "490-2617-1-ND" H 2200 5300 50  0001 C CNN "Digikey Part Number"
 	1    2200 5300
 	0    -1   -1   0   
 $EndComp
@@ -71,6 +75,7 @@ F 0 "C27" H 4365 5546 50  0000 L CNN
 F 1 "DNM" H 4365 5455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 4288 5350 50  0001 C CNN
 F 3 "~" H 4250 5500 50  0001 C CNN
+F 4 "490-5939-1-ND" H 4250 5500 50  0001 C CNN "Digikey Part Number"
 	1    4250 5500
 	1    0    0    -1  
 $EndComp
@@ -82,6 +87,7 @@ F 0 "L9" H 3053 4696 50  0000 L CNN
 F 1 "10nH" H 3053 4605 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 3000 4650 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS10NJ02D/662872?s=N4IgTCBcDaIDIEUDiBGArACQMooAwDkApXMAERAF0BfIA" H 3000 4650 50  0001 C CNN
+F 4 "490-2623-1-ND" H 3000 4650 50  0001 C CNN "Digikey Part Number"
 	1    3000 4650
 	1    0    0    -1  
 $EndComp
@@ -93,6 +99,7 @@ F 0 "C28" H 5015 5546 50  0000 L CNN
 F 1 "3.6pF" H 5015 5455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 4938 5350 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H3R6CA01D/3693850?s=N4IgTCBcDaIOICUCyBGArBgwigEgZgQDZMBBABhQBEQBdAXyA" H 4900 5500 50  0001 C CNN
+F 4 "490-5939-1-ND" H 4900 5500 50  0001 C CNN "Digikey Part Number"
 	1    4900 5500
 	1    0    0    -1  
 $EndComp
@@ -104,6 +111,7 @@ F 0 "L12" H 4603 5146 50  0000 L CNN
 F 1 "9.1nH" H 4603 5055 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 4550 5100 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS9N1J02D/2594223?s=N4IgTCBcDaIDIEUDiBGArACQMoE4ByKAUgAxgAiIAugL5A" H 4550 5100 50  0001 C CNN
+F 4 "490-8390-1-ND" H 4550 5100 50  0001 C CNN "Digikey Part Number"
 	1    4550 5100
 	0    -1   -1   0   
 $EndComp
@@ -115,6 +123,7 @@ F 0 "C29" H 5315 5146 50  0000 L CNN
 F 1 "100pF" H 5315 5055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 5238 4950 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H101JA01D/3693829?s=N4IgTCBcDaIOICUCyBGArBgwigEigDCgFICChAIiALoC%2BQA" H 5200 5100 50  0001 C CNN
+F 4 "490-5922-1-ND" H 5200 5100 50  0001 C CNN "Digikey Part Number"
 	1    5200 5100
 	0    -1   -1   0   
 $EndComp
@@ -126,6 +135,7 @@ F 0 "C23" H 3215 5546 50  0000 L CNN
 F 1 "3pF" H 3215 5455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 3138 5350 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H3R0CA01D/3175191?s=N4IgTCBcDaIOICUCyBGArBgwigEgZgQAZMBBQlAERAF0BfIA" H 3100 5500 50  0001 C CNN
+F 4 "490-5872-1-ND" H 3100 5500 50  0001 C CNN "Digikey Part Number"
 	1    3100 5500
 	1    0    0    -1  
 $EndComp
@@ -137,6 +147,7 @@ F 0 "L11" H 3453 5346 50  0000 L CNN
 F 1 "10nH" H 3453 5255 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 3400 5300 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS10NJ02D/662872?s=N4IgTCBcDaIDIEUDiBGArACQMooAwDkApXMAERAF0BfIA" H 3400 5300 50  0001 C CNN
+F 4 "490-2623-1-ND" H 3400 5300 50  0001 C CNN "Digikey Part Number"
 	1    3400 5300
 	0    -1   -1   0   
 $EndComp
@@ -148,6 +159,7 @@ F 0 "C20" H 2615 5146 50  0000 L CNN
 F 1 "1.2pF" H 2615 5055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 2538 4950 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H1R2BA01D/3693934?s=N4IgTCBcDaIOICUCyBGArBgwigEihYAQgIIAMKAIiALoC%2BQA" H 2500 5100 50  0001 C CNN
+F 4 "490-6209-1-ND" H 2500 5100 50  0001 C CNN "Digikey Part Number"
 	1    2500 5100
 	1    0    0    -1  
 $EndComp
@@ -159,6 +171,7 @@ F 0 "L8" H 2903 5146 50  0000 L CNN
 F 1 "22nH" H 2903 5055 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 2850 5100 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS22NJ02D/662876?s=N4IgTCBcDaIDIEUDiBGArACQMpjAOQCkAGMAERAF0BfIA" H 2850 5100 50  0001 C CNN
+F 4 "490-2627-1-ND" H 2850 5100 50  0001 C CNN "Digikey Part Number"
 	1    2850 5100
 	1    0    0    -1  
 $EndComp
@@ -403,6 +416,7 @@ F 0 "C19" H 2965 3046 50  0000 L CNN
 F 1 "1.1pF" H 2965 2955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 2888 2850 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H1R1BA01D/3693932?s=N4IgTCBcDaIOICUCyBGArBgwigEihKAQgIIAMKAIiALoC%2BQA" H 2850 3000 50  0001 C CNN
+F 4 "490-8189-1-ND" H 2850 3000 50  0001 C CNN "Digikey Part Number"
 	1    2850 3000
 	0    -1   -1   0   
 $EndComp
@@ -414,6 +428,7 @@ F 0 "U3" H 7800 3815 50  0000 C CNN
 F 1 "SMA_Antenna" H 7800 3724 50  0000 C CNN
 F 2 "Connector_Coaxial:SMA_Amphenol_132134-16_Vertical" H 7800 3000 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/amphenol-rf/132134/1011907" H 7800 3000 50  0001 C CNN
+F 4 "ACX1230-ND" H 7800 3450 50  0001 C CNN "Digikey Part Number"
 	1    7800 3450
 	1    0    0    -1  
 $EndComp
@@ -425,6 +440,7 @@ F 0 "C26" H 5215 3246 50  0000 L CNN
 F 1 "12pF" H 5215 3155 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 5138 3050 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H120JA01D/3693831?s=N4IgTCBcDaIOICUCyBGArBgwigEisADAFICCBKAIiALoC%2BQA" H 5100 3200 50  0001 C CNN
+F 4 "490-5924-1-ND" H 5100 3200 50  0001 C CNN "Digikey Part Number"
 	1    5100 3200
 	0    -1   -1   0   
 $EndComp
@@ -436,6 +452,7 @@ F 0 "C25" H 4665 3546 50  0000 L CNN
 F 1 "DNM" H 4665 3455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 4588 3350 50  0001 C CNN
 F 3 "~" H 4550 3500 50  0001 C CNN
+F 4 "490-5939-1-ND" H 4550 3500 50  0001 C CNN "Digikey Part Number"
 	1    4550 3500
 	1    0    0    -1  
 $EndComp
@@ -447,6 +464,7 @@ F 0 "C21" H 3815 3546 50  0000 L CNN
 F 1 "1pF" H 3815 3455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 3738 3350 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/avx-corporation/04025A1R0BAT2A/1116357" H 3700 3500 50  0001 C CNN
+F 4 "478-3659-1-ND" H 3700 3500 50  0001 C CNN "Digikey Part Number"
 	1    3700 3500
 	1    0    0    -1  
 $EndComp
@@ -458,6 +476,7 @@ F 0 "C17" H 2615 2346 50  0000 L CNN
 F 1 "12pF" H 2615 2255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 2538 2150 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H120JA01D/3693831?s=N4IgTCBcDaIOICUCyBGArBgwigEisADAFICCBKAIiALoC%2BQA" H 2500 2300 50  0001 C CNN
+F 4 "490-5924-1-ND" H 2500 2300 50  0001 C CNN "Digikey Part Number"
 	1    2500 2300
 	1    0    0    -1  
 $EndComp
@@ -469,6 +488,7 @@ F 0 "C18" H 2615 3796 50  0000 L CNN
 F 1 "1.1pF" H 2615 3705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 2538 3600 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H1R1BA01D/3693932?s=N4IgTCBcDaIOICUCyBGArBgwigEihKAQgIIAMKAIiALoC%2BQA" H 2500 3750 50  0001 C CNN
+F 4 "490-8189-1-ND" H 2500 3750 50  0001 C CNN "Digikey Part Number"
 	1    2500 3750
 	1    0    0    -1  
 $EndComp
@@ -480,6 +500,7 @@ F 0 "L7" H 3403 3246 50  0000 L CNN
 F 1 "2nH" H 3403 3155 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 3350 3200 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS2N0S02D/1795312?s=N4IgTCBcDaIDIEUDiBGArACQMpgHIAYt8wAREAXQF8g" H 3350 3200 50  0001 C CNN
+F 4 "490-6569-1-ND" H 3350 3200 50  0001 C CNN "Digikey Part Number"
 	1    3350 3200
 	0    -1   -1   0   
 $EndComp
@@ -491,6 +512,7 @@ F 0 "L10" H 4103 3246 50  0000 L CNN
 F 1 "2nH" H 4103 3155 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 4050 3200 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS2N0S02D/1795312?s=N4IgTCBcDaIDIEUDiBGArACQMpgHIAYt8wAREAXQF8g" H 4050 3200 50  0001 C CNN
+F 4 "490-6569-1-ND" H 4050 3200 50  0001 C CNN "Digikey Part Number"
 	1    4050 3200
 	0    -1   -1   0   
 $EndComp
@@ -502,6 +524,7 @@ F 0 "L3" H 2553 2746 50  0000 L CNN
 F 1 "2.4nH" H 2553 2655 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 2500 2700 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS2N4S02D/2594219?s=N4IgTCBcDaIDIEUDiBGArACQMpgHIBYsAGMAERAF0BfIA" H 2500 2700 50  0001 C CNN
+F 4 "490-8389-1-ND" H 2500 2700 50  0001 C CNN "Digikey Part Number"
 	1    2500 2700
 	1    0    0    -1  
 $EndComp
@@ -513,6 +536,7 @@ F 0 "L4" H 2953 3546 50  0000 L CNN
 F 1 "2.4nH" H 2953 3455 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 2900 3500 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS2N4S02D/2594219?s=N4IgTCBcDaIDIEUDiBGArACQMpgHIBYsAGMAERAF0BfIA" H 2900 3500 50  0001 C CNN
+F 4 "490-8389-1-ND" H 2900 3500 50  0001 C CNN "Digikey Part Number"
 	1    2900 3500
 	0    -1   -1   0   
 $EndComp
@@ -524,6 +548,7 @@ F 0 "L2" H 2353 3296 50  0000 L CNN
 F 1 "15nH" H 2353 3205 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder" H 2300 3250 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS15NJ02D/662874?s=N4IgTCBcDaIDIEUDiBGArACQMroHICkAGMAERAF0BfIA" H 2300 3250 50  0001 C CNN
+F 4 "490-2625-1-ND" H 2300 3250 50  0001 C CNN "Digikey Part Number"
 	1    2300 3250
 	1    0    0    -1  
 $EndComp
@@ -568,6 +593,7 @@ F 0 "U2" H 6150 4625 50  0000 C CNN
 F 1 "0.8Ghz_and_2.4GHz_Filter" H 6150 4534 50  0000 C CNN
 F 2 "zigbeeCape:DPX252690DT-5032B1" H 6200 4150 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/tdk-corporation/DPX252690DT-5032B1/5819342" H 6200 4150 50  0001 C CNN
+F 4 "445-174204-1-ND" H 6300 4150 50  0001 C CNN "Digikey Part Number"
 	1    6300 4150
 	1    0    0    -1  
 $EndComp
@@ -627,6 +653,7 @@ F 0 "C31" V 6898 3950 50  0000 C CNN
 F 1 "100pF" V 6989 3950 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 7188 3800 50  0001 C CNN
 F 3 "https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H101JA01D/3693829?s=N4IgTCBcDaIOICUCyBGArBgwigEigDCgFICChAIiALoC%2BQA" H 7150 3950 50  0001 C CNN
+F 4 "490-5922-1-ND" H 7150 3950 50  0001 C CNN "Digikey Part Number"
 	1    7150 3950
 	-1   0    0    1   
 $EndComp
