@@ -1,4 +1,4 @@
-update=8/8/2021 7:20:26 PM
+update=9/15/2021 10:10:40 PM
 version=1
 last_client=kicad
 [general]
@@ -245,8 +245,19 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.254
+Clearance=0.1524
 TrackWidth=0.254
+ViaDiameter=0.5588
+ViaDrill=0.3048
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/1]
+Name=HighSpeed
+Clearance=0.127
+TrackWidth=0.381
 ViaDiameter=0.5588
 ViaDrill=0.3048
 uViaDiameter=0.3

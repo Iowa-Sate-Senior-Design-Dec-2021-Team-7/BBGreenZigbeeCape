@@ -1235,13 +1235,6 @@ $EndComp
 Wire Wire Line
 	3650 750  3650 800 
 Connection ~ 3650 800 
-Wire Wire Line
-	2700 750  2050 750 
-Wire Wire Line
-	2050 750  2050 700 
-Wire Wire Line
-	2050 750  2050 850 
-Connection ~ 2050 750 
 $Comp
 L Device:C C7
 U 1 1 60A4B344
@@ -1620,4 +1613,11 @@ Text Notes 6450 650  0    50   ~ 0
 Caps could be closer
 Text Notes 5250 1300 0    50   ~ 0
 L1 &C11 -> pin 33\nC13 -> Pin 45\nC16 -> Pin 48
+Wire Wire Line
+	2050 750  2050 850 
+Wire Wire Line
+	2050 750  2050 700 
+Connection ~ 2050 750 
+Wire Wire Line
+	2700 750  2050 750 
 $EndSCHEMATC
