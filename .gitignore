@@ -1,11 +1,28 @@
-### Ignore list for temp files
+### ignore list for temp files
 ~$*
 
-### Ignore list for git files
+### ignore list for git files
 !.gitkeep
 
-### Ignore list for Beaglebone firmware projects
+### ignore list for Beaglebone firmware projects
 
-### Ignore list for dia documents
+
+### ignore list for dia documents
 *.dia.autosave
 *.dia~
+
+### ignore list for code composer studio
+!*/.ccsproject
+!*/.cproject
+!*/.project
+!*/.settings folder
+!*/makefile.defs
+*/Release
+*/.xdchelp
+*/.config folder
+*/.launches folder
+
+### ignore list for misc project configurations
+*/.metadata/
+*/.jxbrowser-data/
+*/.tempFiles/
