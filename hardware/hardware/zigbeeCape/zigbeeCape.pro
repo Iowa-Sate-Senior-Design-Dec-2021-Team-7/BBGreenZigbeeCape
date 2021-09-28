@@ -1,4 +1,4 @@
-update=9/27/2021 2:43:00 PM
+update=9/28/2021 11:29:41 AM
 version=1
 last_client=kicad
 [general]
@@ -255,7 +255,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=HighSpeed
-Clearance=0.127
+Clearance=0.1524
 TrackWidth=0.381
 ViaDiameter=0.5588
 ViaDrill=0.3048
