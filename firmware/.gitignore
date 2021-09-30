@@ -1,0 +1,17 @@
+### ignore list for Beaglebone firmware projects
+
+### ignore list for code composer studio
+!**/.ccsproject
+!**/.cproject
+!**/.project
+!**/.settings
+!**/makefile.defs
+**/Release
+**/.xdchelp
+**/.config
+**/.launches
+
+### ignore list for misc project configurations
+**/.metadata/
+**/.jxbrowser-data/
+**/.tempFiles/
