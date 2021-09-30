@@ -4,25 +4,6 @@
 ### ignore list for git files
 !.gitkeep
 
-### ignore list for Beaglebone firmware projects
-
-
 ### ignore list for dia documents
 *.dia.autosave
 *.dia~
-
-### ignore list for code composer studio
-!*/.ccsproject
-!*/.cproject
-!*/.project
-!*/.settings folder
-!*/makefile.defs
-*/Release
-*/.xdchelp
-*/.config folder
-*/.launches folder
-
-### ignore list for misc project configurations
-*/.metadata/
-*/.jxbrowser-data/
-*/.tempFiles/
