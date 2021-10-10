@@ -1,0 +1,1561 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R?
+U 1 1 61594AFB
+P 1500 1500
+F 0 "R?" V 1293 1500 50  0000 C CNN
+F 1 "200" V 1384 1500 50  0000 C CNN
+F 2 "" V 1430 1500 50  0001 C CNN
+F 3 "" H 1500 1500 50  0001 C CNN
+	1    1500 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:DIODE D?
+U 1 1 615977B7
+P 3800 1200
+F 0 "D?" V 3846 1072 50  0000 R CNN
+F 1 "DIODE" V 3755 1072 50  0000 R CNN
+F 2 "" H 3800 1200 50  0001 C CNN
+F 3 "~" H 3800 1200 50  0001 C CNN
+	1    3800 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Relay_SolidState:TLP222A U?
+U 1 1 61598340
+P 1950 1600
+F 0 "U?" H 1950 1925 50  0000 C CNN
+F 1 "TLP222A" H 1950 1834 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 1750 1400 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=17036&prodName=TLP222A" H 1950 1600 50  0001 L CNN
+	1    1950 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:DIPxx-1Axx-13x K?
+U 1 1 6159C063
+P 4600 1200
+F 0 "K?" H 4930 1246 50  0000 L CNN
+F 1 "DIPxx-1Axx-13x" H 4930 1155 50  0000 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 4950 1150 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4600 1200 50  0001 C CNN
+	1    4600 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 6159F923
+P 4200 900
+F 0 "#PWR?" H 4200 750 50  0001 C CNN
+F 1 "+12V" H 4215 1073 50  0000 C CNN
+F 2 "" H 4200 900 50  0001 C CNN
+F 3 "" H 4200 900 50  0001 C CNN
+	1    4200 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 615A10CE
+P 1550 1700
+F 0 "#PWR?" H 1550 1450 50  0001 C CNN
+F 1 "GND" H 1555 1527 50  0000 C CNN
+F 2 "" H 1550 1700 50  0001 C CNN
+F 3 "" H 1550 1700 50  0001 C CNN
+	1    1550 1700
+	1    0    0    -1  
+$EndComp
+Text HLabel 1200 1500 0    50   Input ~ 0
+Relay_00
+Wire Wire Line
+	1650 1700 1550 1700
+Wire Wire Line
+	2400 1700 2250 1700
+Wire Wire Line
+	1350 1500 1200 1500
+$Comp
+L Connector:Screw_Terminal_01x16 J?
+U 1 1 615A5115
+P 10200 1400
+F 0 "J?" H 10280 1392 50  0000 L CNN
+F 1 "Screw_Terminal_01x16" H 10280 1301 50  0000 L CNN
+F 2 "" H 10200 1400 50  0001 C CNN
+F 3 "~" H 10200 1400 50  0001 C CNN
+	1    10200 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615BC4CB
+P 1500 2700
+F 0 "R?" V 1293 2700 50  0000 C CNN
+F 1 "200" V 1384 2700 50  0000 C CNN
+F 2 "" V 1430 2700 50  0001 C CNN
+F 3 "" H 1500 2700 50  0001 C CNN
+	1    1500 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Relay_SolidState:TLP222A U?
+U 1 1 615BC4DF
+P 1950 2800
+F 0 "U?" H 1950 3125 50  0000 C CNN
+F 1 "TLP222A" H 1950 3034 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 1750 2600 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=17036&prodName=TLP222A" H 1950 2800 50  0001 L CNN
+	1    1950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:DIPxx-1Axx-13x K?
+U 1 1 615BC4E9
+P 4600 2400
+F 0 "K?" H 4930 2446 50  0000 L CNN
+F 1 "DIPxx-1Axx-13x" H 4930 2355 50  0000 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 4950 2350 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4600 2400 50  0001 C CNN
+	1    4600 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 615BC507
+P 1550 2900
+F 0 "#PWR?" H 1550 2650 50  0001 C CNN
+F 1 "GND" H 1555 2727 50  0000 C CNN
+F 2 "" H 1550 2900 50  0001 C CNN
+F 3 "" H 1550 2900 50  0001 C CNN
+	1    1550 2900
+	1    0    0    -1  
+$EndComp
+Text HLabel 1200 2700 0    50   Input ~ 0
+Relay_01
+Wire Wire Line
+	3800 2700 4400 2700
+Wire Wire Line
+	1650 2900 1550 2900
+Wire Wire Line
+	2400 2900 2250 2900
+Wire Wire Line
+	1350 2700 1200 2700
+$Comp
+L Device:R R?
+U 1 1 615C16CD
+P 1450 3950
+F 0 "R?" V 1243 3950 50  0000 C CNN
+F 1 "200" V 1334 3950 50  0000 C CNN
+F 2 "" V 1380 3950 50  0001 C CNN
+F 3 "" H 1450 3950 50  0001 C CNN
+	1    1450 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Relay_SolidState:TLP222A U?
+U 1 1 615C16E1
+P 1900 4050
+F 0 "U?" H 1900 4375 50  0000 C CNN
+F 1 "TLP222A" H 1900 4284 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 1700 3850 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=17036&prodName=TLP222A" H 1900 4050 50  0001 L CNN
+	1    1900 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:DIPxx-1Axx-13x K?
+U 1 1 615C16EB
+P 4550 3650
+F 0 "K?" H 4880 3696 50  0000 L CNN
+F 1 "DIPxx-1Axx-13x" H 4880 3605 50  0000 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 4900 3600 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4550 3650 50  0001 C CNN
+	1    4550 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 615C1709
+P 1500 4150
+F 0 "#PWR?" H 1500 3900 50  0001 C CNN
+F 1 "GND" H 1505 3977 50  0000 C CNN
+F 2 "" H 1500 4150 50  0001 C CNN
+F 3 "" H 1500 4150 50  0001 C CNN
+	1    1500 4150
+	1    0    0    -1  
+$EndComp
+Text HLabel 1150 3950 0    50   Input ~ 0
+Relay_02
+Wire Wire Line
+	3750 3950 4350 3950
+Wire Wire Line
+	1600 4150 1500 4150
+Wire Wire Line
+	2350 4150 2200 4150
+Wire Wire Line
+	1300 3950 1150 3950
+$Comp
+L Device:R R?
+U 1 1 615C171D
+P 1450 5150
+F 0 "R?" V 1243 5150 50  0000 C CNN
+F 1 "200" V 1334 5150 50  0000 C CNN
+F 2 "" V 1380 5150 50  0001 C CNN
+F 3 "" H 1450 5150 50  0001 C CNN
+	1    1450 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Relay_SolidState:TLP222A U?
+U 1 1 615C1731
+P 1900 5250
+F 0 "U?" H 1900 5575 50  0000 C CNN
+F 1 "TLP222A" H 1900 5484 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 1700 5050 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=17036&prodName=TLP222A" H 1900 5250 50  0001 L CNN
+	1    1900 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:DIPxx-1Axx-13x K?
+U 1 1 615C185F
+P 4550 4850
+F 0 "K?" H 4880 4896 50  0000 L CNN
+F 1 "DIPxx-1Axx-13x" H 4880 4805 50  0000 L CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 4900 4800 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4550 4850 50  0001 C CNN
+	1    4550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 615C187D
+P 1500 5350
+F 0 "#PWR?" H 1500 5100 50  0001 C CNN
+F 1 "GND" H 1505 5177 50  0000 C CNN
+F 2 "" H 1500 5350 50  0001 C CNN
+F 3 "" H 1500 5350 50  0001 C CNN
+	1    1500 5350
+	1    0    0    -1  
+$EndComp
+Text HLabel 1150 5150 0    50   Input ~ 0
+Relay_03
+Wire Wire Line
+	3750 5150 4350 5150
+Wire Wire Line
+	1600 5350 1500 5350
+Wire Wire Line
+	2350 5350 2200 5350
+Wire Wire Line
+	1300 5150 1150 5150
+Text HLabel 6700 4200 0    50   Input ~ 0
+Relay_06
+$Comp
+L Relay_SolidState:TLP222A U?
+U 1 1 615D7617
+P 8300 5700
+F 0 "U?" H 8300 6025 50  0000 C CNN
+F 1 "TLP222A" H 8300 5934 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 8100 5500 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=17036&prodName=TLP222A" H 8300 5700 50  0001 L CNN
+	1    8300 5700
+	1    0    0    -1  
+$EndComp
+Text HLabel 6850 5450 0    50   Input ~ 0
+Relay_07
+Text HLabel 6750 1700 0    50   Input ~ 0
+Relay_04
+Text HLabel 6750 2950 0    50   Input ~ 0
+Relay_05
+Wire Wire Line
+	5600 2700 4800 2700
+Wire Wire Line
+	5850 3350 4750 3350
+Wire Wire Line
+	4750 3950 5950 3950
+Wire Wire Line
+	6150 4550 4750 4550
+Wire Wire Line
+	4750 5150 6250 5150
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 6167DF49
+P 6150 6300
+F 0 "J?" H 6230 6292 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6230 6201 50  0000 L CNN
+F 2 "" H 6150 6300 50  0001 C CNN
+F 3 "~" H 6150 6300 50  0001 C CNN
+	1    6150 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 6400 4450 6400
+Wire Wire Line
+	4450 6400 4450 6450
+Wire Wire Line
+	4700 6300 4450 6300
+Wire Wire Line
+	4450 6300 4450 6250
+$Comp
+L Device:C_Polarized C?
+U 1 1 61685895
+P 4100 6350
+F 0 "C?" H 4218 6396 50  0000 L CNN
+F 1 "500uf" H 4218 6305 50  0000 L CNN
+F 2 "" H 4138 6200 50  0001 C CNN
+F 3 "~" H 4100 6350 50  0001 C CNN
+	1    4100 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 6200 4250 6200
+Wire Wire Line
+	4350 6200 4350 6300
+Wire Wire Line
+	4350 6300 4450 6300
+Connection ~ 4450 6300
+Wire Wire Line
+	4450 6400 4350 6400
+Wire Wire Line
+	4350 6400 4350 6500
+Wire Wire Line
+	4350 6500 4200 6500
+Connection ~ 4450 6400
+$Comp
+L Device:LED_ARGB D?
+U 1 1 6168F880
+P 3350 6350
+F 0 "D?" V 3396 6020 50  0000 R CNN
+F 1 "LED_ARGB" V 3305 6020 50  0000 R CNN
+F 2 "" H 3350 6300 50  0001 C CNN
+F 3 "~" H 3350 6300 50  0001 C CNN
+	1    3350 6350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61690CC4
+P 3800 6100
+F 0 "R?" V 3593 6100 50  0000 C CNN
+F 1 "2200" V 3684 6100 50  0000 C CNN
+F 2 "" V 3730 6100 50  0001 C CNN
+F 3 "" H 3800 6100 50  0001 C CNN
+	1    3800 6100
+	0    1    1    0   
+$EndComp
+Connection ~ 4250 6200
+Wire Wire Line
+	4250 6200 4350 6200
+Wire Wire Line
+	4200 6500 4200 6700
+Connection ~ 4200 6500
+Wire Wire Line
+	4200 6500 4100 6500
+Wire Wire Line
+	3950 6100 4250 6100
+Wire Wire Line
+	4250 6100 4250 6200
+Wire Wire Line
+	3650 6100 3350 6100
+Wire Wire Line
+	3350 6100 3350 6150
+$Comp
+L Device:LED_ARGB D?
+U 1 1 6169E714
+P 2900 950
+F 0 "D?" V 2946 620 50  0000 R CNN
+F 1 "LED_ARGB" V 2855 620 50  0000 R CNN
+F 2 "" H 2900 900 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Harvatek%20PDFs/B3SK3RGB-F6C0001HOU1930.pdf" H 2900 900 50  0001 C CNN
+	1    2900 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6169E71E
+P 3250 900
+F 0 "R?" V 3043 900 50  0000 C CNN
+F 1 "2200" V 3134 900 50  0000 C CNN
+F 2 "" V 3180 900 50  0001 C CNN
+F 3 "" H 3250 900 50  0001 C CNN
+	1    3250 900 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 900  3100 950 
+Wire Wire Line
+	4200 900  4400 900 
+Wire Wire Line
+	4200 900  3800 900 
+Connection ~ 4200 900 
+Wire Wire Line
+	3800 1000 3800 900 
+Connection ~ 3800 900 
+Wire Wire Line
+	3800 900  3400 900 
+Wire Wire Line
+	3800 1400 3800 1500
+Wire Wire Line
+	3800 1500 4400 1500
+Connection ~ 3800 1500
+$Comp
+L pspice:DIODE D?
+U 1 1 6173BA10
+P 3800 2400
+F 0 "D?" V 3846 2272 50  0000 R CNN
+F 1 "DIODE" V 3755 2272 50  0000 R CNN
+F 2 "" H 3800 2400 50  0001 C CNN
+F 3 "~" H 3800 2400 50  0001 C CNN
+	1    3800 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED_ARGB D?
+U 1 1 6173BA28
+P 2900 2150
+F 0 "D?" V 2946 1820 50  0000 R CNN
+F 1 "LED_ARGB" V 2855 1820 50  0000 R CNN
+F 2 "" H 2900 2100 50  0001 C CNN
+F 3 "~" H 2900 2100 50  0001 C CNN
+	1    2900 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6173BA32
+P 3250 2100
+F 0 "R?" V 3043 2100 50  0000 C CNN
+F 1 "2200" V 3134 2100 50  0000 C CNN
+F 2 "" V 3180 2100 50  0001 C CNN
+F 3 "" H 3250 2100 50  0001 C CNN
+	1    3250 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 2100 3100 2150
+Wire Wire Line
+	3800 2200 3800 2100
+Connection ~ 3800 2100
+Wire Wire Line
+	3800 2100 3400 2100
+Wire Wire Line
+	3800 2600 3800 2700
+Wire Wire Line
+	3800 2700 3100 2700
+Wire Wire Line
+	3100 2700 3100 2550
+Connection ~ 3800 2700
+Wire Wire Line
+	2250 2700 2400 2700
+Connection ~ 3100 2700
+Wire Wire Line
+	3800 2100 4200 2100
+$Comp
+L pspice:DIODE D?
+U 1 1 61742691
+P 3750 3650
+F 0 "D?" V 3796 3522 50  0000 R CNN
+F 1 "DIODE" V 3705 3522 50  0000 R CNN
+F 2 "" H 3750 3650 50  0001 C CNN
+F 3 "~" H 3750 3650 50  0001 C CNN
+	1    3750 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED_ARGB D?
+U 1 1 6174269B
+P 2750 3400
+F 0 "D?" V 2796 3070 50  0000 R CNN
+F 1 "LED_ARGB" V 2705 3070 50  0000 R CNN
+F 2 "" H 2750 3350 50  0001 C CNN
+F 3 "~" H 2750 3350 50  0001 C CNN
+	1    2750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 617426A5
+P 3200 3350
+F 0 "R?" V 2993 3350 50  0000 C CNN
+F 1 "2200" V 3084 3350 50  0000 C CNN
+F 2 "" V 3130 3350 50  0001 C CNN
+F 3 "" H 3200 3350 50  0001 C CNN
+	1    3200 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 3350 3050 3400
+Wire Wire Line
+	3750 3450 3750 3350
+Connection ~ 3750 3350
+Wire Wire Line
+	3750 3350 3350 3350
+Wire Wire Line
+	3750 3850 3750 3950
+Connection ~ 3750 3950
+Wire Wire Line
+	2200 3950 2250 3950
+$Comp
+L pspice:DIODE D?
+U 1 1 61748029
+P 3750 4850
+F 0 "D?" V 3796 4722 50  0000 R CNN
+F 1 "DIODE" V 3705 4722 50  0000 R CNN
+F 2 "" H 3750 4850 50  0001 C CNN
+F 3 "~" H 3750 4850 50  0001 C CNN
+	1    3750 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED_ARGB D?
+U 1 1 61748033
+P 2850 4600
+F 0 "D?" V 2896 4270 50  0000 R CNN
+F 1 "LED_ARGB" V 2805 4270 50  0000 R CNN
+F 2 "" H 2850 4550 50  0001 C CNN
+F 3 "~" H 2850 4550 50  0001 C CNN
+	1    2850 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6174803D
+P 3200 4550
+F 0 "R?" V 2993 4550 50  0000 C CNN
+F 1 "2200" V 3084 4550 50  0000 C CNN
+F 2 "" V 3130 4550 50  0001 C CNN
+F 3 "" H 3200 4550 50  0001 C CNN
+	1    3200 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 4550 3050 4600
+Wire Wire Line
+	3750 4650 3750 4550
+Connection ~ 3750 4550
+Wire Wire Line
+	3750 4550 3350 4550
+Wire Wire Line
+	3750 5050 3750 5150
+Connection ~ 3750 5150
+Wire Wire Line
+	3750 3350 4200 3350
+$Comp
+L power:+12V #PWR?
+U 1 1 6174E924
+P 4200 2050
+F 0 "#PWR?" H 4200 1900 50  0001 C CNN
+F 1 "+12V" H 4215 2223 50  0000 C CNN
+F 2 "" H 4200 2050 50  0001 C CNN
+F 3 "" H 4200 2050 50  0001 C CNN
+	1    4200 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 6174ED43
+P 4200 3350
+F 0 "#PWR?" H 4200 3200 50  0001 C CNN
+F 1 "+12V" H 4215 3523 50  0000 C CNN
+F 2 "" H 4200 3350 50  0001 C CNN
+F 3 "" H 4200 3350 50  0001 C CNN
+	1    4200 3350
+	1    0    0    -1  
+$EndComp
+Connection ~ 4200 3350
+Wire Wire Line
+	4200 3350 4350 3350
+$Comp
+L power:+12V #PWR?
+U 1 1 6174F068
+P 4200 4550
+F 0 "#PWR?" H 4200 4400 50  0001 C CNN
+F 1 "+12V" H 4215 4723 50  0000 C CNN
+F 2 "" H 4200 4550 50  0001 C CNN
+F 3 "" H 4200 4550 50  0001 C CNN
+	1    4200 4550
+	1    0    0    -1  
+$EndComp
+Connection ~ 4200 4550
+Wire Wire Line
+	4200 4550 4350 4550
+Wire Wire Line
+	3750 4550 4200 4550
+$Comp
+L Device:LED_ARGB D?
+U 1 1 6178564D
+P 7300 5700
+F 0 "D?" V 7346 5370 50  0000 R CNN
+F 1 "LED_ARGB" V 7255 5370 50  0000 R CNN
+F 2 "" H 7300 5650 50  0001 C CNN
+F 3 "~" H 7300 5650 50  0001 C CNN
+	1    7300 5700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6178569D
+P 7150 5450
+F 0 "R?" V 6943 5450 50  0000 C CNN
+F 1 "160" V 7034 5450 50  0000 C CNN
+F 2 "" V 7080 5450 50  0001 C CNN
+F 3 "" H 7150 5450 50  0001 C CNN
+	1    7150 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 5450 7300 5500
+$Comp
+L Device:R R?
+U 1 1 6178BBE5
+P 7450 5450
+F 0 "R?" V 7243 5450 50  0000 C CNN
+F 1 "40" V 7334 5450 50  0000 C CNN
+F 2 "" V 7380 5450 50  0001 C CNN
+F 3 "" H 7450 5450 50  0001 C CNN
+	1    7450 5450
+	0    1    1    0   
+$EndComp
+Connection ~ 7300 5450
+Wire Wire Line
+	6850 5450 7000 5450
+Wire Wire Line
+	7600 5450 8000 5450
+Wire Wire Line
+	8000 5450 8000 5600
+Wire Wire Line
+	7700 5800 8000 5800
+$Comp
+L Relay_SolidState:TLP222A U?
+U 1 1 617DDB70
+P 8300 4450
+F 0 "U?" H 8300 4775 50  0000 C CNN
+F 1 "TLP222A" H 8300 4684 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 8100 4250 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=17036&prodName=TLP222A" H 8300 4450 50  0001 L CNN
+	1    8300 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ARGB D?
+U 1 1 617DDBD4
+P 7300 4450
+F 0 "D?" V 7346 4120 50  0000 R CNN
+F 1 "LED_ARGB" V 7255 4120 50  0000 R CNN
+F 2 "" H 7300 4400 50  0001 C CNN
+F 3 "~" H 7300 4400 50  0001 C CNN
+	1    7300 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 617DDBDE
+P 7150 4200
+F 0 "R?" V 6943 4200 50  0000 C CNN
+F 1 "160" V 7034 4200 50  0000 C CNN
+F 2 "" V 7080 4200 50  0001 C CNN
+F 3 "" H 7150 4200 50  0001 C CNN
+	1    7150 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 4200 7300 4250
+Wire Wire Line
+	7300 4700 7300 4650
+$Comp
+L Device:R R?
+U 1 1 617DDBEA
+P 7450 4200
+F 0 "R?" V 7243 4200 50  0000 C CNN
+F 1 "40" V 7334 4200 50  0000 C CNN
+F 2 "" V 7380 4200 50  0001 C CNN
+F 3 "" H 7450 4200 50  0001 C CNN
+	1    7450 4200
+	0    1    1    0   
+$EndComp
+Connection ~ 7300 4200
+Wire Wire Line
+	7600 4200 8000 4200
+Wire Wire Line
+	8000 4200 8000 4350
+Wire Wire Line
+	7700 4550 8000 4550
+$Comp
+L Relay_SolidState:TLP222A U?
+U 1 1 617E4F26
+P 8200 3200
+F 0 "U?" H 8200 3525 50  0000 C CNN
+F 1 "TLP222A" H 8200 3434 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 8000 3000 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=17036&prodName=TLP222A" H 8200 3200 50  0001 L CNN
+	1    8200 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ARGB D?
+U 1 1 617E4F8A
+P 7200 3200
+F 0 "D?" V 7246 2870 50  0000 R CNN
+F 1 "LED_ARGB" V 7155 2870 50  0000 R CNN
+F 2 "" H 7200 3150 50  0001 C CNN
+F 3 "~" H 7200 3150 50  0001 C CNN
+	1    7200 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 617E4F94
+P 7050 2950
+F 0 "R?" V 6843 2950 50  0000 C CNN
+F 1 "160" V 6934 2950 50  0000 C CNN
+F 2 "" V 6980 2950 50  0001 C CNN
+F 3 "" H 7050 2950 50  0001 C CNN
+	1    7050 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7200 2950 7200 3000
+$Comp
+L Device:R R?
+U 1 1 617E4FA0
+P 7350 2950
+F 0 "R?" V 7143 2950 50  0000 C CNN
+F 1 "40" V 7234 2950 50  0000 C CNN
+F 2 "" V 7280 2950 50  0001 C CNN
+F 3 "" H 7350 2950 50  0001 C CNN
+	1    7350 2950
+	0    1    1    0   
+$EndComp
+Connection ~ 7200 2950
+Wire Wire Line
+	6750 2950 6900 2950
+Wire Wire Line
+	7500 2950 7900 2950
+Wire Wire Line
+	7900 2950 7900 3100
+Wire Wire Line
+	7600 3300 7900 3300
+$Comp
+L Relay_SolidState:TLP222A U?
+U 1 1 617EBBFD
+P 8200 1950
+F 0 "U?" H 8200 2275 50  0000 C CNN
+F 1 "TLP222A" H 8200 2184 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 8000 1750 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=17036&prodName=TLP222A" H 8200 1950 50  0001 L CNN
+	1    8200 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 617EBC57
+P 7200 3750
+F 0 "#PWR?" H 7200 3500 50  0001 C CNN
+F 1 "GND" H 7205 3577 50  0000 C CNN
+F 2 "" H 7200 3750 50  0001 C CNN
+F 3 "" H 7200 3750 50  0001 C CNN
+	1    7200 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ARGB D?
+U 1 1 617EBC61
+P 7200 1950
+F 0 "D?" V 7246 1620 50  0000 R CNN
+F 1 "LED_ARGB" V 7155 1620 50  0000 R CNN
+F 2 "" H 7200 1900 50  0001 C CNN
+F 3 "~" H 7200 1900 50  0001 C CNN
+	1    7200 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 617EBC6B
+P 7050 1700
+F 0 "R?" V 6843 1700 50  0000 C CNN
+F 1 "160" V 6934 1700 50  0000 C CNN
+F 2 "" V 6980 1700 50  0001 C CNN
+F 3 "" H 7050 1700 50  0001 C CNN
+	1    7050 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7200 1700 7200 1750
+$Comp
+L Device:R R?
+U 1 1 617EBC77
+P 7350 1700
+F 0 "R?" V 7143 1700 50  0000 C CNN
+F 1 "40" V 7234 1700 50  0000 C CNN
+F 2 "" V 7280 1700 50  0001 C CNN
+F 3 "" H 7350 1700 50  0001 C CNN
+	1    7350 1700
+	0    1    1    0   
+$EndComp
+Connection ~ 7200 1700
+Wire Wire Line
+	6750 1700 6900 1700
+Wire Wire Line
+	7500 1700 7900 1700
+Wire Wire Line
+	7900 1700 7900 1850
+Wire Wire Line
+	7600 2050 7900 2050
+Wire Wire Line
+	6700 4200 7000 4200
+Wire Wire Line
+	8500 1850 8550 1850
+Wire Wire Line
+	8550 1850 8550 1500
+Wire Wire Line
+	8600 1600 8600 2050
+Wire Wire Line
+	8600 2050 8500 2050
+Wire Wire Line
+	8500 3100 8750 3100
+Wire Wire Line
+	8850 3300 8500 3300
+Wire Wire Line
+	8600 4350 8950 4350
+Text Notes 7050 6750 0    50   ~ 0
+Solid state relay max current 500mA\nMagnetic relay max current 20A
+Wire Wire Line
+	4200 2050 4200 2100
+Connection ~ 4200 2100
+Wire Wire Line
+	4200 2100 4400 2100
+$Comp
+L Regulator_Linear:NCP1117-3.3_SOT223 U?
+U 1 1 6163BF36
+P 1700 6300
+F 0 "U?" H 1700 6542 50  0000 C CNN
+F 1 "NCP1117-3.3_SOT223" H 1700 6451 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1700 6500 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 1800 6050 50  0001 C CNN
+	1    1700 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6163BF40
+P 1100 6450
+F 0 "C?" H 1218 6496 50  0000 L CNN
+F 1 "10uf" H 1218 6405 50  0000 L CNN
+F 2 "" H 1138 6300 50  0001 C CNN
+F 3 "~" H 1100 6450 50  0001 C CNN
+	1    1100 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6163BF4A
+P 2200 6450
+F 0 "C?" H 2318 6496 50  0000 L CNN
+F 1 "10uf" H 2318 6405 50  0000 L CNN
+F 2 "" H 2238 6300 50  0001 C CNN
+F 3 "~" H 2200 6450 50  0001 C CNN
+	1    2200 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 6163BF72
+P 1100 6300
+F 0 "#PWR?" H 1100 6150 50  0001 C CNN
+F 1 "+12V" H 1115 6473 50  0000 C CNN
+F 2 "" H 1100 6300 50  0001 C CNN
+F 3 "" H 1100 6300 50  0001 C CNN
+	1    1100 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 6300 1100 6300
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6163BF7D
+P 2500 6300
+F 0 "#PWR?" H 2500 6150 50  0001 C CNN
+F 1 "+3.3V" H 2515 6473 50  0000 C CNN
+F 2 "" H 2500 6300 50  0001 C CNN
+F 3 "" H 2500 6300 50  0001 C CNN
+	1    2500 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 6300 2200 6300
+$Comp
+L power:GND #PWR?
+U 1 1 61690B47
+P 4450 6450
+F 0 "#PWR?" H 4450 6200 50  0001 C CNN
+F 1 "GND" H 4455 6277 50  0000 C CNN
+F 2 "" H 4450 6450 50  0001 C CNN
+F 3 "" H 4450 6450 50  0001 C CNN
+	1    4450 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61691085
+P 1700 6600
+F 0 "#PWR?" H 1700 6350 50  0001 C CNN
+F 1 "GND" H 1705 6427 50  0000 C CNN
+F 2 "" H 1700 6600 50  0001 C CNN
+F 3 "" H 1700 6600 50  0001 C CNN
+	1    1700 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6169168A
+P 2200 6600
+F 0 "#PWR?" H 2200 6350 50  0001 C CNN
+F 1 "GND" H 2205 6427 50  0000 C CNN
+F 2 "" H 2200 6600 50  0001 C CNN
+F 3 "" H 2200 6600 50  0001 C CNN
+	1    2200 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 616918A9
+P 1100 6600
+F 0 "#PWR?" H 1100 6350 50  0001 C CNN
+F 1 "GND" H 1105 6427 50  0000 C CNN
+F 2 "" H 1100 6600 50  0001 C CNN
+F 3 "" H 1100 6600 50  0001 C CNN
+	1    1100 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61691AE8
+P 2350 5350
+F 0 "#PWR?" H 2350 5100 50  0001 C CNN
+F 1 "GND" H 2355 5177 50  0000 C CNN
+F 2 "" H 2350 5350 50  0001 C CNN
+F 3 "" H 2350 5350 50  0001 C CNN
+	1    2350 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61691DDA
+P 2350 4150
+F 0 "#PWR?" H 2350 3900 50  0001 C CNN
+F 1 "GND" H 2355 3977 50  0000 C CNN
+F 2 "" H 2350 4150 50  0001 C CNN
+F 3 "" H 2350 4150 50  0001 C CNN
+	1    2350 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6169214A
+P 2400 2900
+F 0 "#PWR?" H 2400 2650 50  0001 C CNN
+F 1 "GND" H 2405 2727 50  0000 C CNN
+F 2 "" H 2400 2900 50  0001 C CNN
+F 3 "" H 2400 2900 50  0001 C CNN
+	1    2400 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6169239D
+P 2400 1700
+F 0 "#PWR?" H 2400 1450 50  0001 C CNN
+F 1 "GND" H 2405 1527 50  0000 C CNN
+F 2 "" H 2400 1700 50  0001 C CNN
+F 3 "" H 2400 1700 50  0001 C CNN
+	1    2400 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 616971B4
+P 7200 3550
+F 0 "JP?" V 7154 3618 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7245 3618 50  0000 L CNN
+F 2 "" H 7200 3550 50  0001 C CNN
+F 3 "~" H 7200 3550 50  0001 C CNN
+	1    7200 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 61697B4E
+P 7400 3550
+F 0 "JP?" V 7354 3618 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7445 3618 50  0000 L CNN
+F 2 "" H 7400 3550 50  0001 C CNN
+F 3 "~" H 7400 3550 50  0001 C CNN
+	1    7400 3550
+	0    1    1    0   
+$EndComp
+Connection ~ 1100 6300
+Connection ~ 2200 6300
+Wire Wire Line
+	2200 6300 2500 6300
+Wire Wire Line
+	4800 700  4800 900 
+Wire Wire Line
+	4800 700  10000 700 
+Wire Wire Line
+	4800 1500 5600 1500
+Wire Wire Line
+	5600 1500 5600 800 
+Wire Wire Line
+	5600 800  10000 800 
+Wire Wire Line
+	10000 900  5700 900 
+Wire Wire Line
+	5700 900  5700 1650
+Wire Wire Line
+	5700 1650 4800 1650
+Wire Wire Line
+	4800 1650 4800 2100
+Wire Wire Line
+	5600 1700 5800 1700
+Wire Wire Line
+	5800 1700 5800 1000
+Wire Wire Line
+	5800 1000 10000 1000
+Wire Wire Line
+	5600 1700 5600 2700
+Wire Wire Line
+	10000 1100 5850 1100
+Wire Wire Line
+	5850 1100 5850 3350
+Wire Wire Line
+	5950 1200 10000 1200
+Wire Wire Line
+	5950 1200 5950 3950
+Wire Wire Line
+	10000 1300 6150 1300
+Wire Wire Line
+	6150 1300 6150 4550
+Wire Wire Line
+	6250 1400 10000 1400
+Wire Wire Line
+	6250 1400 6250 5150
+Wire Wire Line
+	8550 1500 10000 1500
+Wire Wire Line
+	10000 1600 8600 1600
+Wire Wire Line
+	7600 3750 7200 3750
+Wire Wire Line
+	7400 3700 7200 3700
+Wire Wire Line
+	7000 3700 7200 3700
+Connection ~ 7200 3700
+Wire Wire Line
+	7200 3700 7200 3750
+Connection ~ 7200 3750
+Wire Wire Line
+	8750 1700 10000 1700
+Wire Wire Line
+	8750 1700 8750 3100
+Wire Wire Line
+	10000 1800 8850 1800
+Wire Wire Line
+	8850 1800 8850 3300
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6174EA77
+P 7000 3550
+F 0 "JP?" V 6954 3618 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7045 3618 50  0000 L CNN
+F 2 "" H 7000 3550 50  0001 C CNN
+F 3 "~" H 7000 3550 50  0001 C CNN
+	1    7000 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 3300 7600 3750
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6175AB5A
+P 7400 2300
+F 0 "JP?" V 7354 2368 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7445 2368 50  0000 L CNN
+F 2 "" H 7400 2300 50  0001 C CNN
+F 3 "~" H 7400 2300 50  0001 C CNN
+	1    7400 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6175B4CD
+P 7200 2300
+F 0 "JP?" V 7154 2368 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7245 2368 50  0000 L CNN
+F 2 "" H 7200 2300 50  0001 C CNN
+F 3 "~" H 7200 2300 50  0001 C CNN
+	1    7200 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6175B7E0
+P 7000 2300
+F 0 "JP?" V 6954 2368 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7045 2368 50  0000 L CNN
+F 2 "" H 7000 2300 50  0001 C CNN
+F 3 "~" H 7000 2300 50  0001 C CNN
+	1    7000 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6175BACD
+P 7200 2500
+F 0 "#PWR?" H 7200 2250 50  0001 C CNN
+F 1 "GND" H 7205 2327 50  0000 C CNN
+F 2 "" H 7200 2500 50  0001 C CNN
+F 3 "" H 7200 2500 50  0001 C CNN
+	1    7200 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2450 7200 2450
+Wire Wire Line
+	7200 2500 7200 2450
+Connection ~ 7200 2450
+Wire Wire Line
+	7200 2450 7400 2450
+Wire Wire Line
+	7400 2450 7600 2450
+Wire Wire Line
+	7600 2450 7600 2050
+Connection ~ 7400 2450
+$Comp
+L power:GND #PWR?
+U 1 1 61788917
+P 7300 5050
+F 0 "#PWR?" H 7300 4800 50  0001 C CNN
+F 1 "GND" H 7305 4877 50  0000 C CNN
+F 2 "" H 7300 5050 50  0001 C CNN
+F 3 "" H 7300 5050 50  0001 C CNN
+	1    7300 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 61788929
+P 7300 4850
+F 0 "JP?" V 7254 4918 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7345 4918 50  0000 L CNN
+F 2 "" H 7300 4850 50  0001 C CNN
+F 3 "~" H 7300 4850 50  0001 C CNN
+	1    7300 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 61788933
+P 7500 4850
+F 0 "JP?" V 7454 4918 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7545 4918 50  0000 L CNN
+F 2 "" H 7500 4850 50  0001 C CNN
+F 3 "~" H 7500 4850 50  0001 C CNN
+	1    7500 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 5050 7300 5050
+Wire Wire Line
+	7500 5000 7300 5000
+Wire Wire Line
+	7100 5000 7300 5000
+Connection ~ 7300 5000
+Wire Wire Line
+	7300 5000 7300 5050
+Connection ~ 7300 5050
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 61788943
+P 7100 4850
+F 0 "JP?" V 7054 4918 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7145 4918 50  0000 L CNN
+F 2 "" H 7100 4850 50  0001 C CNN
+F 3 "~" H 7100 4850 50  0001 C CNN
+	1    7100 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 4550 7700 5050
+Wire Wire Line
+	7100 4700 7100 4650
+Wire Wire Line
+	7500 4700 7500 4650
+Wire Wire Line
+	10000 1900 8950 1900
+Wire Wire Line
+	8950 1900 8950 4350
+Wire Wire Line
+	10000 2000 9050 2000
+Wire Wire Line
+	9050 2000 9050 4550
+Wire Wire Line
+	9050 4550 8600 4550
+$Comp
+L power:GND #PWR?
+U 1 1 617BCCED
+P 7300 6350
+F 0 "#PWR?" H 7300 6100 50  0001 C CNN
+F 1 "GND" H 7305 6177 50  0000 C CNN
+F 2 "" H 7300 6350 50  0001 C CNN
+F 3 "" H 7300 6350 50  0001 C CNN
+	1    7300 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 617BCCF7
+P 7300 6150
+F 0 "JP?" V 7254 6218 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7345 6218 50  0000 L CNN
+F 2 "" H 7300 6150 50  0001 C CNN
+F 3 "~" H 7300 6150 50  0001 C CNN
+	1    7300 6150
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 617BCD01
+P 7500 6150
+F 0 "JP?" V 7454 6218 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7545 6218 50  0000 L CNN
+F 2 "" H 7500 6150 50  0001 C CNN
+F 3 "~" H 7500 6150 50  0001 C CNN
+	1    7500 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 6350 7300 6350
+Wire Wire Line
+	7500 6300 7300 6300
+Wire Wire Line
+	7100 6300 7300 6300
+Connection ~ 7300 6300
+Wire Wire Line
+	7300 6300 7300 6350
+Connection ~ 7300 6350
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 617BCD11
+P 7100 6150
+F 0 "JP?" V 7054 6218 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 7145 6218 50  0000 L CNN
+F 2 "" H 7100 6150 50  0001 C CNN
+F 3 "~" H 7100 6150 50  0001 C CNN
+	1    7100 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 5900 7300 6000
+Wire Wire Line
+	7700 5800 7700 6350
+Wire Wire Line
+	7500 5900 7500 6000
+Wire Wire Line
+	7100 5900 7100 6000
+Wire Wire Line
+	8600 5600 9200 5600
+Wire Wire Line
+	9200 5600 9200 2100
+Wire Wire Line
+	9200 2100 10000 2100
+Wire Wire Line
+	9950 2200 9300 2200
+Wire Wire Line
+	9300 2200 9300 5800
+Wire Wire Line
+	9300 5800 8600 5800
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 617E4B58
+P 2550 950
+F 0 "JP?" H 2550 725 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2550 816 50  0000 C CNN
+F 2 "" H 2550 950 50  0001 C CNN
+F 3 "~" H 2550 950 50  0001 C CNN
+	1    2550 950 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 617E7298
+P 2550 750
+F 0 "JP?" H 2550 525 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2550 616 50  0000 C CNN
+F 2 "" H 2550 750 50  0001 C CNN
+F 3 "~" H 2550 750 50  0001 C CNN
+	1    2550 750 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 617E7757
+P 2550 1150
+F 0 "JP?" H 2550 925 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2550 1016 50  0000 C CNN
+F 2 "" H 2550 1150 50  0001 C CNN
+F 3 "~" H 2550 1150 50  0001 C CNN
+	1    2550 1150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2250 1500 2400 1500
+Wire Wire Line
+	2400 750  2400 950 
+Connection ~ 2400 1500
+Wire Wire Line
+	2400 1500 3800 1500
+Connection ~ 2400 950 
+Wire Wire Line
+	2400 950  2400 1150
+Connection ~ 2400 1150
+Wire Wire Line
+	2400 1150 2400 1500
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 61801EAD
+P 2550 2150
+F 0 "JP?" H 2550 1925 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2550 2016 50  0000 C CNN
+F 2 "" H 2550 2150 50  0001 C CNN
+F 3 "~" H 2550 2150 50  0001 C CNN
+	1    2550 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 61801ECF
+P 2550 1950
+F 0 "JP?" H 2550 1725 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2550 1816 50  0000 C CNN
+F 2 "" H 2550 1950 50  0001 C CNN
+F 3 "~" H 2550 1950 50  0001 C CNN
+	1    2550 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 61801ED9
+P 2550 2350
+F 0 "JP?" H 2550 2125 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2550 2216 50  0000 C CNN
+F 2 "" H 2550 2350 50  0001 C CNN
+F 3 "~" H 2550 2350 50  0001 C CNN
+	1    2550 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 1950 2400 2150
+Connection ~ 2400 2150
+Wire Wire Line
+	2400 2150 2400 2350
+Connection ~ 2400 2350
+Wire Wire Line
+	2400 2350 2400 2700
+Connection ~ 2400 2700
+Wire Wire Line
+	2400 2700 3100 2700
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6180BE72
+P 2400 3400
+F 0 "JP?" H 2400 3175 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2400 3266 50  0000 C CNN
+F 2 "" H 2400 3400 50  0001 C CNN
+F 3 "~" H 2400 3400 50  0001 C CNN
+	1    2400 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6180BE94
+P 2400 3200
+F 0 "JP?" H 2400 2975 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2400 3066 50  0000 C CNN
+F 2 "" H 2400 3200 50  0001 C CNN
+F 3 "~" H 2400 3200 50  0001 C CNN
+	1    2400 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6180BE9E
+P 2400 3600
+F 0 "JP?" H 2400 3375 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2400 3466 50  0000 C CNN
+F 2 "" H 2400 3600 50  0001 C CNN
+F 3 "~" H 2400 3600 50  0001 C CNN
+	1    2400 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2250 3200 2250 3400
+Connection ~ 2250 3400
+Wire Wire Line
+	2250 3400 2250 3600
+Connection ~ 2250 3600
+Wire Wire Line
+	2250 3600 2250 3950
+Connection ~ 2250 3950
+Wire Wire Line
+	2250 3950 3750 3950
+Wire Wire Line
+	2950 3400 3050 3400
+Wire Wire Line
+	2200 5150 2350 5150
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6183359F
+P 2500 4600
+F 0 "JP?" H 2500 4375 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2500 4466 50  0000 C CNN
+F 2 "" H 2500 4600 50  0001 C CNN
+F 3 "~" H 2500 4600 50  0001 C CNN
+	1    2500 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 618335C1
+P 2500 4400
+F 0 "JP?" H 2500 4175 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2500 4266 50  0000 C CNN
+F 2 "" H 2500 4400 50  0001 C CNN
+F 3 "~" H 2500 4400 50  0001 C CNN
+	1    2500 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 618335CB
+P 2500 4800
+F 0 "JP?" H 2500 4575 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2500 4666 50  0000 C CNN
+F 2 "" H 2500 4800 50  0001 C CNN
+F 3 "~" H 2500 4800 50  0001 C CNN
+	1    2500 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2350 4400 2350 4600
+Connection ~ 2350 4600
+Wire Wire Line
+	2350 4600 2350 4800
+Connection ~ 2350 4800
+Wire Wire Line
+	2350 4800 2350 5150
+Connection ~ 2350 5150
+Wire Wire Line
+	2350 5150 3750 5150
+$Comp
+L power:GND #PWR?
+U 1 1 6183EDFD
+P 3350 7000
+F 0 "#PWR?" H 3350 6750 50  0001 C CNN
+F 1 "GND" H 3355 6827 50  0000 C CNN
+F 2 "" H 3350 7000 50  0001 C CNN
+F 3 "" H 3350 7000 50  0001 C CNN
+	1    3350 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6183EE0F
+P 3350 6800
+F 0 "JP?" V 3304 6868 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 3395 6868 50  0000 L CNN
+F 2 "" H 3350 6800 50  0001 C CNN
+F 3 "~" H 3350 6800 50  0001 C CNN
+	1    3350 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6183EE19
+P 3550 6800
+F 0 "JP?" V 3504 6868 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 3595 6868 50  0000 L CNN
+F 2 "" H 3550 6800 50  0001 C CNN
+F 3 "~" H 3550 6800 50  0001 C CNN
+	1    3550 6800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 7000 3350 7000
+Wire Wire Line
+	3550 6950 3350 6950
+Wire Wire Line
+	3150 6950 3350 6950
+Connection ~ 3350 6950
+Wire Wire Line
+	3350 6950 3350 7000
+Connection ~ 3350 7000
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 6183EE29
+P 3150 6800
+F 0 "JP?" V 3104 6868 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 3195 6868 50  0000 L CNN
+F 2 "" H 3150 6800 50  0001 C CNN
+F 3 "~" H 3150 6800 50  0001 C CNN
+	1    3150 6800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 6550 3350 6650
+Wire Wire Line
+	3550 6550 3550 6650
+Wire Wire Line
+	3150 6550 3150 6650
+Wire Wire Line
+	4200 6700 3750 6700
+Wire Wire Line
+	3750 6700 3750 7000
+Text Notes 3250 5850 0    50   ~ 0
+Resistor Value calculated for Green LED. \nSolder Jumper allows choice of color.\nResistor value changes for Red or Blue.\nReference LED Datasheet.\n
+$Comp
+L power:+12V #PWR?
+U 1 1 6167E811
+P 4450 6250
+F 0 "#PWR?" H 4450 6100 50  0001 C CNN
+F 1 "+12V" H 4465 6423 50  0000 C CNN
+F 2 "" H 4450 6250 50  0001 C CNN
+F 3 "" H 4450 6250 50  0001 C CNN
+	1    4450 6250
+	1    0    0    -1  
+$EndComp
+Text Notes 5300 5800 0    50   ~ 0
+Max current draw= \nCC1352 Imax + 83mA per 12v relay.\nTLP222A are 2mA\nLED are 2-5mA
+$Comp
+L Zigbee:MCQ9435 U?
+U 1 1 6190208E
+P 5350 6350
+F 0 "U?" H 5350 6665 50  0000 C CNN
+F 1 "MCQ9435" H 5350 6574 50  0000 C CNN
+F 2 "" H 5350 6350 50  0001 C CNN
+F 3 "" H 5350 6350 50  0001 C CNN
+	1    5350 6350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
