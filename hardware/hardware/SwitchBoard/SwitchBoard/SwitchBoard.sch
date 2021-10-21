@@ -124,34 +124,22 @@ Text GLabel 3300 1800 2    50   Input ~ 0
 SW_1
 Text GLabel 3300 1900 2    50   Input ~ 0
 SW_2
-Text GLabel 3300 2000 2    50   Input ~ 0
-SW_3
-Text GLabel 3300 2100 2    50   Input ~ 0
-SW_4
-Text GLabel 3300 2200 2    50   Input ~ 0
-SW_5
-Text GLabel 3300 2300 2    50   Input ~ 0
-SW_6
 Text GLabel 3300 2400 2    50   Input ~ 0
-SW_7
+SW_3
 Text GLabel 3300 2500 2    50   Input ~ 0
+SW_4
+Text GLabel 3300 2000 2    50   Input ~ 0
+SW_5
+Text GLabel 3300 2100 2    50   Input ~ 0
+SW_6
+Text GLabel 3300 2200 2    50   Input ~ 0
+SW_7
+Text GLabel 3300 2300 2    50   Input ~ 0
 SW_8
 Wire Wire Line
 	3150 1800 3300 1800
 Wire Wire Line
 	3300 1900 3150 1900
-Wire Wire Line
-	3150 2000 3300 2000
-Wire Wire Line
-	3150 2100 3300 2100
-Wire Wire Line
-	3150 2200 3300 2200
-Wire Wire Line
-	3150 2300 3300 2300
-Wire Wire Line
-	3150 2400 3300 2400
-Wire Wire Line
-	3150 2500 3300 2500
 $Comp
 L Switch:SW_SPDT SW2
 U 1 1 61656A31
@@ -897,7 +885,7 @@ F 4 "NA" H 5150 7250 50  0001 C CNN "Digikey Part Number"
 	1    0    0    -1  
 $EndComp
 Text GLabel 6000 6250 2    50   Output ~ 0
-CLK
+SCK
 Text GLabel 6000 6350 2    50   Input ~ 0
 MISO
 Text GLabel 6000 6450 2    50   Output ~ 0
@@ -1285,4 +1273,16 @@ Wire Wire Line
 Wire Wire Line
 	1550 1600 1550 1550
 Connection ~ 1550 1600
+Wire Wire Line
+	3300 2500 3150 2500
+Wire Wire Line
+	3300 2400 3150 2400
+Wire Wire Line
+	3300 2300 3150 2300
+Wire Wire Line
+	3300 2200 3150 2200
+Wire Wire Line
+	3150 2100 3300 2100
+Wire Wire Line
+	3150 2000 3300 2000
 $EndSCHEMATC
