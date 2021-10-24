@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>C:\Users\Parker\Desktop\SeniorDesign\sddec21-07\hardware\hardware\zigbeeCape\zigbeeCape.sch</source>
-    <date>8/20/2021 2:34:45 PM</date>
+    <date>10/5/2021 9:58:15 AM</date>
     <tool>Eeschema (5.1.9)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -49,6 +49,9 @@
       <value>CC1352R</value>
       <footprint>zigbeeCape:CC1352R</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/CC1352P1F3RGZT/296-53598-1-ND/10273328</datasheet>
+      <fields>
+        <field name="Digikey Part Number">296-53598-1-ND</field>
+      </fields>
       <libsource lib="Zigbee" part="CC1352R" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6062844D</tstamp>
@@ -57,6 +60,9 @@
       <value>SW_MEC_5E</value>
       <footprint>zigbeeCape:SMD_PUSH_BUTTON</footprint>
       <datasheet>http://www.apem.com/int/index.php?controller=attachment&amp;id_attachment=1371</datasheet>
+      <fields>
+        <field name="Digikey Part Number">679-2381-1-ND</field>
+      </fields>
       <libsource lib="Switch" part="SW_MEC_5E" description="MEC 5E single pole normally-open tactile switch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606B9FBA</tstamp>
@@ -65,6 +71,9 @@
       <value>Green</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/lumex-opto-components-inc/SML-LXFM0603SUGCTR/7364547?s=N4IgjCBcpgbFoDGUBmBDANgZwKYBoQB7KAbRAGYBOAJgBZ4BdAgBwBcoQBlVgJwEsAdgHMQAXwKxKCEMkjps%2BIqRC0ADJSrkQTEGw7d%2BwsQQCs1E9NnzcBYpDLkTYMCYAc2lu0hdegkePBKVyloGVRMGyV7EFUPXS8fQ38CAFpqSyheAFdFOzILBlEioA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">67-2320-1-ND</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BBD60</tstamp>
@@ -73,6 +82,9 @@
       <value>Blue</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321</datasheet>
+      <fields>
+        <field name="Digikey Part Number">475-2815-1-ND</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BC7EC</tstamp>
@@ -81,6 +93,9 @@
       <value>Blue</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321</datasheet>
+      <fields>
+        <field name="Digikey Part Number">475-2815-1-ND</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BD5DA</tstamp>
@@ -89,6 +104,9 @@
       <value>Blue</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321</datasheet>
+      <fields>
+        <field name="Digikey Part Number">475-2815-1-ND</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BD638</tstamp>
@@ -97,6 +115,9 @@
       <value>Blue</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321</datasheet>
+      <fields>
+        <field name="Digikey Part Number">475-2815-1-ND</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BD69B</tstamp>
@@ -105,6 +126,9 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077</datasheet>
+      <fields>
+        <field name="Digikey Part Number">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BE735</tstamp>
@@ -113,6 +137,9 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077</datasheet>
+      <fields>
+        <field name="Digikey Part Number">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BEFE3</tstamp>
@@ -121,6 +148,9 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077</datasheet>
+      <fields>
+        <field name="Digikey Part Number">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BF10F</tstamp>
@@ -129,6 +159,9 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077</datasheet>
+      <fields>
+        <field name="Digikey Part Number">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BF236</tstamp>
@@ -137,6 +170,9 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077</datasheet>
+      <fields>
+        <field name="Digikey Part Number">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BF3CF</tstamp>
@@ -145,6 +181,9 @@
       <value>DNM_1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KA8NNNC/3886842</datasheet>
+      <fields>
+        <field name="Digikey Part Number">1276-1184-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BF98B</tstamp>
@@ -153,6 +192,9 @@
       <value>SW_MEC_5E</value>
       <footprint>zigbeeCape:SMD_PUSH_BUTTON</footprint>
       <datasheet>http://www.apem.com/int/index.php?controller=attachment&amp;id_attachment=1371</datasheet>
+      <fields>
+        <field name="Digikey Part Number">679-2381-1-ND</field>
+      </fields>
       <libsource lib="Switch" part="SW_MEC_5E" description="MEC 5E single pole normally-open tactile switch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606D1A3D</tstamp>
@@ -161,6 +203,9 @@
       <value>DNM_1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KA8NNNC/3886842</datasheet>
+      <fields>
+        <field name="Digikey Part Number">1276-1184-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606D1A43</tstamp>
@@ -169,6 +214,9 @@
       <value>SW_MEC_5E</value>
       <footprint>zigbeeCape:SMD_PUSH_BUTTON</footprint>
       <datasheet>http://www.apem.com/int/index.php?controller=attachment&amp;id_attachment=1371</datasheet>
+      <fields>
+        <field name="Digikey Part Number">679-2381-1-ND</field>
+      </fields>
       <libsource lib="Switch" part="SW_MEC_5E" description="MEC 5E single pole normally-open tactile switch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606D3527</tstamp>
@@ -177,6 +225,9 @@
       <value>DNM_1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KA8NNNC/3886842</datasheet>
+      <fields>
+        <field name="Digikey Part Number">1276-1184-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606D352D</tstamp>
@@ -185,6 +236,9 @@
       <value>Blue</value>
       <footprint>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/osram-opto-semiconductors-inc/LB-Q39E-N1OO-35-1/2176321</datasheet>
+      <fields>
+        <field name="Digikey Part Number">475-2815-1-ND</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BD4BD</tstamp>
@@ -193,6 +247,9 @@
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT1K00/1761077</datasheet>
+      <fields>
+        <field name="Digikey Part Number">RMCF0603FT1K00CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>606BD4C3</tstamp>
@@ -201,6 +258,9 @@
       <value>22uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J226MEA0D/4280542?s=N4IgTCBcDaIOICUCyBGAHGhA2ADAKTDCyQFEBBHAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-7611-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60777E5F</tstamp>
@@ -209,6 +269,9 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844</datasheet>
+      <fields>
+        <field name="Digikey Part Number">311-1777-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60778FDE</tstamp>
@@ -217,6 +280,9 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844</datasheet>
+      <fields>
+        <field name="Digikey Part Number">311-1777-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6077A126</tstamp>
@@ -225,6 +291,9 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844</datasheet>
+      <fields>
+        <field name="Digikey Part Number">311-1777-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6077B233</tstamp>
@@ -233,6 +302,9 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844</datasheet>
+      <fields>
+        <field name="Digikey Part Number">311-1777-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6077C3CD</tstamp>
@@ -241,6 +313,9 @@
       <value>32.768kHz</value>
       <footprint>zigbeeCape:FC-135_Crystal_Unit</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/micro-crystal-ag/CC5V-T1A-32-768KHZ-7PF-20PPM-TA-QC/10499236</datasheet>
+      <fields>
+        <field name="Digikey Part Number">2195-CC5V-T1A-32.768KHZ-7PF-20PPM-TA-QCCT-ND</field>
+      </fields>
       <libsource lib="Device" part="Crystal" description="Two pin crystal"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>607C7143</tstamp>
@@ -249,6 +324,9 @@
       <value>12pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H120JA01D/3693831?s=N4IgTCBcDaIOICUCyBGArBgwigEisADAFICCBKAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5924-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>607D2CA6</tstamp>
@@ -257,6 +335,9 @@
       <value>12pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H120JA01D/3693831?s=N4IgTCBcDaIOICUCyBGArBgwigEisADAFICCBKAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5924-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>607D7D8E</tstamp>
@@ -265,6 +346,9 @@
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KA8NNNC/3886842</datasheet>
+      <fields>
+        <field name="Digikey Part Number">1276-1184-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>608149D8</tstamp>
@@ -273,6 +357,9 @@
       <value>10K</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209</datasheet>
+      <fields>
+        <field name="Digikey Part Number">13-RT0603FRE1310KLCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>608915BC</tstamp>
@@ -281,6 +368,9 @@
       <value>10K</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209</datasheet>
+      <fields>
+        <field name="Digikey Part Number">13-RT0603FRE1310KLCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60891C14</tstamp>
@@ -289,6 +379,9 @@
       <value>10K</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209</datasheet>
+      <fields>
+        <field name="Digikey Part Number">13-RT0603FRE1310KLCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60895C43</tstamp>
@@ -297,6 +390,9 @@
       <value>10K</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209</datasheet>
+      <fields>
+        <field name="Digikey Part Number">13-RT0603FRE1310KLCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60899D09</tstamp>
@@ -305,6 +401,9 @@
       <value>DNM_10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209</datasheet>
+      <fields>
+        <field name="Digikey Part Number">13-RT0603FRE1310KLCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>6089DCA1</tstamp>
@@ -313,6 +412,9 @@
       <value>SW_MEC_5E</value>
       <footprint>zigbeeCape:SMD_PUSH_BUTTON</footprint>
       <datasheet>http://www.apem.com/int/index.php?controller=attachment&amp;id_attachment=1371</datasheet>
+      <fields>
+        <field name="Digikey Part Number">679-2381-1-ND</field>
+      </fields>
       <libsource lib="Switch" part="SW_MEC_5E" description="MEC 5E single pole normally-open tactile switch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60A32575</tstamp>
@@ -321,6 +423,9 @@
       <value>SW_MEC_5E</value>
       <footprint>zigbeeCape:SMD_PUSH_BUTTON</footprint>
       <datasheet>http://www.apem.com/int/index.php?controller=attachment&amp;id_attachment=1371</datasheet>
+      <fields>
+        <field name="Digikey Part Number">679-2381-1-ND</field>
+      </fields>
       <libsource lib="Switch" part="SW_MEC_5E" description="MEC 5E single pole normally-open tactile switch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60A76337</tstamp>
@@ -329,6 +434,9 @@
       <value>DNM_2.2uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A225KP8NNNC/3886743</datasheet>
+      <fields>
+        <field name="Digikey Part Number">1276-1085-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60A7633D</tstamp>
@@ -337,6 +445,9 @@
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT4K70/1760998</datasheet>
+      <fields>
+        <field name="Digikey Part Number">RMCF0603FT4K70CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>608B8299</tstamp>
@@ -345,6 +456,9 @@
       <value>4.7k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT4K70/1760998</datasheet>
+      <fields>
+        <field name="Digikey Part Number">RMCF0603FT4K70CT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>608B8AB3</tstamp>
@@ -353,6 +467,9 @@
       <value>2.2uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10A225KP8NNNC/3886743</datasheet>
+      <fields>
+        <field name="Digikey Part Number">1276-1085-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60A4B344</tstamp>
@@ -361,6 +478,9 @@
       <value>DNM_10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209</datasheet>
+      <fields>
+        <field name="Digikey Part Number">13-RT0603FRE1310KLCT-ND</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>609A838D</tstamp>
@@ -369,6 +489,9 @@
       <value>6.8uH</value>
       <footprint>Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/taiyo-yuden/CB2012T6R8M/2230244</datasheet>
+      <fields>
+        <field name="Digikey Part Number">445-17082-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60A8DA82</tstamp>
@@ -377,6 +500,9 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844</datasheet>
+      <fields>
+        <field name="Digikey Part Number">311-1777-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60A8EA03</tstamp>
@@ -385,6 +511,9 @@
       <value>22uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J226MEA0D/4280542?s=N4IgTCBcDaIOICUCyBGAHGhA2ADAKTDCyQFEBBHAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-7611-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60A8F379</tstamp>
@@ -393,6 +522,9 @@
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/885012206071/5453844</datasheet>
+      <fields>
+        <field name="Digikey Part Number">311-1777-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60AA1937</tstamp>
@@ -401,6 +533,9 @@
       <value>Conn_ARM_JTAG_SWD_10</value>
       <footprint>zigbeeCape:Conn_ARM_JTAG_SWD_10</footprint>
       <datasheet>http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf</datasheet>
+      <fields>
+        <field name="Digikey Part Number">1175-1621-ND</field>
+      </fields>
       <libsource lib="Connector" part="Conn_ARM_JTAG_SWD_10" description="Cortex Debug Connector, standard ARM Cortex-M SWD and JTAG interface"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60760740</tstamp>
@@ -409,6 +544,9 @@
       <value>48MHz</value>
       <footprint>zigbeeCape:SXT32418FD16-48MHZ_Crystal</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/abracon-llc/ABM12W-48-0000MHZ-7-D1X-T3/7172767?s=N4IgjCBcpgbFoDGUBmBDANgZwKYBoQB7KAbRACZyAOAZgBZyQBdAgBwBcoQBldgJwCWAOwDmIAL4EaAVgQhkkdNnxFSFKmDABOOszadIPfsLGSK0mnIVLcBYpDLa6ABj0gOXXoNESCFgOxWqJi2qg7gNFpUbh6GXia%2BFM5UjNDywcp2atLOAAQA8gAWALZYMQYgAKpCAuz5KACyOGhYAK58OInkYDlBiiEq9mR0VLkNABIAXuVc1bX1TS3tnWYAtKlIUPytg9nM4mapZIh8AJ5Y7Jj7QA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">535-13996-1-ND</field>
+      </fields>
       <libsource lib="Device" part="Crystal_GND24" description="Four pin crystal, GND on pins 2 and 4"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60907ED1</tstamp>
@@ -417,6 +555,9 @@
       <value>3pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H3R0CA01D/3175191?s=N4IgTCBcDaIOICUCyBGArBgwigEgZgQAZMBBQlAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5872-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>60860CA4</tstamp>
@@ -425,6 +566,9 @@
       <value>3.9nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS3N9S02D/662866?s=N4IgTCBcDaIDIEUDiBGArACQMoGYByAnFgAxgAiIAugL5A</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-2617-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608610F4</tstamp>
@@ -433,6 +577,9 @@
       <value>100pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H101JA01D/3693829?s=N4IgTCBcDaIOICUCyBGArBgwigEigDCgFICChAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5922-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608623E8</tstamp>
@@ -441,6 +588,9 @@
       <value>3.9nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS3N9S02D/662866?s=N4IgTCBcDaIDIEUDiBGArACQMoGYByAnFgAxgAiIAugL5A</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-2617-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608623EE</tstamp>
@@ -449,6 +599,9 @@
       <value>DNM</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5939-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608624B8</tstamp>
@@ -457,6 +610,9 @@
       <value>10nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS10NJ02D/662872?s=N4IgTCBcDaIDIEUDiBGArACQMooAwDkApXMAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-2623-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608624BE</tstamp>
@@ -465,6 +621,9 @@
       <value>3.6pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H3R6CA01D/3693850?s=N4IgTCBcDaIOICUCyBGArBgwigEgZgQDZMBBABhQBEQBdAXyA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5939-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>60862558</tstamp>
@@ -473,6 +632,9 @@
       <value>9.1nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS9N1J02D/2594223?s=N4IgTCBcDaIDIEUDiBGArACQMoE4ByKAUgAxgAiIAugL5A</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-8390-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>6086255E</tstamp>
@@ -481,6 +643,9 @@
       <value>100pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H101JA01D/3693829?s=N4IgTCBcDaIOICUCyBGArBgwigEigDCgFICChAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5922-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608626A8</tstamp>
@@ -489,6 +654,9 @@
       <value>3pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H3R0CA01D/3175191?s=N4IgTCBcDaIOICUCyBGArBgwigEgZgQAZMBBQlAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5872-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>60862748</tstamp>
@@ -497,6 +665,9 @@
       <value>10nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS10NJ02D/662872?s=N4IgTCBcDaIDIEUDiBGArACQMooAwDkApXMAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-2623-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>6086274E</tstamp>
@@ -505,6 +676,9 @@
       <value>1.2pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H1R2BA01D/3693934?s=N4IgTCBcDaIOICUCyBGArBgwigEihYAQgIIAMKAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-6209-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608628EE</tstamp>
@@ -513,6 +687,9 @@
       <value>22nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS22NJ02D/662876?s=N4IgTCBcDaIDIEUDiBGArACQMpjAOQCkAGMAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-2627-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608628F4</tstamp>
@@ -521,6 +698,9 @@
       <value>1.1pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H1R1BA01D/3693932?s=N4IgTCBcDaIOICUCyBGArBgwigEihKAQgIIAMKAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-8189-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607FEA97</tstamp>
@@ -529,6 +709,9 @@
       <value>SMA_Antenna</value>
       <footprint>Connector_Coaxial:SMA_Amphenol_132134-16_Vertical</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/amphenol-rf/132134/1011907</datasheet>
+      <fields>
+        <field name="Digikey Part Number">ACX1230-ND</field>
+      </fields>
       <libsource lib="Zigbee" part="SMA_Antenna" description=""/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607FCA19</tstamp>
@@ -537,6 +720,9 @@
       <value>12pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H120JA01D/3693831?s=N4IgTCBcDaIOICUCyBGArBgwigEisADAFICCBKAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5924-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607EFB35</tstamp>
@@ -545,6 +731,9 @@
       <value>DNM</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5939-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607EF671</tstamp>
@@ -553,6 +742,9 @@
       <value>1pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/avx-corporation/04025A1R0BAT2A/1116357</datasheet>
+      <fields>
+        <field name="Digikey Part Number">478-3659-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607EF196</tstamp>
@@ -561,6 +753,9 @@
       <value>12pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H120JA01D/3693831?s=N4IgTCBcDaIOICUCyBGArBgwigEisADAFICCBKAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5924-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607EECC0</tstamp>
@@ -569,6 +764,9 @@
       <value>1.1pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H1R1BA01D/3693932?s=N4IgTCBcDaIOICUCyBGArBgwigEihKAQgIIAMKAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-8189-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607EE59D</tstamp>
@@ -577,6 +775,9 @@
       <value>2nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS2N0S02D/1795312?s=N4IgTCBcDaIDIEUDiBGArACQMpgHIAYt8wAREAXQF8g</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-6569-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607EDE4C</tstamp>
@@ -585,6 +786,9 @@
       <value>2nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS2N0S02D/1795312?s=N4IgTCBcDaIDIEUDiBGArACQMpgHIAYt8wAREAXQF8g</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-6569-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607ED8AC</tstamp>
@@ -593,6 +797,9 @@
       <value>2.4nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS2N4S02D/2594219?s=N4IgTCBcDaIDIEUDiBGArACQMpgHIBYsAGMAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-8389-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607ED3A7</tstamp>
@@ -601,6 +808,9 @@
       <value>2.4nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS2N4S02D/2594219?s=N4IgTCBcDaIDIEUDiBGArACQMpgHIBYsAGMAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-8389-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607ECED8</tstamp>
@@ -609,6 +819,9 @@
       <value>15nH</value>
       <footprint>Inductor_SMD:L_0402_1005Metric_Pad0.77x0.64mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/LQG15HS15NJ02D/662874?s=N4IgTCBcDaIDIEUDiBGArACQMroHICkAGMAERAF0BfIA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-2625-1-ND</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>607EC79D</tstamp>
@@ -617,6 +830,9 @@
       <value>0.8Ghz_and_2.4GHz_Filter</value>
       <footprint>zigbeeCape:DPX252690DT-5032B1</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/tdk-corporation/DPX252690DT-5032B1/5819342</datasheet>
+      <fields>
+        <field name="Digikey Part Number">445-174204-1-ND</field>
+      </fields>
       <libsource lib="Zigbee" part="0.8Ghz_and_2.4GHz_Filter" description="DPX252690DT-5032B1"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>6091DA9B</tstamp>
@@ -625,6 +841,9 @@
       <value>100pF</value>
       <footprint>Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/murata-electronics/GRM1555C1H101JA01D/3693829?s=N4IgTCBcDaIOICUCyBGArBgwigEigDCgFICChAIiALoC%2BQA</datasheet>
+      <fields>
+        <field name="Digikey Part Number">490-5922-1-ND</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/ZigBeeFiltering/" tstamps="/60837A8E/"/>
       <tstamp>608925A4</tstamp>
@@ -633,6 +852,9 @@
       <value>BeagleBone_P8</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x23_P2.54mm_Vertical</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC102LFBN-RC/810216</datasheet>
+      <fields>
+        <field name="Digikey Part Number">1528-1365-ND</field>
+      </fields>
       <libsource lib="BeagleBone" part="BeagleBone_P8" description=""/>
       <sheetpath names="/BeagleBone_Headers/" tstamps="/6087B849/"/>
       <tstamp>609FD186</tstamp>
@@ -641,6 +863,9 @@
       <value>BeagleBone_P9</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x23_P2.54mm_Vertical</footprint>
       <datasheet>https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC102LFBN-RC/810216</datasheet>
+      <fields>
+        <field name="Digikey Part Number">~</field>
+      </fields>
       <libsource lib="BeagleBone" part="BeagleBone_P9" description=""/>
       <sheetpath names="/BeagleBone_Headers/" tstamps="/6087B849/"/>
       <tstamp>609FDC70</tstamp>
@@ -996,14 +1221,14 @@
   </libraries>
   <nets>
     <net code="1" name="SPI_MOSI">
-      <node ref="U1" pin="8"/>
       <node ref="U5" pin="18"/>
+      <node ref="U1" pin="8"/>
     </net>
     <net code="2" name="Network_Connect">
       <node ref="C1" pin="1"/>
+      <node ref="SW3" pin="4"/>
       <node ref="SW3" pin="3"/>
       <node ref="U5" pin="30"/>
-      <node ref="SW3" pin="4"/>
     </net>
     <net code="3" name="UART_RX">
       <node ref="U5" pin="26"/>
@@ -1018,25 +1243,25 @@
       <node ref="U1" pin="9"/>
     </net>
     <net code="6" name="SPI_CLK">
-      <node ref="U5" pin="22"/>
       <node ref="U1" pin="12"/>
+      <node ref="U5" pin="22"/>
     </net>
     <net code="7" name="SPI_MISO">
       <node ref="U1" pin="14"/>
       <node ref="U5" pin="21"/>
     </net>
     <net code="8" name="GND">
+      <node ref="C15" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="R10" pin="2"/>
       <node ref="R11" pin="2"/>
       <node ref="U1" pin="49"/>
-      <node ref="R10" pin="2"/>
-      <node ref="R9" pin="2"/>
-      <node ref="R8" pin="2"/>
-      <node ref="C15" pin="2"/>
-      <node ref="U5" pin="2"/>
       <node ref="SW3" pin="1"/>
+      <node ref="U5" pin="2"/>
+      <node ref="SW3" pin="2"/>
       <node ref="C14" pin="2"/>
       <node ref="C12" pin="2"/>
-      <node ref="SW3" pin="2"/>
       <node ref="C1" pin="2"/>
       <node ref="R12" pin="2"/>
       <node ref="C2" pin="2"/>
@@ -1045,21 +1270,20 @@
       <node ref="C3" pin="2"/>
       <node ref="SW2" pin="2"/>
       <node ref="SW2" pin="1"/>
-      <node ref="U2" pin="6"/>
       <node ref="C23" pin="2"/>
       <node ref="U2" pin="4"/>
       <node ref="U2" pin="2"/>
       <node ref="U2" pin="1"/>
       <node ref="U2" pin="7"/>
+      <node ref="U2" pin="6"/>
       <node ref="C28" pin="2"/>
       <node ref="C27" pin="2"/>
       <node ref="C22" pin="1"/>
-      <node ref="C9" pin="2"/>
       <node ref="C10" pin="2"/>
       <node ref="C8" pin="2"/>
       <node ref="C5" pin="2"/>
       <node ref="C6" pin="2"/>
-      <node ref="C17" pin="1"/>
+      <node ref="C9" pin="2"/>
       <node ref="R6" pin="2"/>
       <node ref="U5" pin="1"/>
       <node ref="U4" pin="1"/>
@@ -1072,104 +1296,105 @@
       <node ref="U3" pin="2"/>
       <node ref="C25" pin="2"/>
       <node ref="C21" pin="2"/>
-      <node ref="C7" pin="2"/>
-      <node ref="SW4" pin="4"/>
-      <node ref="SW4" pin="3"/>
-      <node ref="R5" pin="2"/>
-      <node ref="R4" pin="2"/>
-      <node ref="R2" pin="2"/>
+      <node ref="C17" pin="1"/>
       <node ref="C13" pin="2"/>
       <node ref="C11" pin="2"/>
-      <node ref="R7" pin="2"/>
-      <node ref="Y2" pin="4"/>
       <node ref="C16" pin="2"/>
-      <node ref="Y2" pin="2"/>
-      <node ref="SW5" pin="1"/>
-      <node ref="J1" pin="9"/>
-      <node ref="C4" pin="2"/>
-      <node ref="SW5" pin="2"/>
-      <node ref="J1" pin="3"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="R7" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="C7" pin="2"/>
       <node ref="J1" pin="5"/>
+      <node ref="SW4" pin="4"/>
+      <node ref="C4" pin="2"/>
+      <node ref="J1" pin="9"/>
+      <node ref="SW5" pin="2"/>
+      <node ref="SW5" pin="1"/>
+      <node ref="Y2" pin="2"/>
+      <node ref="SW4" pin="3"/>
+      <node ref="Y2" pin="4"/>
+      <node ref="J1" pin="3"/>
     </net>
     <net code="9" name="/BeagleBone_Headers/BeagleBone_Reset">
       <node ref="U5" pin="10"/>
+      <node ref="SW5" pin="4"/>
+      <node ref="SW5" pin="3"/>
       <node ref="C4" pin="1"/>
       <node ref="R1" pin="2"/>
-      <node ref="SW5" pin="3"/>
-      <node ref="SW5" pin="4"/>
     </net>
     <net code="10" name="Lan_HeartBeat">
       <node ref="D5" pin="2"/>
       <node ref="U5" pin="41"/>
     </net>
     <net code="11" name="Cape_HeartBeat">
-      <node ref="U1" pin="31"/>
       <node ref="D3" pin="2"/>
+      <node ref="U1" pin="31"/>
     </net>
     <net code="12" name="+3V3">
-      <node ref="U5" pin="4"/>
-      <node ref="R17" pin="1"/>
-      <node ref="J1" pin="1"/>
-      <node ref="R1" pin="1"/>
-      <node ref="R3" pin="2"/>
+      <node ref="C10" pin="1"/>
       <node ref="U5" pin="3"/>
-      <node ref="D6" pin="2"/>
-      <node ref="U1" pin="44"/>
+      <node ref="J1" pin="1"/>
+      <node ref="C9" pin="1"/>
+      <node ref="R19" pin="1"/>
       <node ref="C6" pin="1"/>
       <node ref="C5" pin="1"/>
-      <node ref="U1" pin="34"/>
-      <node ref="U1" pin="22"/>
-      <node ref="C8" pin="1"/>
-      <node ref="C9" pin="1"/>
       <node ref="U1" pin="13"/>
-      <node ref="C10" pin="1"/>
-      <node ref="R19" pin="1"/>
+      <node ref="D6" pin="2"/>
+      <node ref="R17" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="R3" pin="2"/>
+      <node ref="U1" pin="34"/>
+      <node ref="U1" pin="44"/>
+      <node ref="C8" pin="1"/>
+      <node ref="U1" pin="22"/>
+      <node ref="U5" pin="4"/>
     </net>
     <net code="13" name="I2C2_SCL">
-      <node ref="U5" pin="19"/>
-      <node ref="U1" pin="11"/>
       <node ref="R17" pin="2"/>
+      <node ref="U1" pin="11"/>
+      <node ref="U5" pin="19"/>
     </net>
     <net code="14" name="I2C2_SDA">
-      <node ref="U5" pin="20"/>
       <node ref="R19" pin="2"/>
       <node ref="U1" pin="10"/>
+      <node ref="U5" pin="20"/>
     </net>
     <net code="15" name="Net-(C15-Pad1)">
-      <node ref="C15" pin="1"/>
       <node ref="U1" pin="23"/>
+      <node ref="C15" pin="1"/>
     </net>
     <net code="16" name="/ZigBeeFiltering/2_4_GHZ_RF_P">
       <node ref="C19" pin="1"/>
+      <node ref="U1" pin="1"/>
       <node ref="L2" pin="1"/>
       <node ref="L3" pin="2"/>
-      <node ref="U1" pin="1"/>
     </net>
     <net code="17" name="/ZigBeeFiltering/2_4_GHZ_RF_N">
-      <node ref="L4" pin="1"/>
-      <node ref="C18" pin="1"/>
       <node ref="U1" pin="2"/>
       <node ref="L2" pin="2"/>
+      <node ref="L4" pin="1"/>
+      <node ref="C18" pin="1"/>
     </net>
     <net code="18" name="/ZigBeeFiltering/SUB-1_GHZ_RF_P">
-      <node ref="L5" pin="1"/>
       <node ref="U1" pin="3"/>
+      <node ref="L5" pin="1"/>
     </net>
     <net code="19" name="/ZigBeeFiltering/SUB-1_GHZ_RF_N">
       <node ref="U1" pin="4"/>
       <node ref="L6" pin="1"/>
     </net>
     <net code="20" name="/ZigBeeFiltering/RX_TX">
-      <node ref="C17" pin="2"/>
-      <node ref="C22" pin="2"/>
-      <node ref="U1" pin="5"/>
       <node ref="L3" pin="1"/>
       <node ref="L9" pin="1"/>
+      <node ref="U1" pin="5"/>
+      <node ref="C17" pin="2"/>
+      <node ref="C22" pin="2"/>
     </net>
     <net code="21" name="Net-(J1-Pad4)">
-      <node ref="R7" pin="1"/>
       <node ref="U1" pin="25"/>
       <node ref="J1" pin="4"/>
+      <node ref="R7" pin="1"/>
     </net>
     <net code="22" name="Net-(J1-Pad8)">
       <node ref="U1" pin="27"/>
@@ -1178,88 +1403,88 @@
     </net>
     <net code="23" name="Net-(C7-Pad1)">
       <node ref="R3" pin="1"/>
-      <node ref="SW4" pin="1"/>
-      <node ref="C7" pin="1"/>
       <node ref="U1" pin="35"/>
       <node ref="J1" pin="10"/>
+      <node ref="SW4" pin="1"/>
+      <node ref="C7" pin="1"/>
       <node ref="SW4" pin="2"/>
     </net>
     <net code="24" name="Net-(J1-Pad2)">
-      <node ref="J1" pin="2"/>
       <node ref="R5" pin="1"/>
+      <node ref="J1" pin="2"/>
       <node ref="U1" pin="24"/>
     </net>
     <net code="25" name="Net-(J1-Pad6)">
+      <node ref="R4" pin="1"/>
       <node ref="U1" pin="26"/>
       <node ref="J1" pin="6"/>
-      <node ref="R4" pin="1"/>
     </net>
-    <net code="26" name="ZigBee_HeartBeat">
-      <node ref="D4" pin="2"/>
-      <node ref="U1" pin="20"/>
-    </net>
-    <net code="27" name="ZigBee_Connect">
-      <node ref="SW1" pin="3"/>
-      <node ref="SW1" pin="4"/>
-      <node ref="C2" pin="1"/>
-      <node ref="U1" pin="21"/>
-    </net>
-    <net code="28" name="Net-(U1-Pad46)">
-      <node ref="U1" pin="46"/>
-      <node ref="Y2" pin="3"/>
-    </net>
-    <net code="29" name="Aux_1">
-      <node ref="D1" pin="2"/>
-      <node ref="U1" pin="17"/>
-    </net>
-    <net code="30" name="Aux_2">
-      <node ref="D2" pin="2"/>
-      <node ref="U1" pin="18"/>
-    </net>
-    <net code="31" name="Check_Error">
+    <net code="26" name="Check_Error">
       <node ref="C3" pin="1"/>
       <node ref="SW2" pin="3"/>
       <node ref="SW2" pin="4"/>
       <node ref="U1" pin="19"/>
     </net>
-    <net code="32" name="Net-(U1-Pad29)">
-      <node ref="U1" pin="29"/>
+    <net code="27" name="ZigBee_Connect">
+      <node ref="C2" pin="1"/>
+      <node ref="U1" pin="21"/>
+      <node ref="SW1" pin="3"/>
+      <node ref="SW1" pin="4"/>
     </net>
-    <net code="33" name="Net-(U1-Pad28)">
-      <node ref="U1" pin="28"/>
+    <net code="28" name="ZigBee_HeartBeat">
+      <node ref="D4" pin="2"/>
+      <node ref="U1" pin="20"/>
     </net>
-    <net code="34" name="Net-(U1-Pad37)">
-      <node ref="U1" pin="37"/>
+    <net code="29" name="Aux_1">
+      <node ref="U1" pin="17"/>
+      <node ref="D1" pin="2"/>
     </net>
-    <net code="35" name="Net-(U1-Pad30)">
+    <net code="30" name="Aux_2">
+      <node ref="U1" pin="18"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="31" name="Net-(U1-Pad30)">
       <node ref="U1" pin="30"/>
     </net>
-    <net code="36" name="Net-(U1-Pad32)">
+    <net code="32" name="Net-(U1-Pad32)">
       <node ref="U1" pin="32"/>
+    </net>
+    <net code="33" name="Net-(U1-Pad46)">
+      <node ref="Y2" pin="3"/>
+      <node ref="U1" pin="46"/>
+    </net>
+    <net code="34" name="Net-(U1-Pad29)">
+      <node ref="U1" pin="29"/>
+    </net>
+    <net code="35" name="Net-(U1-Pad28)">
+      <node ref="U1" pin="28"/>
+    </net>
+    <net code="36" name="Net-(U1-Pad37)">
+      <node ref="U1" pin="37"/>
     </net>
     <net code="37" name="Net-(U1-Pad36)">
       <node ref="U1" pin="36"/>
     </net>
     <net code="38" name="VDDR">
-      <node ref="C13" pin="1"/>
-      <node ref="L1" pin="2"/>
-      <node ref="C11" pin="1"/>
       <node ref="C16" pin="1"/>
-      <node ref="U1" pin="48"/>
+      <node ref="L1" pin="2"/>
+      <node ref="C13" pin="1"/>
       <node ref="U1" pin="45"/>
+      <node ref="U1" pin="48"/>
+      <node ref="C11" pin="1"/>
     </net>
     <net code="39" name="DCDC_SW">
-      <node ref="U1" pin="33"/>
       <node ref="L1" pin="1"/>
+      <node ref="U1" pin="33"/>
     </net>
-    <net code="40" name="Net-(J1-Pad7)">
+    <net code="40" name="Net-(U1-Pad39)">
+      <node ref="U1" pin="39"/>
+    </net>
+    <net code="41" name="Net-(J1-Pad7)">
       <node ref="J1" pin="7"/>
     </net>
-    <net code="41" name="Net-(U1-Pad38)">
+    <net code="42" name="Net-(U1-Pad38)">
       <node ref="U1" pin="38"/>
-    </net>
-    <net code="42" name="Net-(U1-Pad39)">
-      <node ref="U1" pin="39"/>
     </net>
     <net code="43" name="Net-(U1-Pad40)">
       <node ref="U1" pin="40"/>
@@ -1274,8 +1499,8 @@
       <node ref="U1" pin="43"/>
     </net>
     <net code="47" name="Net-(D6-Pad1)">
-      <node ref="D6" pin="1"/>
       <node ref="R12" pin="1"/>
+      <node ref="D6" pin="1"/>
     </net>
     <net code="48" name="Net-(D2-Pad1)">
       <node ref="D2" pin="1"/>
