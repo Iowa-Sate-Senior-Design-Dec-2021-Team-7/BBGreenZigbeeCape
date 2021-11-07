@@ -890,7 +890,7 @@ Text GLabel 6000 6350 2    50   Input ~ 0
 MISO
 Text GLabel 6000 6450 2    50   Output ~ 0
 MOSI
-Text GLabel 6000 6600 2    50   Input ~ 0
+Text GLabel 6450 6550 2    50   Input ~ 0
 ~CS
 Wire Wire Line
 	5800 6250 6000 6250
@@ -898,12 +898,6 @@ Wire Wire Line
 	5800 6350 6000 6350
 Wire Wire Line
 	5800 6450 6000 6450
-Wire Wire Line
-	5800 6550 5900 6550
-Wire Wire Line
-	5900 6550 5900 6600
-Wire Wire Line
-	5900 6600 6000 6600
 $Comp
 L power:+3.3V #PWR05
 U 1 1 616A47F7
@@ -985,7 +979,6 @@ NoConn ~ 5800 5800
 NoConn ~ 5800 5700
 NoConn ~ 5800 5600
 NoConn ~ 5800 5500
-NoConn ~ 5800 5350
 NoConn ~ 5800 5250
 NoConn ~ 4500 5450
 NoConn ~ 4500 5350
@@ -996,8 +989,6 @@ NoConn ~ 4500 4950
 NoConn ~ 5800 5150
 NoConn ~ 5800 5050
 NoConn ~ 5800 4950
-NoConn ~ 5800 4850
-NoConn ~ 5800 4750
 NoConn ~ 3000 7400
 NoConn ~ 3000 7300
 NoConn ~ 3000 7200
@@ -1211,8 +1202,6 @@ Wire Wire Line
 	9850 5650 9850 5550
 Wire Wire Line
 	9850 5150 9850 5250
-Text Notes 1600 4000 0    50   ~ 0
-Do I need ESD protection and what should I use
 $Comp
 L Device:C C4
 U 1 1 616AE4C5
@@ -1285,4 +1274,107 @@ Wire Wire Line
 	3150 2100 3300 2100
 Wire Wire Line
 	3150 2000 3300 2000
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 61859C21
+P 1900 4050
+F 0 "J1" H 1957 4517 50  0000 C CNN
+F 1 "USB_B_Micro" H 1957 4426 50  0000 C CNN
+F 2 "microusb:UJ2-MIBH2-4-SMT-TR" H 2050 4000 50  0001 C CNN
+F 3 "~" H 2050 4000 50  0001 C CNN
+F 4 "102-4007-1-ND" H 1900 4050 50  0001 C CNN "Digikey Part Number"
+	1    1900 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 6185AF6A
+P 1800 4550
+F 0 "#PWR0101" H 1800 4300 50  0001 C CNN
+F 1 "GND" H 1805 4377 50  0000 C CNN
+F 2 "" H 1800 4550 50  0001 C CNN
+F 3 "" H 1800 4550 50  0001 C CNN
+	1    1800 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4550 1800 4500
+Wire Wire Line
+	1900 4450 1900 4500
+Wire Wire Line
+	1900 4500 1800 4500
+Connection ~ 1800 4500
+Wire Wire Line
+	1800 4500 1800 4450
+Wire Wire Line
+	2200 3850 2400 3850
+Wire Wire Line
+	2400 3850 2400 3750
+NoConn ~ 2200 4050
+NoConn ~ 2200 4150
+NoConn ~ 2200 4250
+$Comp
+L power:VDD #PWR0102
+U 1 1 618A770D
+P 2400 3750
+F 0 "#PWR0102" H 2400 3600 50  0001 C CNN
+F 1 "VDD" H 2415 3923 50  0000 C CNN
+F 2 "" H 2400 3750 50  0001 C CNN
+F 3 "" H 2400 3750 50  0001 C CNN
+	1    2400 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 618B1AC7
+P 6100 5350
+F 0 "R12" V 5900 5350 50  0000 C CNN
+F 1 "DNP" V 6000 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6030 5350 50  0001 C CNN
+F 3 "~" H 6100 5350 50  0001 C CNN
+	1    6100 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 618B2F48
+P 6100 4850
+F 0 "R13" V 6300 4850 50  0000 C CNN
+F 1 "DNP" V 6200 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6030 4850 50  0001 C CNN
+F 3 "~" H 6100 4850 50  0001 C CNN
+	1    6100 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 618B99F0
+P 6100 6550
+F 0 "R14" V 6300 6550 50  0000 C CNN
+F 1 "0" V 6200 6550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6030 6550 50  0001 C CNN
+F 3 "~" H 6100 6550 50  0001 C CNN
+	1    6100 6550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 6550 5950 6550
+Wire Wire Line
+	6450 6550 6350 6550
+Wire Wire Line
+	6250 4850 6350 4850
+Wire Wire Line
+	6350 4850 6350 5350
+Connection ~ 6350 6550
+Wire Wire Line
+	6350 6550 6250 6550
+Wire Wire Line
+	5950 4850 5800 4850
+Wire Wire Line
+	5800 5350 5950 5350
+Wire Wire Line
+	6250 5350 6350 5350
+Connection ~ 6350 5350
+Wire Wire Line
+	6350 5350 6350 6550
 $EndSCHEMATC
