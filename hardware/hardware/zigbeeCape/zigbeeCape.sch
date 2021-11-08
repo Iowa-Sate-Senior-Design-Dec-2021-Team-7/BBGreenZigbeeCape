@@ -519,54 +519,6 @@ Wire Wire Line
 Wire Wire Line
 	7600 2450 8000 2450
 $Comp
-L Device:R R2
-U 1 1 608915BC
-P 2600 1850
-F 0 "R2" H 2670 1896 50  0000 L CNN
-F 1 "10K" H 2670 1805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2530 1850 50  0001 C CNN
-F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 2600 1850 50  0001 C CNN
-F 4 "13-RT0603FRE1310KLCT-ND" H 2600 1850 50  0001 C CNN "Digikey Part Number"
-	1    2600 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 60891C14
-P 2900 1850
-F 0 "R4" H 2970 1896 50  0000 L CNN
-F 1 "10K" H 2970 1805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2830 1850 50  0001 C CNN
-F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 2900 1850 50  0001 C CNN
-F 4 "13-RT0603FRE1310KLCT-ND" H 2900 1850 50  0001 C CNN "Digikey Part Number"
-	1    2900 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 60895C43
-P 3200 1850
-F 0 "R5" H 3270 1896 50  0000 L CNN
-F 1 "10K" H 3270 1805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3130 1850 50  0001 C CNN
-F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 3200 1850 50  0001 C CNN
-F 4 "13-RT0603FRE1310KLCT-ND" H 3200 1850 50  0001 C CNN "Digikey Part Number"
-	1    3200 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 60899D09
-P 3500 1850
-F 0 "R7" H 3570 1896 50  0000 L CNN
-F 1 "10K" H 3570 1805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3430 1850 50  0001 C CNN
-F 3 "https://www.digikey.com/en/products/detail/yageo/RT0603FRE1310KL/13694209" H 3500 1850 50  0001 C CNN
-F 4 "13-RT0603FRE1310KLCT-ND" H 3500 1850 50  0001 C CNN "Digikey Part Number"
-	1    3500 1850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R3
 U 1 1 6089DCA1
 P 2850 750
@@ -591,8 +543,6 @@ F 3 "" H 1950 2200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1950 2050 1950 2150
-Wire Wire Line
-	3500 2150 3500 2000
 Connection ~ 1950 2150
 Wire Wire Line
 	1950 2150 1950 2200
@@ -616,50 +566,7 @@ Connection ~ 3650 1150
 Wire Wire Line
 	3650 1150 4700 1150
 Wire Wire Line
-	2550 1650 2600 1650
-Wire Wire Line
 	1950 2150 2050 2150
-Wire Wire Line
-	2550 1450 3200 1450
-Wire Wire Line
-	2550 1550 2900 1550
-Wire Wire Line
-	2550 1350 3500 1350
-Wire Wire Line
-	3500 1700 3500 1350
-Connection ~ 3500 1350
-Wire Wire Line
-	3500 1350 4600 1350
-Wire Wire Line
-	3200 1700 3200 1450
-Connection ~ 3200 1450
-Wire Wire Line
-	3200 1450 4500 1450
-Wire Wire Line
-	2900 1700 2900 1550
-Connection ~ 2900 1550
-Wire Wire Line
-	2900 1550 4400 1550
-Wire Wire Line
-	2600 1700 2600 1650
-Connection ~ 2600 1650
-Wire Wire Line
-	2600 1650 4300 1650
-Wire Wire Line
-	2600 2000 2600 2150
-Connection ~ 2600 2150
-Wire Wire Line
-	2600 2150 2900 2150
-Wire Wire Line
-	2900 2000 2900 2150
-Connection ~ 2900 2150
-Wire Wire Line
-	2900 2150 3200 2150
-Wire Wire Line
-	3200 2000 3200 2150
-Connection ~ 3200 2150
-Wire Wire Line
-	3200 2150 3500 2150
 $Comp
 L Switch:SW_MEC_5E SW4
 U 1 1 60A32575
@@ -696,21 +603,19 @@ Wire Wire Line
 	4350 800  4900 800 
 Wire Wire Line
 	4900 800  4900 900 
-Text GLabel 3900 4200 0    50   Output ~ 0
+Text GLabel 3900 3900 0    50   BiDi ~ 0
 UART_RX
-Text GLabel 3900 4300 0    50   Input ~ 0
+Text GLabel 3900 4000 0    50   BiDi ~ 0
 UART_TX
-Text GLabel 3900 4500 0    50   Output ~ 0
+Text GLabel 3900 4450 0    50   BiDi ~ 0
 SPI_MOSI
-Text GLabel 3900 4600 0    50   Output ~ 0
-SPI_CS
-Text GLabel 3900 4700 0    50   Output ~ 0
+Text GLabel 3900 4750 0    50   BiDi ~ 0
 SPI_CLK
 Text Notes 2900 3400 0    50   ~ 0
 Place capacitors close to refered pin. 22uf and 0.1uf on pin 34
-Text GLabel 3900 4800 0    50   Output ~ 0
+Text GLabel 3900 4950 0    50   BiDi ~ 0
 I2C_SCL
-Text GLabel 3900 4900 0    50   BiDi ~ 0
+Text GLabel 3900 5050 0    50   BiDi ~ 0
 I2C_SDA
 $Comp
 L power:GND #PWR014
@@ -934,9 +839,6 @@ Wire Wire Line
 	1400 2000 1400 2100
 Wire Wire Line
 	2050 2050 2050 2150
-Connection ~ 2050 2150
-Wire Wire Line
-	2050 2150 2600 2150
 Wire Wire Line
 	2650 2750 2350 2750
 Wire Wire Line
@@ -977,7 +879,7 @@ Wire Wire Line
 Wire Wire Line
 	7850 3750 7850 3700
 Connection ~ 7850 3750
-Text GLabel 3900 4400 0    50   Input ~ 0
+Text GLabel 3900 4350 0    50   BiDi ~ 0
 SPI_MISO
 Text Notes 6450 650  0    50   ~ 0
 Caps could be closer
@@ -991,23 +893,23 @@ Connection ~ 2050 750
 Wire Wire Line
 	2700 750  2050 750 
 $Comp
-L Zigbee:CC1352P U?
+L Zigbee:CC1352P U1
 U 1 1 61885951
 P 5250 2500
-F 0 "U?" H 5700 3515 50  0000 C CNN
+F 0 "U1" H 5700 3515 50  0000 C CNN
 F 1 "CC1352P" H 5700 3424 50  0000 C CNN
-F 2 "" H 5850 3700 50  0001 C CNN
+F 2 "ZigbeeCape:CC1352R" H 5850 3700 50  0001 C CNN
 F 3 "" H 5850 3700 50  0001 C CNN
 	1    5250 2500
 	1    0    0    -1  
 $EndComp
 $Comp
-L Zigbee:CC1352P U?
+L Zigbee:CC1352P U1
 U 2 1 61887AFC
 P 8500 5350
-F 0 "U?" H 8725 6365 50  0000 C CNN
+F 0 "U1" H 8725 6365 50  0000 C CNN
 F 1 "CC1352P" H 8725 6274 50  0000 C CNN
-F 2 "" H 9100 6550 50  0001 C CNN
+F 2 "ZigbeeCape:CC1352R" H 9100 6550 50  0001 C CNN
 F 3 "" H 9100 6550 50  0001 C CNN
 	2    8500 5350
 	1    0    0    -1  
@@ -1089,25 +991,23 @@ Wire Wire Line
 	6600 2950 7600 2950
 Wire Wire Line
 	6600 2850 8100 2850
-Text GLabel 7850 5700 0    50   Input ~ 0
+Text GLabel 7900 5600 0    50   Input ~ 0
 UART_RX
-Text GLabel 7850 5800 0    50   Input ~ 0
+Text GLabel 7900 5700 0    50   Input ~ 0
 UART_TX
-Text GLabel 7500 5300 0    50   Input ~ 0
+Text GLabel 9550 5050 2    50   BiDi ~ 0
 FCON_CTS
-Text GLabel 7500 5400 0    50   Input ~ 0
-FCON_RTS
-Text GLabel 7450 4800 0    50   Input ~ 0
+Text GLabel 7900 5400 0    50   Input ~ 0
 SPI_CLK
-Text GLabel 7450 4700 0    50   Input ~ 0
+Text GLabel 7900 5200 0    50   Input ~ 0
 SPI_MOSI
-Text GLabel 7450 4600 0    50   Input ~ 0
+Text GLabel 7900 5300 0    50   Input ~ 0
 SPI_MISO
-Text GLabel 7450 4500 0    50   Input ~ 0
-SPI_CS
-Text GLabel 6600 5100 0    50   Input ~ 0
+Text GLabel 9550 4850 2    50   Input ~ 0
+SPI_CS1
+Text GLabel 9550 4950 2    50   Input ~ 0
 I2C_SCL
-Text GLabel 6600 5200 0    50   Input ~ 0
+Text GLabel 7900 4900 0    50   Input ~ 0
 I2C_SDA
 $Comp
 L power:GND #PWR018
@@ -1168,42 +1068,113 @@ Wire Notes Line
 	4050 6000 4050 7750
 Wire Notes Line
 	600  6000 600  7750
-Text GLabel 6600 4750 0    50   Input ~ 0
+Text GLabel 7900 5100 0    50   Input ~ 0
 LED_GREEN
-Text GLabel 6550 4650 0    50   Input ~ 0
+Text GLabel 7900 5000 0    50   Input ~ 0
 LED_RED
-Text GLabel 6000 5050 0    50   Input ~ 0
+Text GLabel 7900 5900 0    50   Input ~ 0
 Button_1
-Text GLabel 6000 5200 0    50   Input ~ 0
+Text GLabel 7900 5800 0    50   Input ~ 0
 Button_2
+Text GLabel 3900 4650 0    50   BiDi ~ 0
+SPI_CS2
+Text GLabel 3900 4550 0    50   BiDi ~ 0
+SPI_CS1
 Wire Wire Line
-	3900 4200 4000 4200
+	7900 4900 8050 4900
 Wire Wire Line
-	4000 4300 3900 4300
+	7900 5000 8050 5000
 Wire Wire Line
-	3900 4400 4000 4400
+	7900 5100 8050 5100
 Wire Wire Line
-	3900 4500 4000 4500
+	7900 5200 8050 5200
 Wire Wire Line
-	4000 4600 3900 4600
+	7900 5300 8050 5300
 Wire Wire Line
-	3900 4700 4000 4700
+	7900 5400 8050 5400
 Wire Wire Line
-	3900 4800 4000 4800
+	7900 5600 8050 5600
 Wire Wire Line
-	4000 4900 3900 4900
+	7900 5700 8050 5700
+Wire Wire Line
+	7900 5800 8050 5800
+Wire Wire Line
+	8050 5900 7900 5900
+Text GLabel 9550 4750 2    50   Input ~ 0
+SPI_CS2
+Text GLabel 9550 5250 2    50   BiDi ~ 0
+FCON_RTS
+NoConn ~ 9400 4650
+NoConn ~ 9400 5150
+NoConn ~ 9400 5350
+NoConn ~ 9400 5500
+NoConn ~ 9400 5600
+NoConn ~ 9400 5700
+NoConn ~ 9400 5800
+NoConn ~ 9400 5900
+NoConn ~ 8050 5500
+Wire Wire Line
+	9400 4750 9550 4750
+Wire Wire Line
+	9550 4850 9400 4850
+Wire Wire Line
+	9400 4950 9550 4950
+Wire Wire Line
+	9550 5050 9400 5050
+Wire Wire Line
+	9400 5250 9550 5250
 $Sheet
-S 4000 3750 800  1400
+S 4000 3750 850  1500
 U 6087B849
 F0 "BeagleBone_Headers" 50
 F1 "BeagleBone_Headers.sch" 50
-F2 "SPI_MISO" I L 4000 4400 50 
-F3 "SPI_MOSI" O L 4000 4500 50 
-F4 "SPI_CS" O L 4000 4600 50 
-F5 "UART_RX" O L 4000 4200 50 
-F6 "UART_TX" I L 4000 4300 50 
-F7 "SPI_CLK" O L 4000 4700 50 
-F8 "I2C2_SCL" O L 4000 4800 50 
-F9 "I2C2_SDA" B L 4000 4900 50 
+F2 "SPI_MISO" B L 4000 4350 50 
+F3 "SPI_MOSI" B L 4000 4450 50 
+F4 "SPI_CS1" B L 4000 4550 50 
+F5 "UART_RX" B L 4000 3900 50 
+F6 "UART_TX" B L 4000 4000 50 
+F7 "SPI_CLK" B L 4000 4750 50 
+F8 "I2C2_SCL" B L 4000 4950 50 
+F9 "I2C2_SDA" B L 4000 5050 50 
+F10 "SPI_CS2" B L 4000 4650 50 
+F11 "FCON_CTS" B L 4000 4100 50 
+F12 "FCON_RTS" O L 4000 4200 50 
 $EndSheet
+Text GLabel 3900 4100 0    50   BiDi ~ 0
+FCON_CTS
+Text GLabel 3900 4200 0    50   BiDi ~ 0
+FCON_RTS
+Wire Wire Line
+	3900 3900 4000 3900
+Wire Wire Line
+	3900 4000 4000 4000
+Wire Wire Line
+	3900 4100 4000 4100
+Wire Wire Line
+	3900 4200 4000 4200
+Wire Wire Line
+	3900 4350 4000 4350
+Wire Wire Line
+	3900 4450 4000 4450
+Wire Wire Line
+	3900 4550 4000 4550
+Wire Wire Line
+	3900 4650 4000 4650
+Wire Wire Line
+	3900 4750 4000 4750
+Wire Wire Line
+	3900 4950 4000 4950
+Wire Wire Line
+	3900 5050 4000 5050
+Wire Wire Line
+	2550 1650 4300 1650
+Wire Wire Line
+	2550 1550 4400 1550
+Wire Wire Line
+	2550 1450 4500 1450
+Wire Wire Line
+	2550 1350 4600 1350
+NoConn ~ 6600 2150
+NoConn ~ 6600 2250
+NoConn ~ 11200 2250
 $EndSCHEMATC
