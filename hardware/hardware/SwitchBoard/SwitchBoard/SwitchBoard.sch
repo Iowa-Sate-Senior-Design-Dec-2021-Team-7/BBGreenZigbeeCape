@@ -57,7 +57,7 @@ F 0 "R2" H 2070 2846 50  0000 L CNN
 F 1 "10k" H 2070 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1930 2800 50  0001 C CNN
 F 3 "~" H 2000 2800 50  0001 C CNN
-F 4 "13-RT0603FRE1310KLCT-ND" H 2000 2800 50  0001 C CNN "Digikey Part Number"
+F 4 "RMCF0603FT10K0CT-ND" H 2000 2800 50  0001 C CNN "Digikey Part Number"
 	1    2000 2800
 	1    0    0    -1  
 $EndComp
@@ -69,7 +69,7 @@ F 0 "R1" H 1770 2846 50  0000 L CNN
 F 1 "10k" H 1770 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1630 2800 50  0001 C CNN
 F 3 "~" H 1700 2800 50  0001 C CNN
-F 4 "13-RT0603FRE1310KLCT-ND" H 1700 2800 50  0001 C CNN "Digikey Part Number"
+F 4 "RMCF0603FT10K0CT-ND" H 1700 2800 50  0001 C CNN "Digikey Part Number"
 	1    1700 2800
 	1    0    0    -1  
 $EndComp
@@ -887,9 +887,9 @@ $EndComp
 Text GLabel 6000 6250 2    50   Output ~ 0
 SCK
 Text GLabel 6000 6350 2    50   Input ~ 0
-MISO
-Text GLabel 6000 6450 2    50   Output ~ 0
 MOSI
+Text GLabel 6000 6450 2    50   Output ~ 0
+MISO
 Text GLabel 6450 6550 2    50   Input ~ 0
 ~CS
 Wire Wire Line
@@ -1354,6 +1354,7 @@ F 0 "R14" V 6300 6550 50  0000 C CNN
 F 1 "0" V 6200 6550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6030 6550 50  0001 C CNN
 F 3 "~" H 6100 6550 50  0001 C CNN
+F 4 "541-0.0GCT-ND" H 6100 6550 50  0001 C CNN "Digikey Part Number"
 	1    6100 6550
 	0    1    1    0   
 $EndComp
