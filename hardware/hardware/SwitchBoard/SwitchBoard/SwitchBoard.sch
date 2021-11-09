@@ -39,16 +39,14 @@ $EndComp
 $Comp
 L power:GND #PWR02
 U 1 1 6164DD9C
-P 1700 3250
-F 0 "#PWR02" H 1700 3000 50  0001 C CNN
-F 1 "GND" H 1705 3077 50  0000 C CNN
-F 2 "" H 1700 3250 50  0001 C CNN
-F 3 "" H 1700 3250 50  0001 C CNN
-	1    1700 3250
+P 1400 3250
+F 0 "#PWR02" H 1400 3000 50  0001 C CNN
+F 1 "GND" H 1405 3077 50  0000 C CNN
+F 2 "" H 1400 3250 50  0001 C CNN
+F 3 "" H 1400 3250 50  0001 C CNN
+	1    1400 3250
 	1    0    0    -1  
 $EndComp
-Text GLabel 1350 2600 0    50   Input ~ 0
-~RESET
 $Comp
 L Device:R R2
 U 1 1 6164F41D
@@ -74,8 +72,6 @@ F 4 "RMCF0603FT10K0CT-ND" H 1700 2800 50  0001 C CNN "Digikey Part Number"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 2600 1350 2600
-Wire Wire Line
 	2000 2650 2000 2500
 Wire Wire Line
 	2000 2500 2300 2500
@@ -90,8 +86,6 @@ Wire Wire Line
 Wire Wire Line
 	2000 3100 1700 3100
 Connection ~ 1700 3100
-Wire Wire Line
-	1700 3100 1700 3250
 Wire Wire Line
 	2300 2800 2250 2800
 Wire Wire Line
@@ -1336,17 +1330,6 @@ F 3 "~" H 6100 5350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R13
-U 1 1 618B2F48
-P 6100 4850
-F 0 "R13" V 6300 4850 50  0000 C CNN
-F 1 "DNP" V 6200 4850 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6030 4850 50  0001 C CNN
-F 3 "~" H 6100 4850 50  0001 C CNN
-	1    6100 4850
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R14
 U 1 1 618B99F0
 P 6100 6550
@@ -1362,20 +1345,38 @@ Wire Wire Line
 	5800 6550 5950 6550
 Wire Wire Line
 	6450 6550 6350 6550
-Wire Wire Line
-	6250 4850 6350 4850
-Wire Wire Line
-	6350 4850 6350 5350
 Connection ~ 6350 6550
 Wire Wire Line
 	6350 6550 6250 6550
 Wire Wire Line
-	5950 4850 5800 4850
-Wire Wire Line
 	5800 5350 5950 5350
 Wire Wire Line
 	6250 5350 6350 5350
-Connection ~ 6350 5350
 Wire Wire Line
 	6350 5350 6350 6550
+$Comp
+L Device:R R15
+U 1 1 618B728C
+P 1400 2800
+F 0 "R15" H 1470 2846 50  0000 L CNN
+F 1 "10k" H 1470 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1330 2800 50  0001 C CNN
+F 3 "~" H 1400 2800 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 1400 2800 50  0001 C CNN "Digikey Part Number"
+	1    1400 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 2650 1400 2600
+Wire Wire Line
+	1400 2600 2300 2600
+Wire Wire Line
+	1400 2950 1400 3100
+Wire Wire Line
+	1400 3100 1700 3100
+Wire Wire Line
+	1400 3250 1400 3100
+Connection ~ 1400 3100
+NoConn ~ 5800 4850
+NoConn ~ 5800 4750
 $EndSCHEMATC
