@@ -306,7 +306,7 @@ CONST zclAttrRec_t zclSampleThermostat_Attrs[] =
     }
   },
   {
-   ZCL_CLUSTER_ID_CUSTOM,
+   ZCL_CLUSTER_ID_HVAC_THERMOSTAT, // maybe change back to ZCL_CLUSTER_ID_CUSTOM
     {  // Attribute record
        CUSTOM_COUNT,
       ZCL_DATATYPE_UINT16,

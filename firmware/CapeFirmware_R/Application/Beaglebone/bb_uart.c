@@ -39,6 +39,7 @@
 #include <unistd.h>
 
 /* POSIX Header files */
+#include <pthread.h>
 #include <semaphore.h>
 
 /* Driver Header files */
@@ -71,29 +72,30 @@ char buf_output[JSON_MAXLEN + 8];
  * GLOBAL FUNCTIONS
  */
 void bb_uartInit();
-static int_fast32_t bb_uartRead(void *buf, size_t maxCount);
-static int_fast32_t bb_uartWrite(void *buf, size_t count);
+int_fast32_t bb_uartRead(void *buf, size_t maxCount);
+int_fast32_t bb_uartWrite(void *buf, size_t count);
 
 /*
  *  ======== mainThread ========
  */
-void *bb_uartThread(void *arg0)
+void *bb_uartRead_thread(void *arg0)
 {
     int i = 0;
-    if (bb_uartHandle == NULL) { bb_uartInit(); }
 
-    /* Loop forever echoing */
+    /* Loop forever reading */
     while (1) {
         int_fast32_t readBytes = bb_uartRead(&buf_recieve, JSON_MAXLEN);
 
-        strcat(buf_output, buf_recieve);
-        buf_output[6 + readBytes + 0] = '\r';
-        buf_output[6 + readBytes + 1] = '\n';
+        if (readBytes != 0) {
+            strcat(buf_output, buf_recieve);
+            buf_output[6 + readBytes + 0] = '\r';
+            buf_output[6 + readBytes + 1] = '\n';
 
-        bb_uartWrite(&buf_output, strlen(buf_output));
+            bb_uartWrite(&buf_output, strlen(buf_output));
 
-        for (i = 0; i < sizeof(buf_recieve); i++) { buf_recieve[i] = '\0'; }
-        for (i = 6; i < sizeof(buf_output); i++) { buf_output[i] = '\0'; }
+            for (i = 0; i < sizeof(buf_recieve); i++) { buf_recieve[i] = '\0'; }
+            for (i = 6; i < sizeof(buf_output); i++) { buf_output[i] = '\0'; }
+        }
     }
 }
 
@@ -110,13 +112,8 @@ void bb_uartInit() {
     GPIO_init();
     UART_init();
 
-    /* Configure the LED pin */
-    GPIO_setConfig(CONFIG_GPIO_RLED, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
-
     /* Create a UART with data processing off. */
     UART_Params_init(&uartParams);
-    uartParams.readMode = UART_MODE_BLOCKING;
-    uartParams.writeMode = UART_MODE_BLOCKING;
     uartParams.readDataMode = UART_DATA_TEXT;
     uartParams.writeDataMode = UART_DATA_TEXT;
     uartParams.readReturnMode = UART_RETURN_NEWLINE;
@@ -126,19 +123,17 @@ void bb_uartInit() {
 
     if (bb_uartHandle == NULL) {
         /* UART_open() failed */
-        while(1) {
-            LED_startBlinking(gRedLedHandle, 500, LED_BLINK_FOREVER);
-        }
+        while(1) { LED_startBlinking(gRedLedHandle, 1000, LED_BLINK_FOREVER); }
     }
 
     /* Turn on user LED to indicate successful initialization */
     LED_setOn(gRedLedHandle, LED_BRIGHTNESS_MAX);
 }
-static int_fast32_t bb_uartRead(void *buf, size_t maxCount) {
+int_fast32_t bb_uartRead(void *buf, size_t maxCount) {
     if (bb_uartHandle != NULL) { return UART_read(bb_uartHandle, buf, maxCount); }
     return 0;
 }
-static int_fast32_t bb_uartWrite(void *buf, size_t count) {
+int_fast32_t bb_uartWrite(void *buf, size_t count) {
     if (bb_uartHandle != NULL) { return UART_write(bb_uartHandle, buf, count); }
     return 0;
 }

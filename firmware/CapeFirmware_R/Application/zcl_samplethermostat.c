@@ -76,6 +76,19 @@
 /*********************************************************************
  * INCLUDES
  */
+#include <stdio.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <string.h>
+
+/* POSIX Header files */
+#include <pthread.h>
+#include <semaphore.h>
+
+/* Driver Header files */
+#include <ti/drivers/apps/Button.h>
+#include <ti/drivers/apps/LED.h>
+
 #include "rom_jt_154.h"
 #include "zcomdef.h"
 #include "zcl.h"
@@ -84,16 +97,12 @@
 #include "zcl_hvac.h"
 #include "zcl_ms.h"
 #include "zcl_samplethermostat.h"
-#include <string.h>
 #include "bdb_interface.h"
 
 #include "ti_drivers_config.h"
 #include "nvintf.h"
 #include "zstackmsg.h"
 #include "zcl_port.h"
-
-#include <ti/drivers/apps/Button.h>
-#include <ti/drivers/apps/LED.h>
 
 #ifndef CUI_DISABLE
 #include "zcl_sampleapps_ui.h"
@@ -125,6 +134,7 @@
 /*********************************************************************
  * CONSTANTS
  */
+#define THREADSTACKSIZE    1024
 
 /*********************************************************************
  * TYPEDEFS
@@ -133,11 +143,15 @@
 /*********************************************************************
  * GLOBAL VARIABLES
  */
-LED_Handle gRedLedHandle;
+extern LED_Handle gRedLedHandle;
 
 /*********************************************************************
  * GLOBAL FUNCTIONS
  */
+extern void *bb_uartRead_thread(void *arg0);
+extern void bb_uartInit();
+extern int_fast32_t bb_uartRead(void *buf, size_t maxCount);
+extern int_fast32_t bb_uartWrite(void *buf, size_t count);
 
 /*********************************************************************
  * LOCAL VARIABLES
@@ -533,13 +547,6 @@ static void zclSampleThermostat_Init( void )
             zclSampleThermostat_RemoveAppNvmData          // A pointer to the app-specific NV Item reset function
             );
 
-
-  //Request the Red LED for App
-  LED_Params ledParams;
-  LED_Params_init(&ledParams);
-  gRedLedHandle = LED_open(CONFIG_LED_RED, &ledParams);
-
-
   //Initialize the SampleDoorLock UI status line
   zclSampleThermostat_InitializeStatusLine(gCuiHandle);
 #endif
@@ -557,6 +564,38 @@ static void zclSampleThermostat_Init( void )
   zstack_bdbStartCommissioningReq_t zstack_bdbStartCommissioningReq;
   zstack_bdbStartCommissioningReq.commissioning_mode = 0;
   Zstackapi_bdbStartCommissioningReq(appServiceTaskId,&zstack_bdbStartCommissioningReq);
+
+  // initialize bb uart handle and connection
+  bb_uartInit();
+
+  /*
+   * BB uart pthread creation
+   */
+  pthread_t           thread_bb_uartRead;
+  pthread_attr_t      thread_bb_uartRead_attrs;
+  struct sched_param  priParam;
+  int                 retc;
+
+  /* Initialize the attributes structure with default values */
+  pthread_attr_init(&thread_bb_uartRead_attrs);
+  /* Set priority, detach state, and stack size attributes */
+  priParam.sched_priority = 1;
+  retc = pthread_attr_setschedparam(&thread_bb_uartRead_attrs, &priParam);
+  retc |= pthread_attr_setdetachstate(&thread_bb_uartRead_attrs, PTHREAD_CREATE_DETACHED);
+  retc |= pthread_attr_setstacksize(&thread_bb_uartRead_attrs, THREADSTACKSIZE);
+  if (retc != 0) {
+      /* failed to set attributes */
+      while (1) {}
+  }
+
+  // create read thread
+  retc = pthread_create(&thread_bb_uartRead, &thread_bb_uartRead_attrs, bb_uartRead_thread, NULL);
+  if (retc != 0) {
+      /* pthread_create() failed */
+      while (1) {
+          LED_startBlinking(gRedLedHandle, 500, LED_BLINK_FOREVER);
+      }
+  }
 }
 
 #ifndef CUI_DISABLE
@@ -1184,6 +1223,7 @@ static void zclSampleThermostat_ProcessInReportCmd( zclIncoming_t *pInMsg )
   zclReportCmd_t *pInTempSensorReport;
 
   pInTempSensorReport = (zclReportCmd_t *)pInMsg->attrCmd;
+  char uartOut[10];
 
   switch (pInTempSensorReport->attrList[0].attrID) {
   case ATTRID_TEMPERATURE_MEASUREMENT_MEASURED_VALUE:
@@ -1192,6 +1232,8 @@ static void zclSampleThermostat_ProcessInReportCmd( zclIncoming_t *pInMsg )
       break;
   case CUSTOM_COUNT:
       data_count = BUILD_UINT16(pInTempSensorReport->attrList[0].attrData[0], pInTempSensorReport->attrList[0].attrData[1]);
+      sprintf(uartOut, "%d\r\n", data_count);
+      bb_uartWrite(uartOut, strlen(uartOut));
       break;
   }
 

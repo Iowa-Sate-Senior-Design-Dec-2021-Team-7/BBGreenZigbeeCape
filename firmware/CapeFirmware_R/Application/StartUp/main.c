@@ -76,6 +76,7 @@
 
 /* POSIX Header files */
 #include <pthread.h>
+#include <semaphore.h>
 
 #ifndef TIMAC_ROM_IMAGE_BUILD
 #include "crypto_mac_api.h"
@@ -143,7 +144,7 @@
  External Variables
  *****************************************************************************/
 
-extern void *bb_uartThread(void *arg0);
+extern void *bb_uartRead_thread(void *arg0);
 
 #ifdef ZSTACK_GPD
 extern ApiMac_sAddrExt_t ApiMac_extAddr;
@@ -152,6 +153,7 @@ extern ApiMac_sAddrExt_t ApiMac_extAddr;
 /******************************************************************************
  Global Variables
  *****************************************************************************/
+LED_Handle gRedLedHandle;
 
 // ZNP does not need an application task
 #ifndef ZNP_NPI
@@ -298,13 +300,6 @@ void Main_lowVoltageCb(uint32_t voltage)
  */
 int main()
 {
-    /*
-     * BB uart pthread variables
-     */
-    pthread_t           thread;
-    pthread_attr_t      attrs;
-    struct sched_param  priParam;
-    int                 retc;
 
 #ifndef USE_DEFAULT_USER_CFG
     zstack_user0Cfg.macConfig.pAssertFP = assertHandler;
@@ -406,31 +401,12 @@ int main()
 #endif /* DEBUG_SW_TRACE */
 
     /*
-     * BB uart pthread creation
+     * Red LED config
      */
-    /* Initialize the attributes structure with default values */
-    pthread_attr_init(&attrs);
-
-    /* Set priority, detach state, and stack size attributes */
-    priParam.sched_priority = 1;
-    retc = pthread_attr_setschedparam(&attrs, &priParam);
-    retc |= pthread_attr_setdetachstate(&attrs, PTHREAD_CREATE_DETACHED);
-    retc |= pthread_attr_setstacksize(&attrs, THREADSTACKSIZE);
-    if (retc != 0) {
-        /* failed to set attributes */
-        while (1) {}
-    }
-
-    retc = pthread_create(&thread, &attrs, bb_uartThread, NULL);
-    if (retc != 0) {
-        /* pthread_create() failed */
-        while (1) {
-            GPIO_write(CONFIG_GPIO_RLED, CONFIG_GPIO_LED_OFF);
-            usleep(5000);
-            GPIO_write(CONFIG_GPIO_RLED, CONFIG_GPIO_LED_ON);
-            usleep(5000);
-        }
-    }
+    //Request the Red LED for App
+    LED_Params ledParams;
+    LED_Params_init(&ledParams);
+    gRedLedHandle = LED_open(CONFIG_LED_RED, &ledParams);
 
     BIOS_start(); /* enable interrupts and start SYS/BIOS */
 
