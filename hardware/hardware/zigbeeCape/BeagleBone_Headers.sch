@@ -37,27 +37,21 @@ F 4 "~" H 6450 4050 50  0001 C CNN "Digikey Part Number"
 	1    6450 4050
 	1    0    0    -1  
 $EndComp
-Text HLabel 5650 2250 0    50   Input ~ 0
-BeagleBone_Reset
-Text HLabel 7300 1550 2    50   Output ~ 0
-LAN_Heartbeat
-Text HLabel 7300 1950 2    50   Input ~ 0
-Network_Connect
-Text HLabel 5650 3650 0    50   Input ~ 0
+Text HLabel 5650 3850 0    50   Input ~ 0
 UART_TX
-Text HLabel 7250 3150 2    50   Input ~ 0
+Text HLabel 7250 3250 2    50   Input ~ 0
 SPI_MISO
-Text HLabel 7250 3250 2    50   Output ~ 0
+Text HLabel 7250 3150 2    50   Output ~ 0
 SPI_MOSI
 Text HLabel 7250 3350 2    50   Output ~ 0
-SPI_CS
+SPI_CS1
 Text HLabel 7250 3050 2    50   Output ~ 0
 SPI_CLK
 Text HLabel 7250 3950 2    50   Output ~ 0
 I2C2_SCL
 Text HLabel 7250 3850 2    50   BiDi ~ 0
 I2C2_SDA
-Text HLabel 5650 3750 0    50   Output ~ 0
+Text HLabel 5650 3950 0    50   Output ~ 0
 UART_RX
 $Comp
 L power:GND #PWR046
@@ -97,8 +91,6 @@ NoConn ~ 5800 3400
 NoConn ~ 5800 3300
 NoConn ~ 5800 3150
 NoConn ~ 5800 3050
-NoConn ~ 5800 3950
-NoConn ~ 5800 3850
 NoConn ~ 7100 3700
 NoConn ~ 7100 3600
 NoConn ~ 7100 3500
@@ -124,8 +116,6 @@ NoConn ~ 2250 3750
 NoConn ~ 2250 3650
 NoConn ~ 2250 3550
 NoConn ~ 2250 3450
-NoConn ~ 2250 3350
-NoConn ~ 2250 3250
 NoConn ~ 2250 3150
 NoConn ~ 2250 3050
 NoConn ~ 2250 2950
@@ -174,8 +164,6 @@ Wire Wire Line
 	5650 1650 5650 1550
 Connection ~ 5650 1550
 Wire Wire Line
-	5800 2250 5650 2250
-Wire Wire Line
 	5800 2900 5650 2900
 Wire Wire Line
 	5650 2900 5650 2950
@@ -205,23 +193,13 @@ Wire Wire Line
 	5650 2400 5650 2500
 Connection ~ 5650 2500
 Wire Wire Line
-	5650 3650 5800 3650
-Wire Wire Line
-	5800 3750 5650 3750
-Wire Wire Line
 	7100 3950 7250 3950
 Wire Wire Line
 	7250 3850 7100 3850
 Wire Wire Line
 	7250 3350 7100 3350
 Wire Wire Line
-	7250 3250 7100 3250
-Wire Wire Line
-	7250 3150 7100 3150
-Wire Wire Line
 	7250 3050 7100 3050
-Wire Wire Line
-	7100 1550 7300 1550
 Wire Wire Line
 	2250 1650 2050 1650
 Wire Wire Line
@@ -231,7 +209,29 @@ Wire Wire Line
 Wire Wire Line
 	2050 1550 2050 1650
 Connection ~ 2050 1650
+Text HLabel 2150 3350 0    50   Input ~ 0
+FCON_RTS
 Wire Wire Line
-	7100 1950 7300 1950
-NoConn ~ 7100 1650
+	2250 3350 2150 3350
+Wire Wire Line
+	5650 3950 5800 3950
+Wire Wire Line
+	5650 3850 5800 3850
+Text HLabel 2150 3250 0    50   BiDi ~ 0
+FCON_CTS
+Wire Wire Line
+	2250 3250 2150 3250
+Wire Wire Line
+	7100 3250 7250 3250
+Wire Wire Line
+	7250 3150 7100 3150
+Text HLabel 7250 1650 2    50   BiDi ~ 0
+SPI_CS2
+Wire Wire Line
+	7100 1650 7250 1650
+NoConn ~ 7100 1550
+NoConn ~ 5800 2250
+NoConn ~ 7100 1950
+NoConn ~ 5800 3650
+NoConn ~ 5800 3750
 $EndSCHEMATC
