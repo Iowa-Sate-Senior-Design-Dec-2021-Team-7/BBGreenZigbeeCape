@@ -398,19 +398,19 @@ static void zclSampleTemperatureSensor_Init( void )
   TempReq.attrID = ATTRID_TEMPERATURE_MEASUREMENT_MEASURED_VALUE;
   TempReq.cluster = ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT;
   TempReq.endpoint = SAMPLETEMPERATURESENSOR_ENDPOINT;
-//  Req.maxReportInt = 1;
-//  Req.minReportInt = 0;
+  TempReq.maxReportInt = 1;
+  TempReq.minReportInt = 0;
   OsalPort_memcpy(TempReq.reportableChange,reportableChange,BDBREPORTING_MAX_ANALOG_ATTR_SIZE);
   Zstackapi_bdbRepAddAttrCfgRecordDefaultToListReq(appServiceTaskId,&TempReq);
 
-  // Set
-  CustomReq.attrID = CUSTOM_COUNT;
-  CustomReq.cluster = ZCL_CLUSTER_ID_MS_FLOW_MEASUREMENT;
-  CustomReq.endpoint = SAMPLETEMPERATURESENSOR_ENDPOINT;
-//  Req.maxReportInt = 1;
-//  Req.minReportInt = 0;
-  OsalPort_memcpy(CustomReq.reportableChange,reportableChange,BDBREPORTING_MAX_ANALOG_ATTR_SIZE);
-  Zstackapi_bdbRepAddAttrCfgRecordDefaultToListReq(appServiceTaskId,&CustomReq);
+//  // Set
+//  CustomReq.attrID = CUSTOM_COUNT;
+//  CustomReq.cluster = ZCL_CLUSTER_ID_MS_FLOW_MEASUREMENT;
+//  CustomReq.endpoint = SAMPLETEMPERATURESENSOR_ENDPOINT;
+////  Req.maxReportInt = 1;
+////  Req.minReportInt = 0;
+//  OsalPort_memcpy(CustomReq.reportableChange,reportableChange,BDBREPORTING_MAX_ANALOG_ATTR_SIZE);
+//  Zstackapi_bdbRepAddAttrCfgRecordDefaultToListReq(appServiceTaskId,&CustomReq);
 #endif
 
 #ifndef CUI_DISABLE
@@ -1245,7 +1245,7 @@ static void zclSampleTemperatureSensor_processKey(uint8_t key, Button_EventMask 
 #ifdef BDB_REPORTING
             zstack_bdbRepChangedAttrValueReq_t Req;
             Req.attrID = CUSTOM_COUNT;
-            Req.cluster = ZCL_CLUSTER_ID_MS_FLOW_MEASUREMENT;
+            Req.cluster = ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT;
             Req.endpoint = SAMPLETEMPERATURESENSOR_ENDPOINT;
             Zstackapi_bdbRepChangedAttrValueReq(appServiceTaskId,&Req);
 #endif
