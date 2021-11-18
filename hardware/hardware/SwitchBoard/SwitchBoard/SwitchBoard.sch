@@ -39,16 +39,14 @@ $EndComp
 $Comp
 L power:GND #PWR02
 U 1 1 6164DD9C
-P 1700 3250
-F 0 "#PWR02" H 1700 3000 50  0001 C CNN
-F 1 "GND" H 1705 3077 50  0000 C CNN
-F 2 "" H 1700 3250 50  0001 C CNN
-F 3 "" H 1700 3250 50  0001 C CNN
-	1    1700 3250
+P 1400 3250
+F 0 "#PWR02" H 1400 3000 50  0001 C CNN
+F 1 "GND" H 1405 3077 50  0000 C CNN
+F 2 "" H 1400 3250 50  0001 C CNN
+F 3 "" H 1400 3250 50  0001 C CNN
+	1    1400 3250
 	1    0    0    -1  
 $EndComp
-Text GLabel 1350 2600 0    50   Input ~ 0
-~RESET
 $Comp
 L Device:R R2
 U 1 1 6164F41D
@@ -57,7 +55,7 @@ F 0 "R2" H 2070 2846 50  0000 L CNN
 F 1 "10k" H 2070 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1930 2800 50  0001 C CNN
 F 3 "~" H 2000 2800 50  0001 C CNN
-F 4 "13-RT0603FRE1310KLCT-ND" H 2000 2800 50  0001 C CNN "Digikey Part Number"
+F 4 "RMCF0603FT10K0CT-ND" H 2000 2800 50  0001 C CNN "Digikey Part Number"
 	1    2000 2800
 	1    0    0    -1  
 $EndComp
@@ -69,12 +67,10 @@ F 0 "R1" H 1770 2846 50  0000 L CNN
 F 1 "10k" H 1770 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1630 2800 50  0001 C CNN
 F 3 "~" H 1700 2800 50  0001 C CNN
-F 4 "13-RT0603FRE1310KLCT-ND" H 1700 2800 50  0001 C CNN "Digikey Part Number"
+F 4 "RMCF0603FT10K0CT-ND" H 1700 2800 50  0001 C CNN "Digikey Part Number"
 	1    1700 2800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2300 2600 1350 2600
 Wire Wire Line
 	2000 2650 2000 2500
 Wire Wire Line
@@ -90,8 +86,6 @@ Wire Wire Line
 Wire Wire Line
 	2000 3100 1700 3100
 Connection ~ 1700 3100
-Wire Wire Line
-	1700 3100 1700 3250
 Wire Wire Line
 	2300 2800 2250 2800
 Wire Wire Line
@@ -887,10 +881,10 @@ $EndComp
 Text GLabel 6000 6250 2    50   Output ~ 0
 SCK
 Text GLabel 6000 6350 2    50   Input ~ 0
-MISO
-Text GLabel 6000 6450 2    50   Output ~ 0
 MOSI
-Text GLabel 6000 6600 2    50   Input ~ 0
+Text GLabel 6000 6450 2    50   Output ~ 0
+MISO
+Text GLabel 6450 6550 2    50   Input ~ 0
 ~CS
 Wire Wire Line
 	5800 6250 6000 6250
@@ -898,12 +892,6 @@ Wire Wire Line
 	5800 6350 6000 6350
 Wire Wire Line
 	5800 6450 6000 6450
-Wire Wire Line
-	5800 6550 5900 6550
-Wire Wire Line
-	5900 6550 5900 6600
-Wire Wire Line
-	5900 6600 6000 6600
 $Comp
 L power:+3.3V #PWR05
 U 1 1 616A47F7
@@ -985,7 +973,6 @@ NoConn ~ 5800 5800
 NoConn ~ 5800 5700
 NoConn ~ 5800 5600
 NoConn ~ 5800 5500
-NoConn ~ 5800 5350
 NoConn ~ 5800 5250
 NoConn ~ 4500 5450
 NoConn ~ 4500 5350
@@ -996,8 +983,6 @@ NoConn ~ 4500 4950
 NoConn ~ 5800 5150
 NoConn ~ 5800 5050
 NoConn ~ 5800 4950
-NoConn ~ 5800 4850
-NoConn ~ 5800 4750
 NoConn ~ 3000 7400
 NoConn ~ 3000 7300
 NoConn ~ 3000 7200
@@ -1069,8 +1054,8 @@ P 8450 5100
 F 0 "U4" H 8450 5342 50  0000 C CNN
 F 1 "NCP1117-3.3_SOT223" H 8450 5251 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 8450 5300 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 8550 4850 50  0001 C CNN
-F 4 "488-NCP1117IST33T3GCT-ND" H 8450 5100 50  0001 C CNN "Digikey Part Number"
+F 3 "" H 8550 4850 50  0001 C CNN
+F 4 "NCP1117ST33T3GOSCT-ND" H 8450 5100 50  0001 C CNN "Digikey Part Number"
 	1    8450 5100
 	1    0    0    -1  
 $EndComp
@@ -1211,8 +1196,6 @@ Wire Wire Line
 	9850 5650 9850 5550
 Wire Wire Line
 	9850 5150 9850 5250
-Text Notes 1600 4000 0    50   ~ 0
-Do I need ESD protection and what should I use
 $Comp
 L Device:C C4
 U 1 1 616AE4C5
@@ -1285,4 +1268,115 @@ Wire Wire Line
 	3150 2100 3300 2100
 Wire Wire Line
 	3150 2000 3300 2000
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 61859C21
+P 1900 4050
+F 0 "J1" H 1957 4517 50  0000 C CNN
+F 1 "USB_B_Micro" H 1957 4426 50  0000 C CNN
+F 2 "microusb:UJ2-MIBH2-4-SMT-TR" H 2050 4000 50  0001 C CNN
+F 3 "~" H 2050 4000 50  0001 C CNN
+F 4 "102-4007-1-ND" H 1900 4050 50  0001 C CNN "Digikey Part Number"
+	1    1900 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 6185AF6A
+P 1800 4550
+F 0 "#PWR0101" H 1800 4300 50  0001 C CNN
+F 1 "GND" H 1805 4377 50  0000 C CNN
+F 2 "" H 1800 4550 50  0001 C CNN
+F 3 "" H 1800 4550 50  0001 C CNN
+	1    1800 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4550 1800 4500
+Wire Wire Line
+	1900 4450 1900 4500
+Wire Wire Line
+	1900 4500 1800 4500
+Connection ~ 1800 4500
+Wire Wire Line
+	1800 4500 1800 4450
+Wire Wire Line
+	2200 3850 2400 3850
+Wire Wire Line
+	2400 3850 2400 3750
+NoConn ~ 2200 4050
+NoConn ~ 2200 4150
+NoConn ~ 2200 4250
+$Comp
+L power:VDD #PWR0102
+U 1 1 618A770D
+P 2400 3750
+F 0 "#PWR0102" H 2400 3600 50  0001 C CNN
+F 1 "VDD" H 2415 3923 50  0000 C CNN
+F 2 "" H 2400 3750 50  0001 C CNN
+F 3 "" H 2400 3750 50  0001 C CNN
+	1    2400 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 618B1AC7
+P 6100 5350
+F 0 "R12" V 5900 5350 50  0000 C CNN
+F 1 "DNP" V 6000 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6030 5350 50  0001 C CNN
+F 3 "~" H 6100 5350 50  0001 C CNN
+	1    6100 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 618B99F0
+P 6100 6550
+F 0 "R14" V 6300 6550 50  0000 C CNN
+F 1 "0" V 6200 6550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6030 6550 50  0001 C CNN
+F 3 "~" H 6100 6550 50  0001 C CNN
+F 4 "541-0.0GCT-ND" H 6100 6550 50  0001 C CNN "Digikey Part Number"
+	1    6100 6550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 6550 5950 6550
+Wire Wire Line
+	6450 6550 6350 6550
+Connection ~ 6350 6550
+Wire Wire Line
+	6350 6550 6250 6550
+Wire Wire Line
+	5800 5350 5950 5350
+Wire Wire Line
+	6250 5350 6350 5350
+Wire Wire Line
+	6350 5350 6350 6550
+$Comp
+L Device:R R15
+U 1 1 618B728C
+P 1400 2800
+F 0 "R15" H 1470 2846 50  0000 L CNN
+F 1 "10k" H 1470 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1330 2800 50  0001 C CNN
+F 3 "~" H 1400 2800 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 1400 2800 50  0001 C CNN "Digikey Part Number"
+	1    1400 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 2650 1400 2600
+Wire Wire Line
+	1400 2600 2300 2600
+Wire Wire Line
+	1400 2950 1400 3100
+Wire Wire Line
+	1400 3100 1700 3100
+Wire Wire Line
+	1400 3250 1400 3100
+Connection ~ 1400 3100
+NoConn ~ 5800 4850
+NoConn ~ 5800 4750
 $EndSCHEMATC
