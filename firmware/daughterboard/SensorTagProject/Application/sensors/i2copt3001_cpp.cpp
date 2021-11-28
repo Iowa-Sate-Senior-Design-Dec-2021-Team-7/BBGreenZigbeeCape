@@ -136,6 +136,9 @@ static void *alarmThread(void *arg0)
     }
 }
 
+//void Display_printf(Display_Handle display, int f, int s, char* c);
+
+
 /*
  *  ======== mainThread ========
  */

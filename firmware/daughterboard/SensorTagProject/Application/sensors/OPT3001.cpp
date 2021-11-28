@@ -106,10 +106,9 @@ OPT3001::~OPT3001()
 /*
  *  ======== init ========
  */
-bool OPT3001::init(I2C_Handle i2cHandle, SlaveAddress i2cAddress,
-    Display_Handle displayHandle)
+bool OPT3001::init(I2C_Handle i2cHandle, SlaveAddress i2cAddress)
 {
-    this->displayHandle = displayHandle;
+//    this->displayHandle = displayHandle;
     this->i2cHandle = i2cHandle;
     this->i2cAddress = i2cAddress;
     i2cTransaction.slaveAddress = this->i2cAddress;
@@ -410,8 +409,8 @@ bool OPT3001::transfer()
 
     ret = I2C_transfer(i2cHandle, &i2cTransaction);
 
-    if (!ret && displayHandle != NULL) {
-        i2cErrorHandler(&i2cTransaction, displayHandle);
+    if (!ret) {
+        i2cErrorHandler(&i2cTransaction);
     }
 
     return (ret);
@@ -420,53 +419,52 @@ bool OPT3001::transfer()
 /*
  *  ======== i2cErrorHandler ========
  */
-void OPT3001::i2cErrorHandler(I2C_Transaction *transaction,
-    Display_Handle display)
+void OPT3001::i2cErrorHandler(I2C_Transaction *transaction)
 {
-    switch (transaction->status) {
-    case I2C_STATUS_TIMEOUT:
-        Display_printf(display, 0, 0, (char *) "%s: I2C transaction timed"
-            "out!", __FILE__);
-        break;
-    case I2C_STATUS_CLOCK_TIMEOUT:
-        Display_printf(display, 0, 0, (char *) "%s: I2C serial clock line"
-            "timed out!", __FILE__);
-        break;
-    case I2C_STATUS_ADDR_NACK:
-        Display_printf(display, 0, 0, (char *) "%s: I2C slave address 0x%x not"
-            " acknowledged!", __FILE__, transaction->slaveAddress);
-        break;
-    case I2C_STATUS_DATA_NACK:
-        Display_printf(display, 0, 0, (char *) "%s: I2C data byte not"
-            "acknowledged!", __FILE__);
-        break;
-    case I2C_STATUS_ARB_LOST:
-        Display_printf(display, 0, 0, (char *) "%s: I2C arbitration to another"
-            "master!", __FILE__);
-        break;
-    case I2C_STATUS_INCOMPLETE:
-        Display_printf(display, 0, 0, (char *) "%s: I2C transaction returned"
-            "before completion!", __FILE__);
-        break;
-    case I2C_STATUS_BUS_BUSY:
-        Display_printf(display, 0, 0, (char *) "%s: I2C bus is already"
-            "in use!", __FILE__);
-        break;
-    case I2C_STATUS_CANCEL:
-        Display_printf(display, 0, 0, (char *) "%s: I2C transaction"
-            "cancelled!", __FILE__);
-        break;
-    case I2C_STATUS_INVALID_TRANS:
-        Display_printf(display, 0, 0, (char *) "%s: I2C transaction"
-            "invalid!", __FILE__);
-        break;
-    case I2C_STATUS_ERROR:
-        Display_printf(display, 0, 0, (char *) "%s: I2C generic error!",
-            __FILE__);
-        break;
-    default:
-        Display_printf(display, 0, 0, (char *)"%s: I2C undefined error case!",
-            __FILE__);
-        break;
-    }
+//    switch (transaction->status) {
+//    case I2C_STATUS_TIMEOUT:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C transaction timed"
+//            "out!", __FILE__);
+//        break;
+//    case I2C_STATUS_CLOCK_TIMEOUT:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C serial clock line"
+//            "timed out!", __FILE__);
+//        break;
+//    case I2C_STATUS_ADDR_NACK:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C slave address 0x%x not"
+//            " acknowledged!", __FILE__, transaction->slaveAddress);
+//        break;
+//    case I2C_STATUS_DATA_NACK:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C data byte not"
+//            "acknowledged!", __FILE__);
+//        break;
+//    case I2C_STATUS_ARB_LOST:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C arbitration to another"
+//            "master!", __FILE__);
+//        break;
+//    case I2C_STATUS_INCOMPLETE:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C transaction returned"
+//            "before completion!", __FILE__);
+//        break;
+//    case I2C_STATUS_BUS_BUSY:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C bus is already"
+//            "in use!", __FILE__);
+//        break;
+//    case I2C_STATUS_CANCEL:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C transaction"
+//            "cancelled!", __FILE__);
+//        break;
+//    case I2C_STATUS_INVALID_TRANS:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C transaction"
+//            "invalid!", __FILE__);
+//        break;
+//    case I2C_STATUS_ERROR:
+//        Display_printf(display, 0, 0, (char *) "%s: I2C generic error!",
+//            __FILE__);
+//        break;
+//    default:
+//        Display_printf(display, 0, 0, (char *)"%s: I2C undefined error case!",
+//            __FILE__);
+//        break;
+//    }
 }

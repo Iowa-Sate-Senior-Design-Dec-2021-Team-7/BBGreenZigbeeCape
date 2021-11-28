@@ -268,8 +268,7 @@ public:
      *  @return @p true for a successful initialization; @p false
      *          for an error (for example, an I2C bus fault (NACK)).
      */
-    bool init(I2C_Handle i2cHandle, SlaveAddress i2cAddress,
-        Display_Handle displayHandle);
+    bool init(I2C_Handle i2cHandle, SlaveAddress i2cAddress);
 
     /*!
      *  @brief  Converts a lux value into a 16-bit number
@@ -394,8 +393,7 @@ private:
      *
      *  @param[in]  display  A pointer to a Display handle
      */
-    void i2cErrorHandler(I2C_Transaction *transaction,
-        Display_Handle display);
+    void i2cErrorHandler(I2C_Transaction *transaction);
 
     /*!
      *  @brief  Puts 'data' into the register 'reg' on the OPT3001
