@@ -82,7 +82,7 @@ void *mainThread(void *arg0)
 
     /* Loop forever echoing */
     while (1) {
-        UART_read(uart, &input, 1);
+        //UART_read(uart, &input, 1);
 
         char write[3] = {'A', '\r', '\n'};
         //write[0] = input;
