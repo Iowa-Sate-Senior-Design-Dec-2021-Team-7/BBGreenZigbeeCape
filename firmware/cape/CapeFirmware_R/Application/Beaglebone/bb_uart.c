@@ -38,71 +38,104 @@
 #include <string.h>
 #include <unistd.h>
 
+/* POSIX Header files */
+#include <pthread.h>
+#include <semaphore.h>
+
 /* Driver Header files */
 #include <ti/drivers/GPIO.h>
 #include <ti/drivers/UART.h>
+#include <ti/drivers/apps/LED.h>
 
 /* Driver configuration */
 #include "ti_drivers_config.h"
 
 #define JSON_MAXLEN 1023
 
+/*********************************************************************
+ * EXTERNAL VARIABLES
+ */
+extern LED_Handle gRedLedHandle;
+
+/*********************************************************************
+ * GLOBAL VARIABLES
+ */
+UART_Handle bb_uartHandle = NULL;
+
+/*********************************************************************
+ * LOCAL VARIABLES
+ */
 char buf_recieve[JSON_MAXLEN + 1];
 char buf_output[JSON_MAXLEN + 8];
+
+/*********************************************************************
+ * GLOBAL FUNCTIONS
+ */
+void bb_uartInit();
+int_fast32_t bb_uartRead(void *buf, size_t maxCount);
+int_fast32_t bb_uartWrite(void *buf, size_t count);
 
 /*
  *  ======== mainThread ========
  */
-void *mainThread(void *arg0)
+void *bb_uartRead_thread(void *arg0)
 {
     int i = 0;
+
+    /* Loop forever reading */
+    while (1) {
+        int_fast32_t readBytes = bb_uartRead(&buf_recieve, JSON_MAXLEN);
+
+        if (readBytes != 0) {
+            strcat(buf_output, buf_recieve);
+            buf_output[6 + readBytes + 0] = '\r';
+            buf_output[6 + readBytes + 1] = '\n';
+
+            bb_uartWrite(&buf_output, strlen(buf_output));
+
+            for (i = 0; i < sizeof(buf_recieve); i++) { buf_recieve[i] = '\0'; }
+            for (i = 6; i < sizeof(buf_output); i++) { buf_output[i] = '\0'; }
+        }
+    }
+}
+
+void bb_uartInit() {
+
+    UART_Params     uartParams;
     buf_recieve[0] = '\0';
     buf_output[0] = '\0';
     strcpy(buf_output, "Echo: ");
-    const char  echoPrompt[] = "Echoing characters:\r\n";
-    UART_Handle uart;
-    UART_Params uartParams;
+
+    while (gRedLedHandle == NULL) { } //stall init until red led is initialized by zstack
 
     /* Call driver init functions */
     GPIO_init();
     UART_init();
 
-    /* Configure the LED pin */
-    GPIO_setConfig(CONFIG_GPIO_LED_0, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
-
     /* Create a UART with data processing off. */
     UART_Params_init(&uartParams);
-    uartParams.writeDataMode = UART_DATA_TEXT;
     uartParams.readDataMode = UART_DATA_TEXT;
-    uartParams.readReturnMode = UART_RETURN_FULL;
+    uartParams.writeDataMode = UART_DATA_TEXT;
+    uartParams.readReturnMode = UART_RETURN_NEWLINE;
     uartParams.baudRate = 115200;
 
-    uart = UART_open(CONFIG_UART_0, &uartParams);
+    bb_uartHandle = UART_open(CONFIG_UART_0, &uartParams);
 
-    if (uart == NULL) {
+    if (bb_uartHandle == NULL) {
         /* UART_open() failed */
-        while(1) {
-            GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
-            sleep(1);
-            GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
-            sleep(1);
-        }
+        while(1) { LED_startBlinking(gRedLedHandle, 1000, LED_BLINK_FOREVER); }
     }
 
     /* Turn on user LED to indicate successful initialization */
-    GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
-
-    UART_write(uart, echoPrompt, sizeof(echoPrompt));
-
-    /* Loop forever echoing */
-    while (1) {
-        int_fast32_t readBytes = UART_read(uart, &buf_recieve, JSON_MAXLEN);
-        strcat(buf_output, buf_recieve);
-        buf_output[6 + readBytes + 0] = '\r';
-        buf_output[6 + readBytes + 1] = '\n';
-        UART_write(uart, &buf_output, strlen(buf_output));
-
-        for (i = 0; i < sizeof(buf_recieve); i++) { buf_recieve[i] = '\0'; }
-        for (i = 6; i < sizeof(buf_output); i++) { buf_output[i] = '\0'; }
+    LED_setOn(gRedLedHandle, LED_BRIGHTNESS_MAX);
+}
+int_fast32_t bb_uartRead(void *buf, size_t maxCount) {
+    if (bb_uartHandle != NULL) {
+        return UART_read(bb_uartHandle, buf, maxCount);
     }
+    return 0;
+}
+int_fast32_t bb_uartWrite(void *buf, size_t count) {
+    if (bb_uartHandle != NULL) { return UART_write(bb_uartHandle, buf, count); }
+    return 0;
 }

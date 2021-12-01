@@ -36,7 +36,6 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <string.h>
-#include <unistd.h>
 
 /* Driver Header files */
 #include <ti/drivers/GPIO.h>
@@ -45,20 +44,12 @@
 /* Driver configuration */
 #include "ti_drivers_config.h"
 
-#define JSON_MAXLEN 1023
-
-char buf_recieve[JSON_MAXLEN + 1];
-char buf_output[JSON_MAXLEN + 8];
-
 /*
  *  ======== mainThread ========
  */
 void *mainThread(void *arg0)
 {
-    int i = 0;
-    buf_recieve[0] = '\0';
-    buf_output[0] = '\0';
-    strcpy(buf_output, "Echo: ");
+    char        input;
     const char  echoPrompt[] = "Echoing characters:\r\n";
     UART_Handle uart;
     UART_Params uartParams;
@@ -73,7 +64,7 @@ void *mainThread(void *arg0)
     /* Create a UART with data processing off. */
     UART_Params_init(&uartParams);
     uartParams.writeDataMode = UART_DATA_TEXT;
-    uartParams.readDataMode = UART_DATA_TEXT;
+    uartParams.readDataMode = UART_DATA_BINARY;
     uartParams.readReturnMode = UART_RETURN_FULL;
     uartParams.baudRate = 115200;
 
@@ -81,12 +72,7 @@ void *mainThread(void *arg0)
 
     if (uart == NULL) {
         /* UART_open() failed */
-        while(1) {
-            GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_OFF);
-            sleep(1);
-            GPIO_write(CONFIG_GPIO_LED_0, CONFIG_GPIO_LED_ON);
-            sleep(1);
-        }
+        while (1);
     }
 
     /* Turn on user LED to indicate successful initialization */
@@ -96,13 +82,11 @@ void *mainThread(void *arg0)
 
     /* Loop forever echoing */
     while (1) {
-        int_fast32_t readBytes = UART_read(uart, &buf_recieve, JSON_MAXLEN);
-        strcat(buf_output, buf_recieve);
-        buf_output[6 + readBytes + 0] = '\r';
-        buf_output[6 + readBytes + 1] = '\n';
-        UART_write(uart, &buf_output, strlen(buf_output));
+        UART_read(uart, &input, 1);
 
-        for (i = 0; i < sizeof(buf_recieve); i++) { buf_recieve[i] = '\0'; }
-        for (i = 6; i < sizeof(buf_output); i++) { buf_output[i] = '\0'; }
+        char write[3] = {'A', '\r', '\n'};
+        //write[0] = input;
+        UART_write(uart, &write, sizeof(write));
+        //UART_write(uart, &input, 1);
     }
 }
