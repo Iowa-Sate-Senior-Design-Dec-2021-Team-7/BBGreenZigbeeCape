@@ -7,19 +7,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import webhost.WebHostApplication;
 import webhost.components.GlobalUtils;
+import webhost.entities.DataPayload;
+import webhost.entities.EndDevice;
 import webhost.enums.WebHostExceptionType;
-import webhost.exceptions.WebHostException;
-import webhost.http_wrappers.ReturnObjectWrapper;
-import webhost.http_wrappers.UpdateExceptionWrapper;
-import webhost.http_wrappers.UpdateStringWrapper;
+import webhost.http_wrappers.*;
 import webhost.services.ApiService;
-import webhost.services.IndexService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
-@RequestMapping(value = "")
-public class IndexController {
+@RequestMapping(value = "/api")
+public class ApiController {
     
     /* ************************************************* START INSTANCE VARIABLES ************************************************** */
     
@@ -27,91 +26,91 @@ public class IndexController {
     
     private Log log = LogFactory.getLog(WebHostApplication.class);
     
-    private IndexService indexService;
-    
-    private String resourcePrefix;
+    private ApiService apiService;
     
     /* ************************************************** END INSTANCE VARIABLES *************************************************** */
     
     /* **************************************************** START CONSTRUCTORS ***************************************************** */
     
     @Autowired
-    public IndexController(GlobalUtils gUtils, IndexService indexService) {
+    public ApiController(GlobalUtils gUtils, ApiService apiService) {
         
         this.gUtils = gUtils;
-        this.indexService = indexService;
-    
-        resourcePrefix = "templates" + GlobalUtils.getFileSep() + "index" + GlobalUtils.getFileSep();
+        this.apiService = apiService;
     }
     
     /* ***************************************************** END CONSTRUCTORS ****************************************************** */
     
     /* **************************************************** START GET MAPPINGS ***************************************************** */
     
-    @GetMapping("")
-    public String get_index() { return indexService.get_index(); }
     
-    @GetMapping("/hello")
-    @ResponseBody
-    public ReturnObjectWrapper<String> get_helloworld() {
-    
-        log.info("Attempting to say hello to a client");
-        
-        String toReturn;
-        try { toReturn = indexService.get_helloworld(); }
-        catch (Exception e) {
-    
-            UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
-            log.error(e.getMessage(), e);
-            ArrayList<UpdateExceptionWrapper> exceptionList = new ArrayList<>();
-            exceptionList.add(exception);
-            return null;
-        }
-        
-        String logMessage = "Said hello to client";
-        GlobalUtils.successHandler(log, logMessage, null);
-        
-        return new ReturnObjectWrapper<>(200, toReturn, null);
-    }
     
     /* ***************************************************** END GET MAPPINGS ****************************************************** */
     
     /* **************************************************** START POST MAPPINGS **************************************************** */
     
-    @PostMapping("/hello/name")
-    @ResponseBody
-    public ReturnObjectWrapper<String> post_helloName(@RequestBody UpdateStringWrapper wrapper) {
     
-        log.info("Attempting to say hello to client [" + wrapper.getStr() + "]");
-        
-        String result;
-        try { result = indexService.post_helloname(wrapper); }
-        catch(WebHostException e) {
-        
-            UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), e.getType(), 500, e.getMessage());
-            log.error(e.getMessage(), e);
-            ArrayList<UpdateExceptionWrapper> exceptionList = new ArrayList<>();
-            exceptionList.add(exception);
-            return new ReturnObjectWrapper<>(500, null, exceptionList);
-        }
-        catch (Exception e) {
     
+    /* ***************************************************** END POST MAPPINGS ***************************************************** */
+    
+    /* **************************************************** START PUT MAPPINGS ***************************************************** */
+    
+    @PutMapping("/get-devices")
+    public ReturnObjectWrapper<List<EndDevice>> put_getDevices() {
+        
+        List<EndDevice> result = null;
+        try { result = apiService.put_getDevices(); }
+        catch(Exception e) {
+            
             UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
             log.error(e.getMessage(), e);
             ArrayList<UpdateExceptionWrapper> exceptionList = new ArrayList<>();
             exceptionList.add(exception);
             return new ReturnObjectWrapper<>(550, null, exceptionList);
         }
-    
-        String logMessage = "Said hello to client [" + wrapper.getStr() + "]";
-        return new ReturnObjectWrapper<>(200, GlobalUtils.successHandler(log, logMessage, result), null);
+        
+        String logMessage = "Retrieved all devices from database";
+        GlobalUtils.successHandler(log, logMessage, logMessage);
+        return new ReturnObjectWrapper<>(200, result, null);
     }
     
-    /* ***************************************************** END POST MAPPINGS ***************************************************** */
+    @PutMapping("/get-payloads")
+    public ReturnObjectWrapper<List<DataPayload>> put_getPayloads() {
+        
+        List<DataPayload> result = null;
+        try { result = apiService.put_getDataPayloads(); }
+        catch(Exception e) {
+            
+            UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
+            log.error(e.getMessage(), e);
+            ArrayList<UpdateExceptionWrapper> exceptionList = new ArrayList<>();
+            exceptionList.add(exception);
+            return new ReturnObjectWrapper<>(550, null, exceptionList);
+        }
+        
+        String logMessage = "Retrieved all data payloads from database";
+        GlobalUtils.successHandler(log, logMessage, logMessage);
+        return new ReturnObjectWrapper<>(200, result, null);
+    }
     
-    /* **************************************************** START PUT MAPPINGS ***************************************************** */
-    
-    
+    @PutMapping("/get-payload")
+    public ReturnObjectWrapper<List<DataPayload>> put_getPayload(@RequestBody EndDevice device) {
+        
+        List<DataPayload> result = null;
+        try { result = apiService.put_getDataPayload(device); }
+        catch(Exception e) {
+            
+            UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
+            log.error(e.getMessage(), e);
+            ArrayList<UpdateExceptionWrapper> exceptionList = new ArrayList<>();
+            exceptionList.add(exception);
+            return new ReturnObjectWrapper<>(550, null, exceptionList);
+        }
+        
+        String logMessage = "Retrieved data payloads corresponding to device [" + device.getId_network() + "] from the database";
+        GlobalUtils.successHandler(log, logMessage, logMessage);
+        return new ReturnObjectWrapper<>(200, result, null);
+    }
     
     /* ***************************************************** END PUT MAPPINGS ****************************************************** */
     

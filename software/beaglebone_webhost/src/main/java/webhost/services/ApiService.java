@@ -3,50 +3,68 @@ package webhost.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import webhost.components.GlobalUtils;
+import webhost.entities.DataPayload;
+import webhost.entities.EndDevice;
 import webhost.exceptions.WebHostException;
 import webhost.http_wrappers.UpdateStringWrapper;
+import webhost.repositories.DataPayloadRepository;
+import webhost.repositories.EndDeviceRepository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
-public class IndexService {
+public class ApiService {
     
     /* ************************************************* START INSTANCE VARIABLES ************************************************** */
     
-    
     private GlobalUtils gUtils;
     
-    private String htmlPrefix;
+    private final EndDeviceRepository deviceRepository;
+    
+    private final DataPayloadRepository payloadRepository;
     
     /* ************************************************** END INSTANCE VARIABLES *************************************************** */
     
     /* **************************************************** START CONSTRUCTORS ***************************************************** */
     
     @Autowired
-    public IndexService(GlobalUtils gUtils) {
+    public ApiService(GlobalUtils gUtils, EndDeviceRepository deviceRepository, DataPayloadRepository payloadRepository) {
         
         this.gUtils = gUtils;
-        
-        htmlPrefix = "index" + GlobalUtils.getFileSep();
+        this.deviceRepository = deviceRepository;
+        this.payloadRepository = payloadRepository;
     }
     
     /* ***************************************************** END CONSTRUCTORS ****************************************************** */
     
     /* ****************************************************** START GET HELPERS **************************************************** */
     
-    public String get_index() { return htmlPrefix + "index"; }
     
-    public String get_helloworld() { return "Hello!"; }
     
     /* ******************************************************* END GET HELPERS ***************************************************** */
     
     /* ****************************************************** START POST HELPERS *************************************************** */
     
-    public String post_helloname(UpdateStringWrapper wrapper) throws WebHostException { return "Hello [" + wrapper.getStr() + "]!"; }
+    
     
     /* ******************************************************* END POST HELPERS **************************************************** */
     
     /* ****************************************************** START PUT HELPERS **************************************************** */
     
+    public List<EndDevice> put_getDevices() { return deviceRepository.findAll(); }
     
+    public List<DataPayload> put_getDataPayloads() { return payloadRepository.findAll(); }
+    
+    public List<DataPayload> put_getDataPayload(EndDevice device) {
+        
+        List<DataPayload> result = new ArrayList<>();
+        List<DataPayload> payloads = payloadRepository.findAll();
+        for (DataPayload p : payloads) {
+            if (p.getDevice().getId_network().equals(device.getId_network())) { result.add(p); }
+        }
+        return result;
+    }
     
     /* ******************************************************* END PUT HELPERS ***************************************************** */
     
