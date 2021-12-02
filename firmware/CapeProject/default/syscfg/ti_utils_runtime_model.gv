@@ -1,0 +1,155 @@
+digraph Model
+{
+    graph[rankdir=LR]
+
+    // mod.$name=/ti/common/multi_stack_validate
+
+    // mod.$name=/ti/devices/CCFG
+    ti_devices_CCFG -> ti_devices_CCFGTemplate0
+
+    // mod.$name=/ti/devices/CCFGTemplate
+
+    // mod.$name=/ti/devices/DriverLib
+
+    // mod.$name=/ti/devices/radioconfig/code_export_param
+
+    // mod.$name=/ti/devices/radioconfig/rfdesign
+
+    // mod.$name=/ti/devices/radioconfig/settings/ieee_15_4
+    ti_devices_radioconfig_settings_ieee_15_40 -> ti_drivers_RF
+    ti_devices_radioconfig_settings_ieee_15_40 -> ti_devices_radioconfig_rfdesign
+    ti_devices_radioconfig_settings_ieee_15_40 -> ti_devices_radioconfig_code_export_param0
+
+    // mod.$name=/ti/dpl/Settings
+
+    // mod.$name=/ti/drivers/AESCBC
+    CONFIG_AESCBC_0 -> ti_drivers_Power
+    CONFIG_AESCBC_0 -> ti_drivers_DMA
+    CONFIG_AESCBC_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/AESCCM
+    CONFIG_AESCCM_0 -> ti_drivers_DMA
+    CONFIG_AESCCM_0 -> ti_drivers_Power
+    CONFIG_AESCCM_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/AESECB
+    CONFIG_AESECB_0 -> ti_drivers_DMA
+    CONFIG_AESECB_0 -> ti_drivers_Power
+    CONFIG_AESECB_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/Board
+    ti_drivers_Board -> ti_devices_DriverLib
+    ti_drivers_Board -> ti_dpl_Settings
+
+    // mod.$name=/ti/drivers/DMA
+    ti_drivers_DMA -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/ECDH
+    CONFIG_ECDH_0 -> ti_drivers_Power
+    CONFIG_ECDH_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/ECDSA
+    CONFIG_ECDSA_0 -> ti_drivers_Power
+    CONFIG_ECDSA_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/GPIO
+    ti_drivers_GPIO -> ti_drivers_Power
+    ti_drivers_GPIO -> ti_drivers_Board
+    CONFIG_GPIO_RLED -> CONFIG_PIN_RLED
+    CONFIG_GPIO_GLED -> CONFIG_PIN_GLED
+    CONFIG_GPIO_BTN1 -> CONFIG_PIN_BTN1
+    CONFIG_GPIO_BTN2 -> CONFIG_PIN_BTN2
+    CONFIG_GPIO_0 -> CONFIG_PIN_0
+
+    // mod.$name=/ti/drivers/NVS
+    CONFIG_NVSINTERNAL -> ti_drivers_Board
+    CONFIG_NVSEXTERNAL -> ti_drivers_Board
+    CONFIG_NVSINTERNAL -> ti_drivers_nvs_NVSCC26XX0
+    CONFIG_NVSEXTERNAL -> ti_drivers_nvs_NVSSPI25X0
+
+    // mod.$name=/ti/drivers/PIN
+    ti_drivers_PIN -> ti_drivers_Power
+    ti_drivers_PIN -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/Power
+    ti_drivers_Power -> ti_devices_CCFG
+    ti_drivers_Power -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/RF
+    ti_drivers_RF -> ti_drivers_Power
+    ti_drivers_RF -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/SHA2
+    CONFIG_SHA2_0 -> ti_drivers_DMA
+    CONFIG_SHA2_0 -> ti_drivers_Power
+    CONFIG_SHA2_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/SPI
+    CONFIG_SPI_0 -> ti_drivers_DMA
+    CONFIG_SPI_0 -> ti_drivers_Power
+    CONFIG_SPI_0 -> ti_drivers_Board
+    CONFIG_SPI_0 -> CONFIG_PIN_SPI_SCLK
+    CONFIG_SPI_0 -> CONFIG_PIN_SPI_MISO
+    CONFIG_SPI_0 -> CONFIG_PIN_SPI_MOSI
+
+    // mod.$name=/ti/drivers/TRNG
+    CONFIG_TRNG_0 -> ti_drivers_Power
+    CONFIG_TRNG_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/UART
+    CONFIG_DISPLAY_UART -> ti_drivers_Power
+    CONFIG_DISPLAY_UART -> ti_drivers_Board
+    CONFIG_DISPLAY_UART -> CONFIG_PIN_UART_TX
+    CONFIG_DISPLAY_UART -> CONFIG_PIN_UART_RX
+
+    // mod.$name=/ti/drivers/apps/Button
+    CONFIG_BTN_LEFT -> ti_drivers_Board
+    CONFIG_BTN_RIGHT -> ti_drivers_Board
+    CONFIG_BTN_LEFT -> CONFIG_GPIO_BTN1
+    CONFIG_BTN_RIGHT -> CONFIG_GPIO_BTN2
+
+    // mod.$name=/ti/drivers/apps/LED
+    CONFIG_LED_RED -> ti_drivers_Board
+    CONFIG_LED_GREEN -> ti_drivers_Board
+    CONFIG_LED_RED -> CONFIG_GPIO_RLED
+    CONFIG_LED_GREEN -> CONFIG_GPIO_GLED
+
+    // mod.$name=/ti/drivers/nvs/NVSCC26XX
+
+    // mod.$name=/ti/drivers/nvs/NVSSPI25X
+    ti_drivers_nvs_NVSSPI25X0 -> CONFIG_NVS_SPI_0
+
+    // mod.$name=/ti/drivers/nvs/NVSSPI25XDevice
+    CONFIG_NVS_SPI_0 -> CONFIG_GPIO_0
+    CONFIG_NVS_SPI_0 -> CONFIG_SPI_0
+
+    // mod.$name=/ti/zstack/advanced/zstack_advanced
+    ti_zstack_advanced_zstack_advanced0 -> ti_zstack_advanced_zstack_routing0
+    ti_zstack_advanced_zstack_advanced0 -> ti_zstack_advanced_zstack_packet_sending0
+    ti_zstack_advanced_zstack_advanced0 -> ti_zstack_advanced_zstack_table_size0
+
+    // mod.$name=/ti/zstack/advanced/zstack_packet_sending
+
+    // mod.$name=/ti/zstack/advanced/zstack_routing
+
+    // mod.$name=/ti/zstack/advanced/zstack_table_size
+
+    // mod.$name=/ti/zstack/network/zstack_network
+
+    // mod.$name=/ti/zstack/pm/zstack_pm
+
+    // mod.$name=/ti/zstack/rf/zstack_rf
+    ti_zstack_rf_zstack_rf0 -> ti_devices_radioconfig_settings_ieee_15_40
+
+    // mod.$name=/ti/zstack/touchlink/zstack_touchlink
+
+    // mod.$name=/ti/zstack/zstack
+    ti_zstack_zstack -> ti_common_multi_stack_validate
+    ti_zstack_zstack -> ti_drivers_RF
+    ti_zstack_zstack -> ti_devices_radioconfig_rfdesign
+    ti_zstack_zstack -> ti_zstack_touchlink_zstack_touchlink0
+    ti_zstack_zstack -> ti_zstack_pm_zstack_pm0
+    ti_zstack_zstack -> ti_zstack_rf_zstack_rf0
+    ti_zstack_zstack -> ti_zstack_network_zstack_network0
+    ti_zstack_zstack -> ti_zstack_advanced_zstack_advanced0
+}

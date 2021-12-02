@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//default/Application/Beaglebone/subdir_rules.mk=UTF-8
+encoding//default/Application/Beaglebone/subdir_vars.mk=UTF-8
 encoding//default/Application/Services/subdir_rules.mk=UTF-8
 encoding//default/Application/Services/subdir_vars.mk=UTF-8
 encoding//default/Application/StartUp/subdir_rules.mk=UTF-8

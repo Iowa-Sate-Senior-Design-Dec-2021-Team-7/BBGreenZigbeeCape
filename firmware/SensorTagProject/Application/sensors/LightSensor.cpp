@@ -13,6 +13,9 @@
 /* Include OPT3001 driver file */
 #include "OPT3001.h"
 
+/* Include Common sensor file */
+#include "SensorStructure.h"
+
 /* Driver Configuration */
 #include "ti_drivers_config.h"
 
@@ -23,6 +26,7 @@ extern "C" {
 }
 
 extern uint16_t data_count;
+extern uint8_t jsonData[];
 
 
 static OPT3001 opt3001;
@@ -64,7 +68,6 @@ void *mainThread(void *arg0)
     int                 retc;
 
     /* Call driver init functions */
-//    Display_init();
     GPIO_init();
     I2C_init();
     data_count = 3;
@@ -91,12 +94,6 @@ void *mainThread(void *arg0)
 //        while (1) {}
 //    }
 
-    /* Open the UART display for output */
-//    display = Display_open(Display_Type_UART, NULL);
-//    if (display == NULL) {
-//        while (1);
-//    }
-
     /*
      * Set OPT3001 Power pin to high (give device power) and then sleep briefly
      * to allow device to power up
@@ -115,7 +112,6 @@ void *mainThread(void *arg0)
     i2c = I2C_open(CONFIG_I2C_OPT3001, &i2cParams);
     if (i2c == NULL) {
         data_count = 402;
-//        Display_printf(display, 0, 0, (char *)"Error Initializing I2C!\n");
         while (1);
     }
     else {

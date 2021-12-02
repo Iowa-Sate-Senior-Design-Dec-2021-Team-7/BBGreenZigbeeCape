@@ -76,6 +76,7 @@ extern "C"
 
 #define ZCL_CLUSTER_ID_CUSTOM    0x6969
 #define CUSTOM_COUNT             0x0069
+#define CUSTOM_STR               0x0069
 
 /*********************************************************************
  * MACROS
@@ -98,6 +99,7 @@ extern uint8_t  zclSampleTemperatureSensor_OnOff;
 extern uint16_t zclSampleTemperatureSensor_IdentifyTime;
 
 extern uint16_t data_count;
+extern uint8_t jsonData[];
 
 // Temperature Measurement Cluster
 extern int16_t zclSampleTemperatureSensor_MeasuredValue;

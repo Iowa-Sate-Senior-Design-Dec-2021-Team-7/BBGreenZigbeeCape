@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<<<<<<< HEAD:firmware/CapeProject/.cproject
+	<storageModule configRelations="2" moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.ti.ccstudio.buildDefinitions.TMS470.Default.1519354265">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.TMS470.Default.1519354265" moduleId="org.eclipse.cdt.core.settings" name="default">
+=======
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration id="com.ti.ccstudio.buildDefinitions.TMS470.Default.1320061860">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.TMS470.Default.1320061860" moduleId="org.eclipse.cdt.core.settings" name="default">
+>>>>>>> e8b5e9b1107f510178e1f9f9b8df7f2e3b66f4f6:firmware/zed_temperaturesensor_CC1352R1_LAUNCHXL_tirtos_ccs/.cproject
 				<externalSettings/>
 				<extensions>
 					<extension id="com.ti.ccstudio.binaryparser.CoffParser" point="org.eclipse.cdt.core.BinaryParser"/>
@@ -239,4 +245,9 @@
 		<project id="zed_temperaturesensor_CC1352R1_LAUNCHXL_tirtos_ccs.com.ti.ccstudio.buildDefinitions.TMS470.ProjectType.1553354189" name="TMS470" projectType="com.ti.ccstudio.buildDefinitions.TMS470.ProjectType"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration"/>
+<<<<<<< HEAD:firmware/CapeProject/.cproject
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
+=======
+</cproject>
+>>>>>>> e8b5e9b1107f510178e1f9f9b8df7f2e3b66f4f6:firmware/zed_temperaturesensor_CC1352R1_LAUNCHXL_tirtos_ccs/.cproject

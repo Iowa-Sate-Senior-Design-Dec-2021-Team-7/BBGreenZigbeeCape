@@ -1,6 +1,10 @@
 #
 # This file was generated based on the configuration script:
+<<<<<<< HEAD
+#     C:\Users\griff\Documents\.docs\academics\iowa_state\senior_design\sddec21-07\firmware\tirtos_builds_cc13x2_cc26x2_release_ccs\release.cfg
+=======
 #     /Users/taylorweil/sddec21-07/firmware/tirtos_builds_cc13x2_cc26x2_release_ccs/release.cfg
+>>>>>>> e8b5e9b1107f510178e1f9f9b8df7f2e3b66f4f6
 #
 # This makefile may be included in other makefiles that need to build
 # the libraries containing the compiled source files generated as
@@ -14,7 +18,11 @@
 #
 # The absolute path to the generated source directory (at the time the
 # sources were generated) is:
+<<<<<<< HEAD
+#    C:\Users\griff\Documents\.docs\academics\iowa_state\senior_design\sddec21-07\firmware\tirtos_builds_cc13x2_cc26x2_release_ccs\src
+=======
 #    /Users/taylorweil/sddec21-07/firmware/tirtos_builds_cc13x2_cc26x2_release_ccs/src
+>>>>>>> e8b5e9b1107f510178e1f9f9b8df7f2e3b66f4f6
 #
 GEN_SRC_DIR ?= ../src
 
