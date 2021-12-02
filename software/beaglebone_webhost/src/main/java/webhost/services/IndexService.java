@@ -6,34 +6,20 @@ import webhost.components.GlobalUtils;
 import webhost.exceptions.WebHostException;
 import webhost.http_wrappers.UpdateStringWrapper;
 
-/**
- * Service for {@code IndexController}
- */
 @Service
 public class IndexService {
     
     /* ************************************************* START INSTANCE VARIABLES ************************************************** */
     
-    /**
-     * {@code GlobalUtils} {@code Component}. Grants the ability to use global variables and methods common to other {@code classes} in this Application
-     * @see webhost.components.GlobalUtils
-     */
+    
     private GlobalUtils gUtils;
     
-    /**
-     * File path to html files
-     */
     private String htmlPrefix;
     
     /* ************************************************** END INSTANCE VARIABLES *************************************************** */
     
     /* **************************************************** START CONSTRUCTORS ***************************************************** */
     
-    /**
-     * Default constructor
-     * @param gUtils
-     * 		See {@code this.gUtils}
-     */
     @Autowired
     public IndexService(GlobalUtils gUtils) {
         

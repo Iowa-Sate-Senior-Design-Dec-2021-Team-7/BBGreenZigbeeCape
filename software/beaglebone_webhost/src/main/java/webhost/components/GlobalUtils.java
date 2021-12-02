@@ -1,9 +1,9 @@
 package webhost.components;
 
 import org.apache.commons.logging.Log;
-import org.apache.poi.util.IOUtils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.poi.util.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -42,7 +42,7 @@ public class GlobalUtils {
     /* live directory */
 //    private final static String resourceLoc = "";
     /* griffens directory */
-    private final static String resourceLoc = "C:" + fileSep + "Users"+ fileSep + "griff" + fileSep + "Documents" + fileSep + ".docs" + fileSep + "academics" + fileSep + "iowa_state" + fileSep + "senior_design" + fileSep + "git" + fileSep + "software" + fileSep + "beaglebone_webhost" + fileSep + "src" + fileSep + "main" + fileSep + "resources" + fileSep;
+    private final static String resourceLoc = "J:" + fileSep + ".docs"+ fileSep + "academics" + fileSep + "iowa_state" + fileSep + "senior_design" + fileSep + "git" + fileSep + "software" + fileSep + "beaglebone_webhost" + fileSep + "src" + fileSep + "main" + fileSep + "resources" + fileSep;
     /* tcweil directory */
 //    private final static String resourceLoc = "";
     
@@ -52,7 +52,7 @@ public class GlobalUtils {
     /* live directory */
 //    private final static String outputLoc = "";
     /* griffens directory */
-    private final static String outputLoc = "C:" + fileSep + "Users"+ fileSep + "griff" + fileSep + "Documents" + fileSep + ".docs" + fileSep + "academics" + fileSep + "iowa_state" + fileSep + "senior_design" + fileSep + "git" + fileSep + "software" + fileSep + "beaglebone_webhost" + fileSep + "output" + fileSep;
+    private final static String outputLoc = "J:" + fileSep + ".docs"+ fileSep + "academics" + fileSep + "iowa_state" + fileSep + "senior_design" + fileSep + "git" + fileSep + "software" + fileSep + "beaglebone_webhost" + fileSep + "output" + fileSep;
     /* tcweil directory */
 //    private final static String outputLoc = "";
     
