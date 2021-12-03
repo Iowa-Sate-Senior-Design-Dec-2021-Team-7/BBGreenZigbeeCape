@@ -1,0 +1,55 @@
+
+.Chart {
+    border: 1pt solid aliceblue;
+    flex: 1;
+    position: relative;
+    /* height: 80%; */
+    margin: 20px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ChartHead {
+    position: relative;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2pt solid black;
+    /* height: 50px; */
+}
+
+.ChartBody {
+    position: relative;
+    height: 90%;
+    flex-direction: row;
+    flex: 1 1 auto;
+    /* height: 100%; */
+    overflow-y: scroll;
+    /* display: flex; */
+    /* position: absolute; */
+    /* bottom: 0pt; */
+}
+
+.ChartRow {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    /* flex: 1; */
+    /* border: ; */
+    border-bottom: 1pt solid rgb(83, 74, 74);
+}
+
+.ChartCell {
+    /* border: 1pt solid black; */
+    display: flex;
+    flex: 1;
+    text-align: center;
+}
+
+.Label {
+    flex: 1;
+    margin: auto auto;
+    font: bolder small-caps 20px normal, sans-serif;
+}
