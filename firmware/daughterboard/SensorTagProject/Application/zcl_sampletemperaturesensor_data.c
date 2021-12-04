@@ -98,6 +98,8 @@ const uint16_t zclSampleTemperatureSensor_MaxMeasuredValue = SAMPLETEMPERATURESE
 
 // Custom Data
 uint16_t data_count = 1;
+uint8_t jsonData[128] = {'C','u','s','t','o','m',' ','S','t','r','i','n','g'};
+
 
 /*********************************************************************
  * ATTRIBUTE DEFINITIONS - Uses REAL cluster IDs
@@ -232,6 +234,18 @@ CONST zclAttrRec_t zclSampleTemperatureSensor_Attrs[] =
       (void *)&data_count
     }
   },
+
+//  // Custom String
+//  {
+//   ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
+//    {  // Attribute record
+//      CUSTOM_STR,
+//      ZCL_DATATYPE_CHAR_STR,
+//      ACCESS_CONTROL_READ | ACCESS_REPORTABLE,
+//      (void *)jsonData
+//    }
+//  },
+
 };
 
 uint8_t CONST zclSampleTemperatureSensor_NumAttributes = ( sizeof(zclSampleTemperatureSensor_Attrs) / sizeof(zclSampleTemperatureSensor_Attrs[0]) );

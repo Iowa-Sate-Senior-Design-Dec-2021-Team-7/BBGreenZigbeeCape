@@ -173,6 +173,7 @@ CONST char zclSampleTemperatureSensor_appStr[] = APP_TITLE_STR;
 CUI_clientHandle_t gCuiHandle;
 static uint32_t gSampleTemperatureSensorInfoLine;
 static uint32_t gSampleThermostatInfoLine3;
+static uint32_t gSampleThermostatInfoSensorData;
 #endif
 /*********************************************************************
  * LOCAL FUNCTIONS
@@ -197,6 +198,7 @@ static void zclSampleTemperatureSensor_RemoveAppNvmData(void);
 static void zclSampleTemperatureSensor_InitializeStatusLine(CUI_clientHandle_t gCuiHandle);
 void zclSampleTemperatureSensor_UpdateStatusLine(void);
 static void zclSampleThermostat_UpdateCustomLine(void);
+static void zclSampleThermostat_UpdateSensorDataLine(void);
 #endif
 
 static void zclSampleTemperatureSensor_BasicResetCB( void );
@@ -358,7 +360,7 @@ static void zclSampleTemperatureSensor_Init( void )
 {
 #ifdef BDB_REPORTING
       zstack_bdbRepAddAttrCfgRecordDefaultToListReq_t TempReq = {0};
-      zstack_bdbRepAddAttrCfgRecordDefaultToListReq_t CustomReq = {0};
+//      zstack_bdbRepAddAttrCfgRecordDefaultToListReq_t CustomReq = {0};
 #endif
 
   //Register Endpoint
@@ -398,19 +400,19 @@ static void zclSampleTemperatureSensor_Init( void )
   TempReq.attrID = ATTRID_TEMPERATURE_MEASUREMENT_MEASURED_VALUE;
   TempReq.cluster = ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT;
   TempReq.endpoint = SAMPLETEMPERATURESENSOR_ENDPOINT;
-//  Req.maxReportInt = 1;
-//  Req.minReportInt = 0;
+  TempReq.maxReportInt = 1;
+  TempReq.minReportInt = 0;
   OsalPort_memcpy(TempReq.reportableChange,reportableChange,BDBREPORTING_MAX_ANALOG_ATTR_SIZE);
   Zstackapi_bdbRepAddAttrCfgRecordDefaultToListReq(appServiceTaskId,&TempReq);
 
-  // Set
-  CustomReq.attrID = CUSTOM_COUNT;
-  CustomReq.cluster = ZCL_CLUSTER_ID_MS_FLOW_MEASUREMENT;
-  CustomReq.endpoint = SAMPLETEMPERATURESENSOR_ENDPOINT;
-//  Req.maxReportInt = 1;
-//  Req.minReportInt = 0;
-  OsalPort_memcpy(CustomReq.reportableChange,reportableChange,BDBREPORTING_MAX_ANALOG_ATTR_SIZE);
-  Zstackapi_bdbRepAddAttrCfgRecordDefaultToListReq(appServiceTaskId,&CustomReq);
+//  // Set
+//  CustomReq.attrID = CUSTOM_COUNT;
+//  CustomReq.cluster = ZCL_CLUSTER_ID_MS_FLOW_MEASUREMENT;
+//  CustomReq.endpoint = SAMPLETEMPERATURESENSOR_ENDPOINT;
+////  Req.maxReportInt = 1;
+////  Req.minReportInt = 0;
+//  OsalPort_memcpy(CustomReq.reportableChange,reportableChange,BDBREPORTING_MAX_ANALOG_ATTR_SIZE);
+//  Zstackapi_bdbRepAddAttrCfgRecordDefaultToListReq(appServiceTaskId,&CustomReq);
 #endif
 
 #ifndef CUI_DISABLE
@@ -620,10 +622,9 @@ static void zclSampleTemperatureSensor_process_loop(void)
             //Process the events that the UI may have
             zclsampleApp_ui_event_loop();
 #endif
-            zclSampleThermostat_UpdateCustomLine();
 
 #if ZG_BUILD_ENDDEVICE_TYPE
-            if ( appServiceTaskEvents & SAMPLEAPP_END_DEVICE_REJOIN_EVT )
+//            if ( appServiceTaskEvents & SAMPLEAPP_END_DEVICE_REJOIN_EVT )
             {
               zstack_bdbRecoverNwkRsp_t zstack_bdbRecoverNwkRsp;
 
@@ -636,6 +637,8 @@ static void zclSampleTemperatureSensor_process_loop(void)
 #ifndef CUI_DISABLE
   //Update status line
   zclSampleTemperatureSensor_UpdateStatusLine();
+  zclSampleThermostat_UpdateCustomLine();
+  zclSampleThermostat_UpdateSensorDataLine();
 #endif
 
         }
@@ -1245,7 +1248,8 @@ static void zclSampleTemperatureSensor_processKey(uint8_t key, Button_EventMask 
 #ifdef BDB_REPORTING
             zstack_bdbRepChangedAttrValueReq_t Req;
             Req.attrID = CUSTOM_COUNT;
-            Req.cluster = ZCL_CLUSTER_ID_MS_FLOW_MEASUREMENT;
+//            Req.attrID = CUSTOM_STR;
+            Req.cluster = ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT;
             Req.endpoint = SAMPLETEMPERATURESENSOR_ENDPOINT;
             Zstackapi_bdbRepChangedAttrValueReq(appServiceTaskId,&Req);
 #endif
@@ -1322,9 +1326,11 @@ static void zclSampleTemperatureSensor_InitializeStatusLine(CUI_clientHandle_t g
 {
     /* Request Async Line for Light application Info */
     CUI_statusLineResourceRequest(gCuiHandle, "   APP Info"CUI_DEBUG_MSG_START"1"CUI_DEBUG_MSG_END, false, &gSampleTemperatureSensorInfoLine);
-    CUI_statusLineResourceRequest(gCuiHandle, "   APP Info"CUI_DEBUG_MSG_START"3"CUI_DEBUG_MSG_END, false, &gSampleThermostatInfoLine3);
+    CUI_statusLineResourceRequest(gCuiHandle, "   APP Info"CUI_DEBUG_MSG_START"2"CUI_DEBUG_MSG_END, false, &gSampleThermostatInfoLine3);
+    CUI_statusLineResourceRequest(gCuiHandle, "   SnsrData"CUI_DEBUG_MSG_START"4"CUI_DEBUG_MSG_END, false, &gSampleThermostatInfoSensorData);
 
     zclSampleTemperatureSensor_UpdateStatusLine();
+    zclSampleThermostat_UpdateCustomLine();
 }
 
 
@@ -1348,6 +1354,21 @@ static void zclSampleThermostat_UpdateCustomLine(void)
 
 
     CUI_statusLinePrintf(gCuiHandle, gSampleThermostatInfoLine3, lineFormat, data_count);
+}
+
+
+/* Include Common sensor file */
+//#include <SensorStructure.h>
+//SensorData sensorData = DEFAULT_SENSOR_DATA;
+
+static void zclSampleThermostat_UpdateSensorDataLine(void)
+{
+
+    char lineFormat[MAX_STATUS_LINE_VALUE_LEN] = {'\0'};
+
+    strcat(lineFormat, "[Sensor Data] %s ");
+
+    CUI_statusLinePrintf(gCuiHandle, gSampleThermostatInfoSensorData, lineFormat, jsonData);
 }
 
 #endif
