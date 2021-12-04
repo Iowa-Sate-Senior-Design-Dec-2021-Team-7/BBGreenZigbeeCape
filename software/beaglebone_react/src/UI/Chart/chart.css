@@ -4,15 +4,33 @@
     flex: 1;
     position: relative;
     /* height: 80%; */
-    margin: 20px;
+    margin: 10px;
     background-color: brown;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
+.ChartSettingsRow {
+    flex-direction: row;
+    display: flex;
+    height: 40px;
+    border-bottom: 2pt solid black;
+    /* background-color: white; */
+}
+
+.ChartSettingsRowButton {
+    min-width: 100px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: slategray;
+    margin: auto auto;
+    padding: 0px 10px;
+    display: flex;
+}
+
 .ChartHead {
-    position: relative;
+    /* position: relative; */
     height: 35px;
     display: flex;
     flex-direction: row;
@@ -36,9 +54,14 @@
     height: 30px;
     display: flex;
     flex-direction: row;
+    background-color: #14774b;
     /* flex: 1; */
     /* border: ; */
     border-bottom: 1pt solid rgb(83, 74, 74);
+}
+
+.ChartRowEven {
+    background-color: rgb(10, 109, 109);
 }
 
 .ChartCell {
@@ -52,4 +75,11 @@
     flex: 1;
     margin: auto auto;
     font: bolder small-caps 20px normal, sans-serif;
+}
+
+.Search {
+    position: absolute;
+    flex: 1;
+    padding: 10%;
+    display: flex;
 }

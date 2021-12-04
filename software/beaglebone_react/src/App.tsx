@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ContextWrapper from './Context';
+import AsyncServer from './Data/Server/AsyncServer';
+// import Server from './Data/Server/SpringServer';
+import Server from './Data/Server/MockServer';
 
 // import Graph from './graph'
 import Home from './home'
@@ -13,6 +16,7 @@ function App() {
     <ContextWrapper>
       <BrowserRouter>
         <div className="App">
+          <AsyncServer Server={Server}/>
           <Navigation/>
           <Routes>
             <Route path="/" element={null} />
