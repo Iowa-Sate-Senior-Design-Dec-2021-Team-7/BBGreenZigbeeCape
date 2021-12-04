@@ -43,23 +43,12 @@ public class ApiController {
     
     /* **************************************************** START GET MAPPINGS ***************************************************** */
     
-    
-    
-    /* ***************************************************** END GET MAPPINGS ****************************************************** */
-    
-    /* **************************************************** START POST MAPPINGS **************************************************** */
-    
-    
-    
-    /* ***************************************************** END POST MAPPINGS ***************************************************** */
-    
-    /* **************************************************** START PUT MAPPINGS ***************************************************** */
-    
-    @PutMapping("/get-devices")
-    public ReturnObjectWrapper<List<EndDevice>> put_getDevices() {
+    @GetMapping("/get-devices")
+    @ResponseBody
+    public ReturnObjectWrapper<List<EndDevice>> get_getDevices() {
         
         List<EndDevice> result = null;
-        try { result = apiService.put_getDevices(); }
+        try { result = apiService.getDevices(); }
         catch(Exception e) {
             
             UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
@@ -74,11 +63,12 @@ public class ApiController {
         return new ReturnObjectWrapper<>(200, result, null);
     }
     
-    @PutMapping("/get-payloads")
-    public ReturnObjectWrapper<List<DataPayload>> put_getPayloads() {
+    @GetMapping("/get-payloads")
+    @ResponseBody
+    public ReturnObjectWrapper<List<DataPayload>> get_getPayloads() {
         
         List<DataPayload> result = null;
-        try { result = apiService.put_getDataPayloads(); }
+        try { result = apiService.getDataPayloads(); }
         catch(Exception e) {
             
             UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
@@ -93,11 +83,12 @@ public class ApiController {
         return new ReturnObjectWrapper<>(200, result, null);
     }
     
-    @PutMapping("/get-payload")
-    public ReturnObjectWrapper<List<DataPayload>> put_getPayload(@RequestBody EndDevice device) {
+    @GetMapping("/get-devicepayload")
+    @ResponseBody
+    public ReturnObjectWrapper<List<DataPayload>> get_getPayload(@RequestBody EndDevice device) {
         
         List<DataPayload> result = null;
-        try { result = apiService.put_getDataPayload(device); }
+        try { result = apiService.getDataPayload(device); }
         catch(Exception e) {
             
             UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
@@ -111,6 +102,18 @@ public class ApiController {
         GlobalUtils.successHandler(log, logMessage, logMessage);
         return new ReturnObjectWrapper<>(200, result, null);
     }
+    
+    /* ***************************************************** END GET MAPPINGS ****************************************************** */
+    
+    /* **************************************************** START POST MAPPINGS **************************************************** */
+    
+    
+    
+    /* ***************************************************** END POST MAPPINGS ***************************************************** */
+    
+    /* **************************************************** START PUT MAPPINGS ***************************************************** */
+    
+    
     
     /* ***************************************************** END PUT MAPPINGS ****************************************************** */
     

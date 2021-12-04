@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service;
 import webhost.components.GlobalUtils;
 import webhost.entities.DataPayload;
 import webhost.entities.EndDevice;
-import webhost.exceptions.WebHostException;
-import webhost.http_wrappers.UpdateStringWrapper;
 import webhost.repositories.DataPayloadRepository;
 import webhost.repositories.EndDeviceRepository;
 
@@ -40,7 +38,19 @@ public class ApiService {
     
     /* ****************************************************** START GET HELPERS **************************************************** */
     
+    public List<EndDevice> getDevices() { return deviceRepository.findAll(); }
     
+    public List<DataPayload> getDataPayloads() { return payloadRepository.findAll(); }
+    
+    public List<DataPayload> getDataPayload(EndDevice device) {
+        
+        List<DataPayload> result = new ArrayList<>();
+        List<DataPayload> payloads = payloadRepository.findAll();
+        for (DataPayload p : payloads) {
+            if (p.getDevice().getId_network().equals(device.getId_network())) { result.add(p); }
+        }
+        return result;
+    }
     
     /* ******************************************************* END GET HELPERS ***************************************************** */
     
@@ -52,19 +62,7 @@ public class ApiService {
     
     /* ****************************************************** START PUT HELPERS **************************************************** */
     
-    public List<EndDevice> put_getDevices() { return deviceRepository.findAll(); }
     
-    public List<DataPayload> put_getDataPayloads() { return payloadRepository.findAll(); }
-    
-    public List<DataPayload> put_getDataPayload(EndDevice device) {
-        
-        List<DataPayload> result = new ArrayList<>();
-        List<DataPayload> payloads = payloadRepository.findAll();
-        for (DataPayload p : payloads) {
-            if (p.getDevice().getId_network().equals(device.getId_network())) { result.add(p); }
-        }
-        return result;
-    }
     
     /* ******************************************************* END PUT HELPERS ***************************************************** */
     
