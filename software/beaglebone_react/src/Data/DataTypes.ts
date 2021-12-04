@@ -5,6 +5,11 @@ export interface Data {
     value: number
 }
 
+export interface Device {
+    id: number,
+    deviceType: string,
+}
+
 export enum DataType {
     TEMP = "TEMP",
     LIGHT = "LIGHT",
@@ -14,4 +19,8 @@ export enum ServerStatus {
     DISCONNECTED = "DISCONNECTED",
     CONNECTED = "CONNECTED",
     BUSY = "BUSY",
+}
+
+export enum DeviceType {
+    SENSOR = "SENSOR"
 }

@@ -1,4 +1,4 @@
-import { Data } from "../DataTypes"
+import { Data, Device } from "../DataTypes"
 import { IServer } from "./IServer"
 
 const Server: IServer = {
@@ -8,6 +8,9 @@ const Server: IServer = {
     GetData: function (): Promise<Data[]> {
         throw new Error("Function not implemented.")
     },
+    GetDevices: function (): Promise<Device[]> {
+        throw new Error("Function not implemented.")
+    }
 }
 
 export default Server

@@ -1,7 +1,7 @@
 import React from "react";
 import { AppContext, IContext } from "../../Context";
 import Logger, { LogSeverity, LogType } from "../../Logger";
-import { Data, ServerStatus } from "../DataTypes";
+import { Data, Device, ServerStatus } from "../DataTypes";
 import './asyncServer.css';
 import { IServer } from "./IServer";
 // import Server from "./MockServer";
@@ -36,7 +36,7 @@ const AsyncServer = (props: {Server: IServer}): JSX.Element => {
                 if (timeSince.current) return _serverBusy()
 
                 timeSince.current = (new Date()).getTime()
-                logger.Log(LogType.API,LogSeverity.INFO,"Getting Data")
+                logger.Log(LogType.API,LogSeverity.INFO,"Getting Data and Devices")
                 props.Server.GetData(context.data.size).then((incomingData: Data[]) => {
                     context.setServerStatus(ServerStatus.CONNECTED)
                     timeSince.current = 0
@@ -45,6 +45,21 @@ const AsyncServer = (props: {Server: IServer}): JSX.Element => {
                         context.setData(newDataMap.set(data.id,data))
                     });
                     logger.Log(LogType.API,LogSeverity.SUCCESS,"Got Data")
+                })
+
+                props.Server.GetDevices().then((incomingDevices: Device[]) => {
+                context.setServerStatus(ServerStatus.CONNECTED)
+                timeSince.current = 0
+                let newDeviceMap = new Map(context.devices)
+                incomingDevices.forEach(device => {
+                    console.log("Adding:",device);
+                    
+                    context.setDevices(newDeviceMap.set(device.id,device))
+                });
+                logger.Log(LogType.API,LogSeverity.SUCCESS,"Got Devices")
+                })
+                .catch(reason => {
+                    logger.Log(LogType.API,LogSeverity.ERROR,reason)
                 })
                 
             }, context.pollingInterval);

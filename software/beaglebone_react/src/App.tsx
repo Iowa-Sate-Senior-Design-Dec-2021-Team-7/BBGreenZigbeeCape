@@ -7,7 +7,8 @@ import Server from './Data/Server/MockServer';
 
 // import Graph from './graph'
 import Home from './home'
-import ChartView from './UI/Chart/Chart';
+import DataTableView from './UI/Table/DataTable';
+import DeviceTableView from './UI/Table/DeviceTable';
 // import Error from './error'
 import Navigation from './UI/Navigation/Navigation';
 
@@ -21,7 +22,8 @@ function App() {
           <Routes>
             <Route path="/" element={null} />
             <Route path="/Home" element={<Home/>} />
-            <Route path="/Chart" element={<ChartView/>} />
+            <Route path="/DataTable" element={<DataTableView/>} />
+            <Route path="/DeviceTable" element={<DeviceTableView/>} />
             {/* <Route path="/graph" element={<Graph/>}/> */}
             {/* <Route element={Error}/> */}
           </Routes>

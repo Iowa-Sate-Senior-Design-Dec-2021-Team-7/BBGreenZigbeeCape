@@ -7,7 +7,8 @@ const Navigation = () => {
     return (
        <div className="Header">
           <NavLink style={navStyle} to="/Home">HOME</NavLink>
-          <NavLink style={navStyle} to="/Chart">CHART</NavLink>
+          <NavLink style={navStyle} to="/DataTable">DATA</NavLink>
+          <NavLink style={navStyle} to="/DeviceTable">DEVICES</NavLink>
        </div>
     );
 }
