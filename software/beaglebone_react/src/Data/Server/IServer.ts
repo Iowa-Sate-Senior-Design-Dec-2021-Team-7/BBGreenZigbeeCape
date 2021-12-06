@@ -1,7 +1,7 @@
 import { Data, Device } from "../DataTypes";
 
 export interface IServer {
-    PingServer: () => Promise<boolean>
-    GetData: (startId: number) => Promise<Data[]>
-    GetDevices: () => Promise<Device[]>
+    PingServer: (abortController: AbortController) => Promise<boolean>
+    GetData: (abortController: AbortController ,startId: number) => Promise<Data[]>
+    GetDevices: (abortController: AbortController) => Promise<Device[]>
 }

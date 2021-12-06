@@ -1,0 +1,15 @@
+.HomeContainer {
+    display: flex;
+    padding: 0px 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* .HomeHeader {
+
+} */
+
+.HomeBody {
+    flex: 1;
+    overflow-y: scroll;
+}

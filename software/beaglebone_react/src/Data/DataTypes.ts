@@ -16,6 +16,7 @@ export enum DataType {
 }
 
 export enum ServerStatus {
+    INIT = "INITIALIZING",
     DISCONNECTED = "DISCONNECTED",
     CONNECTED = "CONNECTED",
     BUSY = "BUSY",

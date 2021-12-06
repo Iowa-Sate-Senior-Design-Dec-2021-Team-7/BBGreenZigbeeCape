@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Data, Device, ServerStatus } from "./Data/DataTypes";
+import { SERVER_URL } from "./Data/Server/SpringServer";
 import { LogSeverity } from "./Logger";
 
 export interface IContext {
@@ -15,14 +16,17 @@ export interface IContext {
     setPollingInterval: React.Dispatch<React.SetStateAction<number>>
     serverStatus: ServerStatus
     setServerStatus: React.Dispatch<React.SetStateAction<ServerStatus>>
+    serverAddress: string
+    setServerAddress: React.Dispatch<React.SetStateAction<string>>
 }
 
-const defaultContext: Partial<IContext> = {
+export const defaultContext: Partial<IContext> = {
     logLevel: LogSeverity.INFO,
     data: new Map<number,Data>(),
     devices: new Map<number,Device>(),
     pollingInterval: 1000,
-    serverStatus: ServerStatus.DISCONNECTED,
+    serverStatus: ServerStatus.INIT,
+    serverAddress: SERVER_URL
 }
 
 const AppContext = React.createContext<IContext>({} as IContext);
@@ -34,8 +38,9 @@ const ContextWrapper: React.FC = ({ children }) => {
     const [devices, setDevices] = React.useState<Map<number,Device>>(defaultContext.devices!)
     const [pollingInterval, setPollingInterval] = React.useState<number>(defaultContext.pollingInterval!)
     const [serverStatus, setServerStatus] = React.useState<ServerStatus>(defaultContext.serverStatus!)
+    const [serverAddress, setServerAddress] = React.useState<string>(defaultContext.serverAddress!)
 
-    return <AppContext.Provider value={{logLevel, setLogLevel, data, setData, devices, setDevices, pollingInterval, setPollingInterval, serverStatus, setServerStatus}}>
+    return <AppContext.Provider value={{logLevel, setLogLevel, data, setData, devices, setDevices, pollingInterval, setPollingInterval, serverStatus, setServerStatus, serverAddress, setServerAddress}}>
         {children}
     </AppContext.Provider>
 }

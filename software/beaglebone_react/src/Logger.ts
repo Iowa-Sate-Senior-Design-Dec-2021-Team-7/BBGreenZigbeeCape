@@ -10,7 +10,8 @@ const Logger = (logLevel: LogSeverity) => {
 }
 
 export enum LogType {
-    API = "API"
+    API = "API",
+    SET = "SET",
 }
 
 export enum LogSeverity {

@@ -1,5 +1,6 @@
 // import React from "react";
 import "./search.css";
+import "./../../App.css";
 // import { AppContext, IContext } from "../../Context";
 
 export type SearchViewProps = {
@@ -38,7 +39,7 @@ const SearchView = (props: SearchViewProps) => {
     )
 }
 
-const toNumber = (num: string): number|null => {
+export const toNumber = (num: string): number|null => {
     const split = num.split("---")
     let rightSide = split[split.length-1]
     if (isNaN(Number(rightSide))) return null

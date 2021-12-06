@@ -12,7 +12,7 @@ const DeviceTableView = () => {
     // const [maxId, setMaxId] = React.useState<number|null>(null)
     
     const filteredData = Array.from(devices.values()).filter(d => true)
-    
+        
     return (
         <div className="Chart">
             {/* <ChartSettingsRow autoScroll={autoScroll} setAutoScroll={setAutoScroll} showSearch={showSearch} setShowSearch={setShowSearch} /> */}

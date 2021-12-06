@@ -6,9 +6,10 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => {
     return (
        <div className="Header">
-          <NavLink style={navStyle} to="/Home">HOME</NavLink>
-          <NavLink style={navStyle} to="/DataTable">DATA</NavLink>
-          <NavLink style={navStyle} to="/DeviceTable">DEVICES</NavLink>
+          <NavLink style={navStyle} to="/Home">Home</NavLink>
+          <NavLink style={navStyle} to="/DataTable">Data</NavLink>
+          <NavLink style={navStyle} to="/DeviceTable">Devices</NavLink>
+          <NavLink style={navStyle} to="/Settings">Settings</NavLink>
        </div>
     );
 }
@@ -19,11 +20,12 @@ const Styles = {
     height : '25px',
     padding : 10,
     borderRadius : 5,
-    textAlign : 'center',
+    // textAlign : 'center',
     minHeight : 100,
     textDecoration : 'none', 
+    width: '75px',
 }
-const StylesActive = { ...navStyle, ...{
+const StylesActive = { ...Styles, ...{
     color : "#59bfff",
 }}
  
