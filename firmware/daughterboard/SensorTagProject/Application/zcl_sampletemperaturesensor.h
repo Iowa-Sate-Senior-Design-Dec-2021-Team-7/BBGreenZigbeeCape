@@ -99,7 +99,7 @@ extern uint8_t  zclSampleTemperatureSensor_OnOff;
 extern uint16_t zclSampleTemperatureSensor_IdentifyTime;
 
 extern uint16_t data_count;
-extern uint8_t jsonData[];
+extern char jsonData[];
 
 // Temperature Measurement Cluster
 extern int16_t zclSampleTemperatureSensor_MeasuredValue;

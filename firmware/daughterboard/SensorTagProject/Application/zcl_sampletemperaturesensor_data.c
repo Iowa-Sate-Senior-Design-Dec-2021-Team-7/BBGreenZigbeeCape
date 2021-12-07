@@ -98,7 +98,7 @@ const uint16_t zclSampleTemperatureSensor_MaxMeasuredValue = SAMPLETEMPERATURESE
 
 // Custom Data
 uint16_t data_count = 1;
-uint8_t jsonData[128] = {'C','u','s','t','o','m',' ','S','t','r','i','n','g'};
+char jsonData[128] = {'C','u','s','t','o','m',' ','S','t','r','i','n','g'};
 
 
 /*********************************************************************
@@ -224,27 +224,28 @@ CONST zclAttrRec_t zclSampleTemperatureSensor_Attrs[] =
     }
   },
 
-  // Custom Data
-  {
-   ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
-    {  // Attribute record
-      CUSTOM_COUNT,
-      ZCL_DATATYPE_UINT16,
-      ACCESS_CONTROL_READ | ACCESS_REPORTABLE,
-      (void *)&data_count
-    }
-  },
-
-//  // Custom String
+//  // Custom Data
 //  {
 //   ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
 //    {  // Attribute record
-//      CUSTOM_STR,
-//      ZCL_DATATYPE_CHAR_STR,
+//      CUSTOM_COUNT,
+//      ZCL_DATATYPE_UINT16,
 //      ACCESS_CONTROL_READ | ACCESS_REPORTABLE,
-//      (void *)jsonData
+//      (void *)&data_count
 //    }
 //  },
+
+  // If String data is given reportable, will not start but will load
+ // Custom String
+  {
+   ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
+    {  // Attribute record
+      CUSTOM_STR,
+      ZCL_DATATYPE_CHAR_STR,
+      ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+      (void *)jsonData
+    }
+  },
 
 };
 
