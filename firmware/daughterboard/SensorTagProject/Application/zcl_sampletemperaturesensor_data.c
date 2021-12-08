@@ -97,8 +97,8 @@ const int16_t zclSampleTemperatureSensor_MinMeasuredValue = SAMPLETEMPERATURESEN
 const uint16_t zclSampleTemperatureSensor_MaxMeasuredValue = SAMPLETEMPERATURESENSOR_MAX_MEASURED_VALUE;
 
 // Custom Data
-uint16_t data_count = 1;
-char jsonData[128] = {'C','u','s','t','o','m',' ','S','t','r','i','n','g'};
+uint16_t sensor_data = 0;
+char sensor_status[16] = "Waiting";
 
 
 /*********************************************************************
@@ -225,25 +225,13 @@ CONST zclAttrRec_t zclSampleTemperatureSensor_Attrs[] =
   },
 
 //  // Custom Data
-//  {
-//   ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
-//    {  // Attribute record
-//      CUSTOM_COUNT,
-//      ZCL_DATATYPE_UINT16,
-//      ACCESS_CONTROL_READ | ACCESS_REPORTABLE,
-//      (void *)&data_count
-//    }
-//  },
-
-  // If String data is given reportable, will not start but will load
- // Custom String
   {
    ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
     {  // Attribute record
-      CUSTOM_STR,
-      ZCL_DATATYPE_CHAR_STR,
-      ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
-      (void *)jsonData
+      CUSTOM_COUNT,
+      ZCL_DATATYPE_UINT16,
+      ACCESS_CONTROL_READ | ACCESS_REPORTABLE,
+      (void *)&sensor_data
     }
   },
 
@@ -256,21 +244,21 @@ uint8_t CONST zclSampleTemperatureSensor_NumAttributes = ( sizeof(zclSampleTempe
  */
 // This is the Cluster ID List and should be filled with Application
 // specific cluster IDs.
-#define ZCLSAMPLETEMPERATURESENSOR_MAX_INCLUSTERS       5
+#define ZCLSAMPLETEMPERATURESENSOR_MAX_INCLUSTERS       4
 const cId_t zclSampleTemperatureSensor_InClusterList[ZCLSAMPLETEMPERATURESENSOR_MAX_INCLUSTERS] =
 {
   ZCL_CLUSTER_ID_GENERAL_BASIC,
   ZCL_CLUSTER_ID_GENERAL_IDENTIFY,
   ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
-  ZCL_CLUSTER_ID_CUSTOM,
+//  ZCL_CLUSTER_ID_CUSTOM, TODO remove
   ZCL_CLUSTER_ID_MS_FLOW_MEASUREMENT
 };
 
-#define ZCLSAMPLETEMPERATURESENSOR_MAX_OUTCLUSTERS       3
+#define ZCLSAMPLETEMPERATURESENSOR_MAX_OUTCLUSTERS       2
 const cId_t zclSampleTemperatureSensor_OutClusterList[ZCLSAMPLETEMPERATURESENSOR_MAX_OUTCLUSTERS] =
 {
   ZCL_CLUSTER_ID_GENERAL_IDENTIFY,
-  ZCL_CLUSTER_ID_CUSTOM,
+//  ZCL_CLUSTER_ID_CUSTOM,
   ZCL_CLUSTER_ID_MS_FLOW_MEASUREMENT
 };
 
