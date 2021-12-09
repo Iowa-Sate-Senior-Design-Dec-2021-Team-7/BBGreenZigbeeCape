@@ -2,11 +2,14 @@
 
 ---
 
-## Website: https://sddec21-07.sd.ece.iastate.edu
+## Website
+https://sddec21-07.sd.ece.iastate.edu
 
-## Hackster.io page: https://www.hackster.io/iowa-state-senior-design-dec-2021-proj7/beaglebone-green-wireless-zigbee-cape-c2da61
+## Hackster.io page
+https://www.hackster.io/iowa-state-senior-design-dec-2021-proj7/beaglebone-green-wireless-zigbee-cape-c2da61
 
-## Project email: sddec21-07@iastate.edu
+## Project email
+sddec21-07@iastate.edu
 
 ## Devs:
 	- Parker Larsen (pjlarsen)
