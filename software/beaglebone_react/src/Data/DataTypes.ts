@@ -1,13 +1,17 @@
 
 export interface Data {
-    id: number,
-    dataType: DataType,
+    id_db: number,
+    type: DataType,
     value: number
+    timestamp: Date,
+    device: string,
 }
 
 export interface Device {
-    id: number,
-    deviceType: string,
+    id_db: number,
+    id_network: string,
+    type_device: string,
+    type_data: string,
 }
 
 export enum DataType {

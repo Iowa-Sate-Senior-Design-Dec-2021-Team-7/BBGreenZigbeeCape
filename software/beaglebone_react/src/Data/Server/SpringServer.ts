@@ -1,5 +1,5 @@
 import { Data, Device } from "../DataTypes"
-import { IServer } from "./IServer"
+import { getDataFromPayload, IServer } from "./IServer"
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SERVER_IP: string = '10.29.160.230:8080/'
@@ -13,10 +13,10 @@ const Server: IServer = {
                 method: "GET",
                 signal: abortController.signal,
             })
-            .then(async response => {
-                resolve(response.ok)
-            })
-            .catch(reason => reject(reason))
+                .then(async (response) => {
+                    resolve(response.ok)
+                })
+                .catch(reason => reject(reason))
         })
     },
     GetData: function (abortController: AbortController): Promise<Data[]> {
@@ -26,33 +26,41 @@ const Server: IServer = {
                 method: "GET",
                 signal: abortController.signal,
             })
-            .then(async response => {
-                const text = await response.text()
-                const data: Data[] = JSON.parse(text).payload.map((device: { id_db: number, type_device: string }): Device => { return {
-                    id: device.id_db,
-                    deviceType: device.type_device
-                }});
-                resolve(data)
-            })
-            .catch(reason => reject(reason))
+                .then(async (response) => {
+                    const text = await response.text()
+
+                    const data: Data[] = getDataFromPayload(JSON.parse(text).payload)
+                    resolve(data)
+                })
+                .catch(reason => reject(reason))
         })
     },
-    GetDevices: function (abortController: AbortController ): Promise<Device[]> {
+    GetDevices: function (abortController: AbortController): Promise<Device[]> {
         const endpoint: string = SERVER_URL + 'api/get-devices'
         return new Promise<Device[]>((resolve, reject) => {
             fetch(endpoint, {
                 method: "GET",
                 signal: abortController.signal,
             })
-            .then(async response => {
-                const text = await response.text()
-                const devices: Device[] = JSON.parse(text).payload.map((device: { id_db: number, type_device: string }): Device => { return {
-                    id: device.id_db,
-                    deviceType: device.type_device
-                }});
-                resolve(devices)
+                .then(async (response) => {
+                    const text = await response.text()
+
+                    const devices: Device[] = JSON.parse(text).payload
+                    resolve(devices)
+                })
+                .catch(reason => reject(reason))
+        })
+    },
+    ClearDB: function (): Promise<null> {
+        const endpoint: string = SERVER_URL + 'api/delete-all'
+        return new Promise<null>((resolve, reject) => {
+            fetch(endpoint, {
+                method: "DELETE",
             })
-            .catch(reason => reject(reason))
+                .then(async (response) => {
+                    resolve(null)
+                })
+                .catch(reason => reject(reason))
         })
     }
 }

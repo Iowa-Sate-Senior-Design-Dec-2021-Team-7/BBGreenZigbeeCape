@@ -41,9 +41,7 @@ const AsyncServer = (props: {}): JSX.Element => {
         // If disconnected, ping server
         if (context.serverStatus === ServerStatus.DISCONNECTED || 
             context.serverStatus === ServerStatus.INIT) {
-            timer.current = setInterval(() => {
-                console.log(timeSince.current);
-                
+            timer.current = setInterval(() => {                
                 if (timeSince.current[0] || timeSince.current[1]) return _serverBusy()
                 
                 timeSince.current[0] = (new Date()).getTime()
@@ -67,10 +65,10 @@ const AsyncServer = (props: {}): JSX.Element => {
                     timeSince.current[0] = 0
                     let newDataMap = new Map(context.data)
                     incomingData.forEach(data => {
-                        newDataMap.set(data.id,data)
+                        newDataMap.set(data.id_db,data)
                     });
                     context.setData(newDataMap)
-                    logger.Log(LogType.API,LogSeverity.SUCCESS,"Got Data")
+                    logger.Log(LogType.API,LogSeverity.SUCCESS,"Got Data ("+incomingData.length+" rows)")
                 }).catch(_handleApiError)
 
                 server.GetDevices(abortCtr).then((incomingDevices: Device[]) => {
@@ -78,7 +76,7 @@ const AsyncServer = (props: {}): JSX.Element => {
                     timeSince.current[1] = 0
                     let newDeviceMap = new Map<number,Device>()
                     incomingDevices.forEach(device => {
-                        newDeviceMap.set(device.id,device)
+                        newDeviceMap.set(device.id_db,device)                        
                     });
                     context.setDevices(newDeviceMap)
                     logger.Log(LogType.API,LogSeverity.SUCCESS,"Got Devices")

@@ -162,7 +162,8 @@ void *mainThread(void *arg0)
      * Read the OPT3001 sensor NUM_SAMPLES times and display the values.
      * Sleep between readings
      */
-    for (sample = 1; sample <= NUM_SAMPLES; sample++) {
+    while(1) {
+//    for (sample = 1; sample <= NUM_SAMPLES; sample++) {
 
         /* Sleep between every sample */
         sleep(1);
@@ -175,6 +176,8 @@ void *mainThread(void *arg0)
             sensor_data = luxValue;
         }
     }
+
+//    strcpy(sensor_status,"DONE");
 
     return (NULL);
 }

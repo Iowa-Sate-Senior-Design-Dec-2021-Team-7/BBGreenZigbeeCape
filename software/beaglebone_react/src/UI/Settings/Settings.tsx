@@ -5,6 +5,9 @@ import { isOffline } from '../../Data/Server/AsyncServer';
 import Logger, { LogSeverity, LogType } from '../../Logger';
 import { toNumber } from '../Search/Search';
 import './settings.css'
+import {default as OnlineServer} from "./../../Data/Server/SpringServer";
+import { IServer } from '../../Data/Server/IServer';
+
  
 const SettingsView = () => {  
 
@@ -15,6 +18,14 @@ const SettingsView = () => {
     const [pollingRate, setPollingRate] = React.useState<number>(context.pollingInterval)
     const _unequalRates = pollingRate !== context.pollingInterval
     const logger = Logger(context.logLevel)
+
+    let server: IServer = OnlineServer
+
+    if (context.data.size > 1000) {
+        context.setData(new Map())
+        server.ClearDB() 
+    }
+
 
     return (
         <div className="SettingsContainer">
@@ -44,6 +55,12 @@ const SettingsView = () => {
                     <div className="SettingButton" onClick={
                         () => context.setPollingInterval(pollingRate)
                     }><p className="SettingButtonLabel">Set</p></div>
+                </div>
+                <div className="SettingRow">
+                    <p className="SettingLabel">Clear DB</p>
+                    <div className="SettingButton" onClick={
+                        () => server.ClearDB()
+                    }><p className="SettingButtonLabel">Byyyyee</p></div>
                 </div>
             </div>
         </div>

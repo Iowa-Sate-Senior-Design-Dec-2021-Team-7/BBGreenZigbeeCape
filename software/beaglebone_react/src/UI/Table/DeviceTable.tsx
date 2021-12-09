@@ -18,7 +18,9 @@ const DeviceTableView = () => {
             {/* <ChartSettingsRow autoScroll={autoScroll} setAutoScroll={setAutoScroll} showSearch={showSearch} setShowSearch={setShowSearch} /> */}
             <div className="ChartHead">
                 <ChartHeader label="Id"/>       
+                <ChartHeader label="Network ID"/>       
                 <ChartHeader label="Device Type"/>       
+                <ChartHeader label="Data Type"/>       
             </div>
             <div className="ChartBody">
                 { filteredData.map((data,index) => <ChartRow key={"ChartRow_"+index} data={data} /> ) }
