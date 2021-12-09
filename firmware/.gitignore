@@ -13,5 +13,6 @@
 
 ### ignore list for misc project configurations
 **/.metadata/
-**/.jxbrowser-data/
+**/.jxbrowser*/
+**/.jxbrowser.*/
 **/.tempFiles/

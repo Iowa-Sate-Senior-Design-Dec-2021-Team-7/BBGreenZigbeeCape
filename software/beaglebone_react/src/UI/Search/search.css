@@ -1,0 +1,51 @@
+.SearchContainer {
+    /* flex: 1; */
+    /* height: 100%; */
+    border-radius: 15;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%; 
+    background-color: azure;
+    padding: 20px;
+    color: cornflowerblue;
+    flex-direction: column;
+}
+
+.SearchHeader {
+    flex-direction: column;
+}
+
+.SearchHeaderTextLine {
+    flex-direction: row;
+    display: flex;
+}
+
+.SearchText {
+    margin: auto;
+    font: bolder small-caps 20px normal, sans-serif;
+    /* width: 200px; */
+}
+
+.SearchTextLabel {
+    margin: 0;
+    width: 150px;
+}
+
+.SearchTextTo {
+    margin: 0;
+    width: 30px;
+    text-align: center;
+}
+
+.SearchBody {
+    flex: 1,
+}
+
+.SearchRow {
+    flex-direction: row;
+    display: flex;
+    /* width: 300px; */
+}
