@@ -1,3 +1,5 @@
 (fp_lib_table
-  (lib (name zigbeeCape)(type KiCad)(uri ${KISYSMOD}/ZigbeeCape.pretty)(options "")(descr ""))
+  (lib (name zigbeeCape)(type KiCad)(uri ${KISYSMOD}/ZigbeeCape.pretty)(options "")(descr "")(disabled))
+  (lib (name PUSH_BUTTON_SMD)(type KiCad)(uri ${KIPRJMOD}/PUSH_BUTTON_SMD.pretty)(options "")(descr ""))
+  (lib (name CC1352R)(type KiCad)(uri ${KIPRJMOD}/CC1352R.pretty)(options "")(descr ""))
 )
