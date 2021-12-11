@@ -1,0 +1,13 @@
+# service that runs on BeagleBone startup that runs the script to enable header
+#	pins used by the cape project
+
+[Unit]
+Description=Enable UART4, I2C2, and SPI0 pins
+After=generic-board-startup.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sddec-config-pins.sh
+
+[Install]
+WantedBy=multi-user.target

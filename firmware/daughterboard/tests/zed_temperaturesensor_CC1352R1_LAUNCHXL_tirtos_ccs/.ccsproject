@@ -15,4 +15,5 @@
 	<templateProperties value="id=zed_temperaturesensor_CC1352R1_LAUNCHXL_tirtos_ccs.projectspec.zed_temperaturesensor_CC1352R1_LAUNCHXL_tirtos_ccs,type=rtsc,xdcToolsVersion=3.62.00.08,target=ti.targets.arm.elf.M4F,platform=ti.platforms.simplelink:CC1352R1F3,buildProfile=release,isHybrid=true,configuroOptions= --compileOptions &quot;${COMPILER_FLAGS} &quot;"/>
 	<origin value="C:\ti\simplelink_cc13x2_26x2_sdk_5_20_00_52\examples\rtos\CC1352R1_LAUNCHXL\zstack\zed_temperaturesensor\tirtos\ccs\zed_temperaturesensor_CC1352R1_LAUNCHXL_tirtos_ccs.projectspec"/>
 	<filesToOpen value=""/>
+	<sourceLookupPath value=""/>
 </projectOptions>

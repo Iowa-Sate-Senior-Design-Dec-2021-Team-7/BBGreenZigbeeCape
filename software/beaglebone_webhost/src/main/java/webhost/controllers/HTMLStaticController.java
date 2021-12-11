@@ -5,6 +5,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import webhost.WebHostApplication;
 import webhost.components.GlobalUtils;
@@ -14,6 +15,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
+@CrossOrigin(maxAge=3600)
 public class HTMLStaticController implements ErrorController {
     
     /* ************************************************* START INSTANCE VARIABLES ************************************************** */
