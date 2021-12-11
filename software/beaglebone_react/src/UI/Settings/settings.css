@@ -1,0 +1,46 @@
+.SettingsContainer {
+    flex: 1;
+    padding: 0px 20px;
+}
+
+.SettingsHeader {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.SettingsBody {
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 100%;
+    min-height: 25px;
+    flex-direction: column;
+    /* display: flex; */
+    flex: 1;
+}
+
+.SettingRow {
+    flex: 1;
+    flex-direction: row;
+    display: flex;
+    height: 30px;
+}
+
+.SettingLabel {
+    width: 160px;
+    margin: auto 25px;
+}
+
+.SettingButton {
+    width: 100px;
+    background-color: darkgrey;
+    border: 2px solid grey;
+    border-radius: 10px;
+    height: auto;
+    text-align: center;
+
+}
+
+.SettingButtonLabel {
+    margin: auto 0;
+    width: 200;
+}

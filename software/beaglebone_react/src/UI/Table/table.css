@@ -5,7 +5,7 @@
     position: relative;
     /* height: 80%; */
     margin: 10px;
-    background-color: brown;
+    background-color: darkslateblue;
     display: flex;
     flex-direction: column;
     overflow: hidden;

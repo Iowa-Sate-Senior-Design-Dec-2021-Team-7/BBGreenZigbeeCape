@@ -2,12 +2,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ContextWrapper from './Context';
 import AsyncServer from './Data/Server/AsyncServer';
-// import Server from './Data/Server/SpringServer';
-import Server from './Data/Server/MockServer';
 
 // import Graph from './graph'
-import Home from './home'
-import ChartView from './UI/Chart/Chart';
+import HomeView from './UI/Home/Home'
+import DataTableView from './UI/Table/DataTable';
+import DeviceTableView from './UI/Table/DeviceTable';
+import SettingsView from './UI/Settings/Settings';
 // import Error from './error'
 import Navigation from './UI/Navigation/Navigation';
 
@@ -16,14 +16,14 @@ function App() {
     <ContextWrapper>
       <BrowserRouter>
         <div className="App">
-          <AsyncServer Server={Server}/>
+          <AsyncServer/>
           <Navigation/>
           <Routes>
             <Route path="/" element={null} />
-            <Route path="/Home" element={<Home/>} />
-            <Route path="/Chart" element={<ChartView/>} />
-            {/* <Route path="/graph" element={<Graph/>}/> */}
-            {/* <Route element={Error}/> */}
+            <Route path="/Home" element={<HomeView/>} />
+            <Route path="/DataTable" element={<DataTableView/>} />
+            <Route path="/DeviceTable" element={<DeviceTableView/>} />
+            <Route path="/Settings" element={<SettingsView/>} />
           </Routes>
         </div> 
       </BrowserRouter>

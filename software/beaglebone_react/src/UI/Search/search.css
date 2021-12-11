@@ -49,10 +49,3 @@
     display: flex;
     /* width: 300px; */
 }
-
-.line {
-    border-radius: 45;
-    border-width: 0.5px;
-    border-color : white;
-    width: 100%;
-  }
