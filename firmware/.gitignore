@@ -15,6 +15,7 @@
 **/.launches
 
 ### ignore list for misc project configurations
+**/RemoteSystemsTempFiles/
 **/.metadata/
 **/.jxbrowser*/
 **/.jxbrowser.userdata/
