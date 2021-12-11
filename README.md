@@ -30,8 +30,8 @@ See CHANGELOG.md for official release updates/changes
 	1. Create a system of printed circuit boards to connect to the Zigbee network to show the capabilities and use cases of the Zigbee network.
 	2. Program and debug the CC1352 microcontroller Using UART.
 	3. Create a data-collection demo to demonstrate basic interactions between the Cape's Zigbee network and the BeagleBone's capabilities
-	3. Extend the demo to demonstrate the BeagleBone controlling/commanding Zigbee network devices
-	4. Extend the demo to demonstrate devices on the Zigbee network controlling/commanding other Zigbee network devices
+	4. Extend the demo to demonstrate the BeagleBone controlling/commanding Zigbee network devices
+	5. Extend the demo to demonstrate devices on the Zigbee network controlling/commanding other Zigbee network devices
 
 ---
 
