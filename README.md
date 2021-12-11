@@ -60,6 +60,6 @@ See CHANGELOG.md for official release updates/changes
 	- hardware: for pcb designs created and other hardware-specific resources
 	- firmware: for code being deployed on the BeagleBone Green Gateway, IoT cape, or other created daughter boards
 	- software: for code not being deployed on a hardware module. i.e. web-servers, apps, and other non-controller code
-	- docs: for project documents and classwork
+	- docs: for project documents
 
 ---
