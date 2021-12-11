@@ -1,41 +1,40 @@
 package webhost.components;
 
 import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 /**
  * {@code Component} used to serialize {@code Java.util.Calendar} from a {@code JSON} and vice a versa
  * <br>
  * @see com.fasterxml.jackson.databind.JsonSerializer
  */
-public class JsonDateSerializer extends JsonSerializer<LocalDateTime> {
+public class JsonDateSerializer extends StdSerializer<Date> {
     
     /**
      * Format of the {@code Calendar} to serialize
      */
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy");
-    
-    /**
-     * Serializes a {@code Calendar} {@code JSON} into a {@code Calendar} {@code Object}
-     * @param date
-     * 		{@code Calendar} to serialize
-     * @param gen
-     * 		@see com.fasterxml.jackson.core.JsonGenerator
-     * @param provider
-     * 		@see com.fasterxml.jackson.databind.SerializerProvider
-     * @throws IOException
-     */
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+    public JsonDateSerializer() {
+        this(null);
+    }
+
+    public JsonDateSerializer(Class t) {
+        super(t);
+    }
+
     @Override
-    public void serialize(LocalDateTime date, JsonGenerator gen, SerializerProvider provider) throws IOException {
-        
-        String formattedDate = date.format(DateTimeFormatter.ofPattern(dateFormat.toPattern()));
-        
-        gen.writeString(formattedDate);
+    public void serialize (Date value, JsonGenerator gen, SerializerProvider arg2)
+            throws IOException, JsonProcessingException {
+        gen.writeString(dateFormat.format(value));
     }
 }

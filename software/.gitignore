@@ -6,16 +6,14 @@
 !beaglebone_webhost/target/*.jar
 !beaglebone_webhost/.mvn/wrapper/maven-wrapper.jar
 
-### Ignore list for Beaglebone firmware projects
-
 
 ### Ignore list for Spring webserver
 beaglebone_webhost/target/*
-beaglebone_webhost/out
-*.gz
-*.log
-*.tmp
-bin
+beaglebone_webhost/output
+**/*.gz
+**/*.log
+**/*.tmp
+**/bin
 
 ### STS ###
 .apt_generated
@@ -27,10 +25,10 @@ bin
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+**/.idea
+**/*.iws
+**/*.iml
+**/*.ipr
 
 ### NetBeans ###
 /nbproject/private/
@@ -39,9 +37,3 @@ bin
 /nbdist/
 /.nb-gradle/
 /build/
-
-### VS Code ###
-.vscode/
-
-### Ignore list for class assignments
-assignments/

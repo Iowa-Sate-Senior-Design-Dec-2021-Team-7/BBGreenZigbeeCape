@@ -13,20 +13,14 @@ import org.springframework.context.annotation.Primary;
  */
 @Configuration
 public class Configurator {
-    
-    /**
-     * {@code Bean} used to get the {@code ObjectMapper} to use at runtime
-     * @return
-     *      The {@code ObjectMapper} methods this application should use when writing {@code Objects} to {@code JSON Strings}, vice a versa
-     * @see com.fasterxml.jackson.databind.ObjectMapper
-     */
+
     @Bean
     @Primary
     public ObjectMapper config_objectMapper() {
-    
+
         return new ObjectMapper()
-                       .registerModule(new ParameterNamesModule())
-                       .registerModule(new Jdk8Module())
-                       .registerModule(new JavaTimeModule()); // new module, NOT JSR310Module
+                .registerModule(new ParameterNamesModule())
+                .registerModule(new Jdk8Module())
+                .registerModule(new JavaTimeModule()); // new module, NOT JSR310Module
     }
 }

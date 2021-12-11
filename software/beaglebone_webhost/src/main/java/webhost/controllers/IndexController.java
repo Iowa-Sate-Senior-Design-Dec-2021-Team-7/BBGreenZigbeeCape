@@ -12,49 +12,30 @@ import webhost.exceptions.WebHostException;
 import webhost.http_wrappers.ReturnObjectWrapper;
 import webhost.http_wrappers.UpdateExceptionWrapper;
 import webhost.http_wrappers.UpdateStringWrapper;
+import webhost.services.ApiService;
 import webhost.services.IndexService;
 
 import java.util.ArrayList;
 
 @Controller
+@CrossOrigin(maxAge=3600)
 @RequestMapping(value = "")
 public class IndexController {
     
     /* ************************************************* START INSTANCE VARIABLES ************************************************** */
     
-    /**
-     * {@code GlobalUtils} {@code Component}. Grants the ability to use global variables and methods common to other {@code classes} in this Application
-     * @see webhost.components.GlobalUtils
-     */
     private GlobalUtils gUtils;
     
-    /**
-     * {@code Log} for this controller
-     */
     private Log log = LogFactory.getLog(WebHostApplication.class);
     
-    /**
-     * {@code IndexSevice} for this controller
-     * @see webhost.services.IndexService
-     */
     private IndexService indexService;
     
-    /**
-     * Directory {@code HTML} resources are in
-     */
     private String resourcePrefix;
     
     /* ************************************************** END INSTANCE VARIABLES *************************************************** */
     
     /* **************************************************** START CONSTRUCTORS ***************************************************** */
     
-    /**
-     * Default constructor
-     * @param gUtils
-     *      See {@code this.gUtils}
-     * @param indexService
-     *      See {@code this.indexService}
-     */
     @Autowired
     public IndexController(GlobalUtils gUtils, IndexService indexService) {
         
@@ -68,19 +49,9 @@ public class IndexController {
     
     /* **************************************************** START GET MAPPINGS ***************************************************** */
     
-    /**
-     * Index page
-     * @return
-     * 		Default HTML path
-     */
     @GetMapping("")
     public String get_index() { return indexService.get_index(); }
     
-    /**
-     * Debug data return
-     * @return
-     *        {@code String} "Hello World!"
-     */
     @GetMapping("/hello")
     @ResponseBody
     public ReturnObjectWrapper<String> get_helloworld() {

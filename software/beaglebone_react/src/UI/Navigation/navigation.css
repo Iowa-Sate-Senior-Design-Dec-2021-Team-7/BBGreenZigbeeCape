@@ -1,0 +1,16 @@
+
+.Header {
+    align-items: center;
+    justify-content: center;
+    /* font-size: calc(10px + 2vmin); */
+    font-size: 30px;
+    /* color: white; */
+    margin: 0 7%;
+    padding: 5px;
+    /* margin-top: 20px; */
+    border: solid whitesmoke;
+    /* border-radius: 5px; */
+    border-width: 0 0 5px 0;
+    text-decoration: none;
+    font: bolder small-caps 35px normal, sans-serif;
+  }
