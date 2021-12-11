@@ -1,9 +1,9 @@
 package webhost.socket_wrappers;
 
-import webhost.http_wrappers.UtilArrayIntegerWrapper;
+import webhost.entities.DataPayload;
 
 public class SocketIntentWrapper<T> {
-    
+
     private int intent;
 
     private T payload;
@@ -35,7 +35,7 @@ public class SocketIntentWrapper<T> {
      * @param identifier
      * 		{@code User.id_app} desired
      */
-    public SocketIntentWrapper(int intent, UtilArrayIntegerWrapper<T> payload, String identifier) {
+    public SocketIntentWrapper(int intent, DataPayload payload, String identifier) {
 
         this.setIntent(intent);
         this.setPayload(payload);
@@ -66,7 +66,7 @@ public class SocketIntentWrapper<T> {
      * @param payload
      * 		Desired {@code payload} for {@code SocketIntentWrapper}
      */
-    public void setPayload(UtilArrayIntegerWrapper<T> payload) { this.payload = (T) payload; }
+    public void setPayload(DataPayload payload) { this.payload = (T) payload; }
     
     /**
      * Get the {@code identifier} of {@code SocketIntentWrapper}

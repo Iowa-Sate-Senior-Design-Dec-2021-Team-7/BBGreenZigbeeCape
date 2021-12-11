@@ -57,7 +57,7 @@
 
 #endif
 
-#define APP_TITLE_STR "TI Sample Thermostat"
+#define APP_TITLE_STR "Cape Zigbee Interface"
 
 #endif  // #ifndef CUI_DISABLE
 

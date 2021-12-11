@@ -143,13 +143,13 @@
 /*********************************************************************
  * GLOBAL VARIABLES
  */
-extern LED_Handle gRedLedHandle;
+LED_Handle gRedLedHandle;
 
 /*********************************************************************
  * GLOBAL FUNCTIONS
  */
-extern void *bb_uartRead_thread(void *arg0);
 extern void bb_uartInit();
+extern void *bb_uartRead_thread(void *arg0);
 extern int_fast32_t bb_uartRead(void *buf, size_t maxCount);
 extern int_fast32_t bb_uartWrite(void *buf, size_t count);
 
@@ -195,7 +195,6 @@ CONST char zclSampleThermostat_appStr[] = APP_TITLE_STR;
 CUI_clientHandle_t gCuiHandle;
 static uint32_t gSampleThermostatInfoLine1;
 static uint32_t gSampleThermostatInfoLine2;
-static uint32_t gSampleThermostatInfoLine3;
 #endif
 /*********************************************************************
  * LOCAL FUNCTIONS
@@ -220,7 +219,6 @@ static void zclSampleThermostat_RemoveAppNvmData(void);
 static void zclSampleThermostat_processKey(uint8_t key, Button_EventMask buttonEvents);
 static void zclSampleThermostat_InitializeStatusLine(CUI_clientHandle_t gCuiHandle);
 static void zclSampleThermostat_UpdateStatusLine(void);
-static void zclSampleThermostat_UpdateCustomLine(void);
 #endif
 
 static ZStatus_t zclSampleThermostat_SetpointRaiseLowerCB(zclCmdThermostatSetpointRaiseLowerPayload_t *pCmd);
@@ -257,13 +255,10 @@ static uint8_t zclSampleThermostat_ProcessInDefaultRspCmd( zclIncoming_t *pInMsg
 
 static void zclSampleThermostat_UpdateLedState(void);
 
-
 #if defined (ENABLE_GREENPOWER_COMBO_BASIC)
 static void zclSampleThermostat_GPSink_Identify(zclGpNotification_t *zclGpNotification);
 static void zclSampleThermostat_GPSink_ProcessReport(zclGpNotification_t *zclGpNotification);
 #endif
-
-
 
 /*********************************************************************
  * CONSTANTS
@@ -376,6 +371,10 @@ GpSink_AppCallbacks_t zclSampleThermostat_GpSink_AppCallbacks =
 };
 #endif
 
+uint16_t data_light_disp0 = 0;
+uint16_t data_light_disp1 = 0;
+uint16_t id_light_disp0 = 0;
+uint16_t id_light_disp1 = 0;
 
 /*******************************************************************************
  * @fn          sampleApp_task
@@ -547,6 +546,41 @@ static void zclSampleThermostat_Init( void )
             zclSampleThermostat_RemoveAppNvmData          // A pointer to the app-specific NV Item reset function
             );
 
+  //Request the Red LED for App
+    LED_Params ledParams;
+    LED_Params_init(&ledParams);
+    gRedLedHandle = LED_open(CONFIG_LED_RED, &ledParams);
+
+   // initialize bb uart handle and connection
+   bb_uartInit();
+
+   /*
+    * BB uart pthread creation
+    */
+   pthread_t           thread_bb_uartRead;
+   pthread_attr_t      thread_bb_uartRead_attrs;
+   struct sched_param  priParam;
+   int                 retc;
+
+   /* Initialize the attributes structure with default values */
+   pthread_attr_init(&thread_bb_uartRead_attrs);
+   /* Set priority, detach state, and stack size attributes */
+   priParam.sched_priority = 1;
+   retc = pthread_attr_setschedparam(&thread_bb_uartRead_attrs, &priParam);
+   retc |= pthread_attr_setdetachstate(&thread_bb_uartRead_attrs, PTHREAD_CREATE_DETACHED);
+   retc |= pthread_attr_setstacksize(&thread_bb_uartRead_attrs, THREADSTACKSIZE);
+   if (retc != 0) {
+       /* failed to set attributes */
+       LED_startBlinking(gRedLedHandle, 3000, LED_BLINK_FOREVER);
+   }
+
+   // create read thread
+   retc = pthread_create(&thread_bb_uartRead, &thread_bb_uartRead_attrs, bb_uartRead_thread, NULL);
+   if (retc != 0) {
+       /* pthread_create() failed */
+       LED_startBlinking(gRedLedHandle, 1000, LED_BLINK_FOREVER);
+   }
+
   //Initialize the SampleDoorLock UI status line
   zclSampleThermostat_InitializeStatusLine(gCuiHandle);
 #endif
@@ -564,36 +598,6 @@ static void zclSampleThermostat_Init( void )
   zstack_bdbStartCommissioningReq_t zstack_bdbStartCommissioningReq;
   zstack_bdbStartCommissioningReq.commissioning_mode = 0;
   Zstackapi_bdbStartCommissioningReq(appServiceTaskId,&zstack_bdbStartCommissioningReq);
-
-  // initialize bb uart handle and connection
-  bb_uartInit();
-
-  /*
-   * BB uart pthread creation
-   */
-  pthread_t           thread_bb_uartRead;
-  pthread_attr_t      thread_bb_uartRead_attrs;
-  struct sched_param  priParam;
-  int                 retc;
-
-  /* Initialize the attributes structure with default values */
-  pthread_attr_init(&thread_bb_uartRead_attrs);
-  /* Set priority, detach state, and stack size attributes */
-  priParam.sched_priority = 1;
-  retc = pthread_attr_setschedparam(&thread_bb_uartRead_attrs, &priParam);
-  retc |= pthread_attr_setdetachstate(&thread_bb_uartRead_attrs, PTHREAD_CREATE_DETACHED);
-  retc |= pthread_attr_setstacksize(&thread_bb_uartRead_attrs, THREADSTACKSIZE);
-  if (retc != 0) {
-      /* failed to set attributes */
-      while (1) {}
-  }
-
-  // create read thread
-  retc = pthread_create(&thread_bb_uartRead, &thread_bb_uartRead_attrs, bb_uartRead_thread, NULL);
-  if (retc != 0) {
-      /* pthread_create() failed */
-      LED_startBlinking(gRedLedHandle, 250, LED_BLINK_FOREVER);
-  }
 }
 
 #ifndef CUI_DISABLE
@@ -767,7 +771,6 @@ static void zclSampleThermostat_process_loop(void)
 #ifndef CUI_DISABLE
             //Update status line
             zclSampleThermostat_UpdateStatusLine();
-            zclSampleThermostat_UpdateCustomLine();
 #endif
             zclSampleThermostat_UpdateLedState();
         }
@@ -1222,24 +1225,43 @@ static void zclSampleThermostat_ProcessInReportCmd( zclIncoming_t *pInMsg )
 
   pInTempSensorReport = (zclReportCmd_t *)pInMsg->attrCmd;
   char uartOut[128];
+  int uartWrite = 0;
+
+  char *json_deviceId = "\"device_id\"";
+  char *json_deviceType = "\"device_type\"";
+  char *json_datatype = "\"type\"";
+  char *json_value = "\"value\"";
 
   switch (pInTempSensorReport->attrList[0].attrID) {
   case ATTRID_TEMPERATURE_MEASUREMENT_MEASURED_VALUE:
       // store the current temperature value sent over the air from temperature sensor
       zclSampleThermostat_LocalTemperature = BUILD_UINT16(pInTempSensorReport->attrList[0].attrData[0], pInTempSensorReport->attrList[0].attrData[1]);
       break;
-  case CUSTOM_COUNT:
-      data_count = BUILD_UINT16(pInTempSensorReport->attrList[0].attrData[0], pInTempSensorReport->attrList[0].attrData[1]);
-      //sprintf(uartOut, "%d\r\n", data_count);
-      //bb_uartWrite(uartOut, strlen(uartOut));
+  case CUSTOM_LIGHT:
+      data_light = BUILD_UINT16(pInTempSensorReport->attrList[0].attrData[0], pInTempSensorReport->attrList[0].attrData[1]);
+      sprintf(uartOut, "{%s:\"%X\", %s:\"%s\", %s:\"%s\", %s:%d}", json_deviceId, pInMsg->msg->srcAddr.addr.shortAddr, json_deviceType, "SENSOR", json_datatype, "LIGHT", json_value, data_light);
+      uartWrite = 1;
+      if (pInMsg->msg->srcAddr.addr.shortAddr != 0x4256) {
+          id_light_disp0 = pInMsg->msg->srcAddr.addr.shortAddr;
+          data_light_disp0 = data_light;
+      } else {
+          id_light_disp1 = 0x4256;
+          data_light_disp1 = data_light;
+      }
       break;
-  case 0x70:
-      jsonData[0] = (char)pInTempSensorReport->attrList[0].attrData[0];
-      sprintf(uartOut, "%s\r\n", jsonData);
-      bb_uartWrite(uartOut, strlen(uartOut));
+  case CUSTOM_TEMP_C:
+      data_temp_c = BUILD_UINT16(pInTempSensorReport->attrList[0].attrData[0], pInTempSensorReport->attrList[0].attrData[1]);
+      sprintf(uartOut, "{%s:\"%X\", %s:\"%s\", %s:\"%s\", %s:%f}", json_deviceId, pInMsg->msg->srcAddr.addr.shortAddr, json_deviceType, "SENSOR", json_datatype, "TEMP_C", json_value, data_temp_c / 100.0);
+      uartWrite = 1;
+      break;
+  case CUSTOM_HUMID:
+      data_humid = BUILD_UINT16(pInTempSensorReport->attrList[0].attrData[0], pInTempSensorReport->attrList[0].attrData[1]);
+      sprintf(uartOut, "{%s:\"%X\", %s:\"%s\", %s:\"%s\", %s:%f}", json_deviceId, pInMsg->msg->srcAddr.addr.shortAddr, json_deviceType, "SENSOR", json_datatype, "HUMID", json_value, data_humid / 100.0);
+      uartWrite = 1;
       break;
   }
-
+  strcat(uartOut, "\r\n");
+  if (uartWrite) { bb_uartWrite(uartOut, strlen(uartOut)); }
 
 #ifndef CUI_DISABLE
   zclSampleThermostat_UpdateStatusLine();
@@ -1357,21 +1379,21 @@ void zclSampleThermostat_UpdateLedState(void)
     {
       // turn on heating
       zclSampleThermostat_SystemMode = HVAC_THERMOSTAT_SYSTEM_MODE_HEAT;
-      LED_stopBlinking(gRedLedHandle);
-      LED_setOn(gRedLedHandle, LED_BRIGHTNESS_MAX);
+      //LED_stopBlinking(gRedLedHandle);
+      //LED_setOn(gRedLedHandle, LED_BRIGHTNESS_MAX);
     }
     else if ( zclSampleThermostat_LocalTemperature >= zclSampleThermostat_OccupiedCoolingSetpoint )
     {
       // turn on cooling
       zclSampleThermostat_SystemMode = HVAC_THERMOSTAT_SYSTEM_MODE_COOL;
-      LED_startBlinking(gRedLedHandle, 500, LED_BLINK_FOREVER);
+      //LED_startBlinking(gRedLedHandle, 500, LED_BLINK_FOREVER);
     }
     else
     {
       // turn off heating/cooling
       zclSampleThermostat_SystemMode = HVAC_THERMOSTAT_SYSTEM_MODE_OFF;
-      LED_stopBlinking(gRedLedHandle);
-      LED_setOff(gRedLedHandle);
+      //LED_stopBlinking(gRedLedHandle);
+      //LED_setOff(gRedLedHandle);
     }
   }
 }
@@ -1461,11 +1483,6 @@ static void zclSampleThermostat_processKey(uint8_t key, Button_EventMask buttonE
 
 //            zstack_bdbStartCommissioningReq.commissioning_mode = zclSampleThermostat_BdbCommissioningModes;
 //            Zstackapi_bdbStartCommissioningReq(appServiceTaskId,&zstack_bdbStartCommissioningReq);
-            data_count++;
-        }
-        if(key == CONFIG_BTN_RIGHT)
-        {
-          data_count = 0;
         }
     }
 }
@@ -1475,7 +1492,6 @@ static void zclSampleThermostat_InitializeStatusLine(CUI_clientHandle_t gCuiHand
     /* Request Async Line for Light application Info */
     CUI_statusLineResourceRequest(gCuiHandle, "   APP Info"CUI_DEBUG_MSG_START"1"CUI_DEBUG_MSG_END, false, &gSampleThermostatInfoLine1);
     CUI_statusLineResourceRequest(gCuiHandle, "   APP Info"CUI_DEBUG_MSG_START"2"CUI_DEBUG_MSG_END, false, &gSampleThermostatInfoLine2);
-    CUI_statusLineResourceRequest(gCuiHandle, "   APP Info"CUI_DEBUG_MSG_START"3"CUI_DEBUG_MSG_END, false, &gSampleThermostatInfoLine3);
 
     zclSampleThermostat_UpdateStatusLine();
 }
@@ -1485,53 +1501,11 @@ static void zclSampleThermostat_UpdateStatusLine(void)
     char lineFormat1[MAX_STATUS_LINE_VALUE_LEN] = {'\0'};
     char lineFormat2[MAX_STATUS_LINE_VALUE_LEN] = {'\0'};
 
-    strcat(lineFormat1, "["CUI_COLOR_YELLOW"Remote Temperature"CUI_COLOR_RESET"] ");
+    strcat(lineFormat1, "["CUI_COLOR_CYAN"Light Value Device 0x%04x"CUI_COLOR_RESET"] %d lm");
+    strcat(lineFormat2, "["CUI_COLOR_CYAN"Light Value Device 0x%04x"CUI_COLOR_RESET"] %d lm");
 
-    if(zclSampleThermostat_LocalTemperature == ATTR_INVALID_MEASUREMENT_HVAC_THERMOSTAT_LOCAL_TEMPERATURE)
-    {
-        strcat(lineFormat1, "Invalid");
-    }
-    else
-    {
-        strcat(lineFormat1, "%dC");
-    }
-
-    strcat(lineFormat1, " ["CUI_COLOR_YELLOW"System Mode"CUI_COLOR_RESET"] ");
-
-    switch(zclSampleThermostat_SystemMode)
-    {
-        case HVAC_THERMOSTAT_SYSTEM_MODE_HEAT:
-            strcat(lineFormat1, CUI_COLOR_RED"HEAT"CUI_COLOR_RESET);
-        break;
-        case HVAC_THERMOSTAT_SYSTEM_MODE_COOL:
-            strcat(lineFormat1, CUI_COLOR_CYAN"COOL"CUI_COLOR_RESET);
-        break;
-        case HVAC_THERMOSTAT_SYSTEM_MODE_OFF:
-            strcat(lineFormat1, "OFF ");
-        break;
-    }
-
-    strcat(lineFormat2, "["CUI_COLOR_YELLOW"Cooling Set Temp"CUI_COLOR_RESET"] %dC ");
-
-    strcat(lineFormat2, "["CUI_COLOR_YELLOW"Heating Set Temp"CUI_COLOR_RESET"] %dC");
-
-    CUI_statusLinePrintf(gCuiHandle, gSampleThermostatInfoLine1, lineFormat1,
-                        (zclSampleThermostat_LocalTemperature / 100));
-
-    CUI_statusLinePrintf(gCuiHandle, gSampleThermostatInfoLine2, lineFormat2,
-                        (zclSampleThermostat_OccupiedCoolingSetpoint / 100),
-                        (zclSampleThermostat_OccupiedHeatingSetpoint / 100 ));
-}
-
-static void zclSampleThermostat_UpdateCustomLine(void)
-{
-    char lineFormat[MAX_STATUS_LINE_VALUE_LEN] = {'\0'};
-
-    strcat(lineFormat, "DATA:%d ");
-    CUI_statusLinePrintf(gCuiHandle, gSampleThermostatInfoLine3, lineFormat, data_count);
-
-    //strcat(lineFormat, "DATA:%s ");
-    //CUI_statusLinePrintf(gCuiHandle, gSampleThermostatInfoLine3, lineFormat, jsonData);
+    if (id_light_disp0) { CUI_statusLinePrintf(gCuiHandle, gSampleThermostatInfoLine1, lineFormat1, id_light_disp0, data_light_disp0); }
+    if (id_light_disp1) { CUI_statusLinePrintf(gCuiHandle, gSampleThermostatInfoLine2, lineFormat2, id_light_disp1, data_light_disp1); }
 }
 
 #endif

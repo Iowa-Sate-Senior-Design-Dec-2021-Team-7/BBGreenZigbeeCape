@@ -113,9 +113,9 @@ int16_t zclSampleThermostat_OccupiedHeatingSetpoint;
 int16_t zclSampleThermostat_OccupiedCoolingSetpoint;
 
 // Custom Data
-uint16_t data_count = 1;
-uint8_t jsonData[128];
-
+uint16_t data_light = 0;
+uint16_t data_temp_c = 0;
+uint16_t data_humid = 0;
 
 uint8_t zclSampleThermostat_ControlSequenceOfOperation;
 uint8_t zclSampleThermostat_SystemMode;
@@ -309,21 +309,30 @@ CONST zclAttrRec_t zclSampleThermostat_Attrs[] =
   {
    ZCL_CLUSTER_ID_HVAC_THERMOSTAT,
    { // Attribute record
-     CUSTOM_COUNT,
+     CUSTOM_LIGHT,
      ZCL_DATATYPE_UINT16,
      ACCESS_CONTROL_READ | ACCESS_CLIENT,
-     (void *)&data_count
+     (void *)&data_light
    }
   },
   {
    ZCL_CLUSTER_ID_HVAC_THERMOSTAT,
    { // Attribute record
-     0x70,
-     ZCL_DATATYPE_CHAR_STR,
+     CUSTOM_TEMP_C,
+     ZCL_DATATYPE_UINT16,
      ACCESS_CONTROL_READ | ACCESS_CLIENT,
-     (void *)&jsonData
+     (void *)&data_temp_c
    }
   },
+  {
+     ZCL_CLUSTER_ID_HVAC_THERMOSTAT,
+     { // Attribute record
+       CUSTOM_HUMID,
+       ZCL_DATATYPE_UINT16,
+       ACCESS_CONTROL_READ | ACCESS_CLIENT,
+       (void *)&data_humid
+     }
+    },
 };
 
 uint8_t CONST zclSampleThermostat_NumAttributes = ( sizeof(zclSampleThermostat_Attrs) / sizeof(zclSampleThermostat_Attrs[0]) );

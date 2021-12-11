@@ -9,6 +9,8 @@ public enum DataPayloadType {
     TEMP_F,
     @JsonProperty("LIGHT")
     LIGHT,
+    @JsonProperty("HUMID")
+    HUMID,
     @JsonProperty("ACCEL")
     ACCEL,
     @JsonProperty("GYRO")

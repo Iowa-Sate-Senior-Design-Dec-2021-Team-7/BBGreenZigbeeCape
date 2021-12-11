@@ -1,6 +1,9 @@
 package webhost.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import webhost.components.GlobalUtils;
 import webhost.enums.DataPayloadType;
 import webhost.enums.EndDeviceType;
@@ -9,6 +12,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin(maxAge=3600)
 @Entity
 @Table(name="devices")
 public class EndDevice {
@@ -20,15 +24,15 @@ public class EndDevice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Integer id_db;
-    
-    @JsonManagedReference
-    @OneToMany(targetEntity = DataPayload.class, cascade=CascadeType.ALL, mappedBy = "device")
+
+    @JsonIgnore
+    @OneToMany(targetEntity = DataPayload.class, mappedBy = "device", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<DataPayload> payloads;
     
     private String id_network;
-    
+
     private EndDeviceType type_device;
-    
+
     private DataPayloadType type_data;
     
     public EndDevice() {

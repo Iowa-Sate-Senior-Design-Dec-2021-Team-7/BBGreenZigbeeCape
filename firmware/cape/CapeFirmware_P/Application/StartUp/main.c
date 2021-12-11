@@ -106,7 +106,6 @@
 #include "cui.h"
 #endif
 
-
 #include "ti_zstack_config.h"
 
 /******************************************************************************
@@ -144,8 +143,6 @@
  External Variables
  *****************************************************************************/
 
-extern void *bb_uartRead_thread(void *arg0);
-
 #ifdef ZSTACK_GPD
 extern ApiMac_sAddrExt_t ApiMac_extAddr;
 #endif
@@ -153,8 +150,6 @@ extern ApiMac_sAddrExt_t ApiMac_extAddr;
 /******************************************************************************
  Global Variables
  *****************************************************************************/
-LED_Handle gRedLedHandle;
-LED_Handle gGreenLedHandle;
 
 // ZNP does not need an application task
 #ifndef ZNP_NPI
@@ -321,8 +316,8 @@ int main()
      Initialization for board related stuff such as LEDs
      following TI-RTOS convention
      */
-    Board_init(); //replaced Board_initGeneral() with Board_init();
-    //Board_initGeneral();
+    //Board_init(); //replaced Board_initGeneral() with Board_init();
+    Board_initGeneral();
 
 // OTA client projects use BIM, so CCFG isn't present in this image
 #if !((defined OTA_CLIENT_STANDALONE) || (defined OTA_CLIENT_INTEGRATED))
@@ -400,17 +395,6 @@ int main()
     IOCPortConfigureSet(IOID_8, IOC_PORT_RFC_TRC, IOC_STD_OUTPUT
                     | IOC_CURRENT_4MA | IOC_SLEW_ENABLE);
 #endif /* DEBUG_SW_TRACE */
-
-    /*
-     * Red LED config
-     */
-    //Request the Red LED for App
-    LED_Params ledParams;
-    LED_Params_init(&ledParams);
-    gRedLedHandle = LED_open(CONFIG_LED_RED, &ledParams);
-    gGreenLedHandle = LED_open(CONFIG_LED_GREEN, &ledParams);
-    LED_startBlinking(gRedLedHandle, LED_BRIGHTNESS_MAX, 1);
-    LED_startBlinking(gGreenLedHandle, LED_BRIGHTNESS_MAX, 1);
 
     BIOS_start(); /* enable interrupts and start SYS/BIOS */
 

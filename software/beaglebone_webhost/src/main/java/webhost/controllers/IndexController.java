@@ -18,6 +18,7 @@ import webhost.services.IndexService;
 import java.util.ArrayList;
 
 @Controller
+@CrossOrigin(maxAge=3600)
 @RequestMapping(value = "")
 public class IndexController {
     

@@ -38,7 +38,12 @@ public class ApiService {
     
     /* ****************************************************** START GET HELPERS **************************************************** */
     
-    public List<EndDevice> getDevices() { return deviceRepository.findAll(); }
+    public List<EndDevice> getDevices() {
+
+        List<EndDevice> devices = deviceRepository.findAll();
+        for (EndDevice d : devices) { d.setPayloads(new ArrayList<>()); }
+        return deviceRepository.findAll();
+    }
     
     public List<DataPayload> getDataPayloads() { return payloadRepository.findAll(); }
     
@@ -68,7 +73,12 @@ public class ApiService {
     
     /* ***************************************************** START DELETE HELPERS ************************************************** */
     
-    
+    public Boolean clearDatabase() {
+
+        payloadRepository.deleteAll();
+        deviceRepository.deleteAll();
+        return new Boolean(true);
+    }
     
     /* ****************************************************** END DELETE HELPERS *************************************************** */
     

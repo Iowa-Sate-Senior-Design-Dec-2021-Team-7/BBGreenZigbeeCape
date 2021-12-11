@@ -11,5 +11,5 @@ public class WebSocketConfig {
     public ServerEndpointExporter serverEndpointExporter() { return new ServerEndpointExporter(); }
     
     @Bean
-    public Configurator customConfigurator() { return new Configurator(); }
+    public CustomConfigurator customConfigurator() { return new CustomConfigurator(); }
 }

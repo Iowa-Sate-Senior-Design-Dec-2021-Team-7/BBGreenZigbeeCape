@@ -1,14 +1,16 @@
 package webhost.components;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import webhost.WebHostApplication;
-import webhost.configurations.Configurator;
+import webhost.configurations.CustomConfigurator;
+import webhost.entities.DataPayload;
+import webhost.entities.EndDevice;
 import webhost.http_wrappers.ReturnObjectWrapper;
+import webhost.repositories.DataPayloadRepository;
+import webhost.repositories.EndDeviceRepository;
 import webhost.socket_wrappers.SocketIntentWrapper;
 import webhost.socket_wrappers.SocketReturnWrapper;
 
@@ -20,14 +22,18 @@ import java.util.*;
 import java.util.Map.Entry;
 
 @Component
-@ServerEndpoint(value = "/socket/{payload}", decoders = SocketDecoder.class, encoders = SocketEncoder.class, configurator = Configurator.class)
+@ServerEndpoint(value = "/socket/{payload}", decoders = SocketDecoder.class, encoders = SocketEncoder.class, configurator = CustomConfigurator.class)
 public class WebSocketComponent {
     
     /* ************************************************* START INSTANCE VARIABLES ************************************************** */
     
     @Autowired
     private GlobalUtils gUtils;
-    
+    @Autowired
+    EndDeviceRepository endDeviceRepository;
+    @Autowired
+    DataPayloadRepository dataPayloadRepository;
+
     private Map<String, Session> listeners_device;
     
     private Map<Session, String> listeners_session;
@@ -44,9 +50,11 @@ public class WebSocketComponent {
         listeners_session = new HashMap<>();
     }
     
-    public WebSocketComponent(GlobalUtils gUtils) {
+    public WebSocketComponent(GlobalUtils gUtils, EndDeviceRepository endDeviceRepository, DataPayloadRepository dataPayloadRepository) {
         this();
         this.gUtils = gUtils;
+        this.endDeviceRepository = endDeviceRepository;
+        this.dataPayloadRepository = dataPayloadRepository;
     }
     
     /* ***************************************************** END CONSTRUCTORS ****************************************************** */
@@ -126,14 +134,28 @@ public class WebSocketComponent {
 
         switch(intentWrap.getIntent()) {
             
-            case 201 :  //
-                
-                break;
-            case 202 :  //
-                
-                break;
-            case 203:   //
-                
+            case 201 :  // received data payload from cape
+                DataPayload dp = (DataPayload)intentWrap.getPayload();
+                EndDevice ed = dp.getDevice();
+
+                boolean new_device = true;
+                for (EndDevice e : endDeviceRepository.findAll()) {
+                    if (e.getId_network().equals(ed.getId_network())) {
+                        ed = e;
+                        new_device = false;
+                    }
+                }
+
+                if (new_device) {
+                    ed.addPayload(dp);
+                    endDeviceRepository.save(ed);
+                    dataPayloadRepository.save(dp);
+                } else {
+                    dp.setDevice(ed);
+                    dataPayloadRepository.save(dp);
+                    ed.addPayload(dp);
+                    endDeviceRepository.save(ed);
+                }
                 break;
             default :   // echo intent payload
                 this.echoIntent(whisperBackSession, intentWrap.getPayload().toString(), intentWrap.getIdentifier());

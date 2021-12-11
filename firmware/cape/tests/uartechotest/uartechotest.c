@@ -45,10 +45,10 @@
 /* Driver configuration */
 #include "ti_drivers_config.h"
 
-#define JSON_MAXLEN 1023
+#define JSON_MAXLEN 1024
 
-char buf_recieve[JSON_MAXLEN + 1];
-char buf_output[JSON_MAXLEN + 8];
+char buf_recieve[JSON_MAXLEN];
+char buf_output[10];
 
 /*
  *  ======== mainThread ========
@@ -98,8 +98,7 @@ void *mainThread(void *arg0)
     while (1) {
         int_fast32_t readBytes = UART_read(uart, &buf_recieve, JSON_MAXLEN);
         strcat(buf_output, buf_recieve);
-        buf_output[6 + readBytes + 0] = '\r';
-        buf_output[6 + readBytes + 1] = '\n';
+        strcat(buf_output, "\r\n");
         UART_write(uart, &buf_output, strlen(buf_output));
 
         for (i = 0; i < sizeof(buf_recieve); i++) { buf_recieve[i] = '\0'; }

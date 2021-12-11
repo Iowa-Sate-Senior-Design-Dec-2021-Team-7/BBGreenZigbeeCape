@@ -74,8 +74,11 @@ extern "C"
 
 #define SAMPLEAPP_END_DEVICE_REJOIN_DELAY 1000
 
-#define ZCL_CLUSTER_ID_CUSTOM    0x6969
-#define CUSTOM_COUNT             0x0069
+#define ZCL_CLUSTER_ID_CUSTOM       0x6969
+#define CUSTOM_LIGHT                0x0069
+#define CUSTOM_TEMP_C               0x0070
+#define CUSTOM_HUMID                0x0071
+
 
 /*********************************************************************
  * MACROS
@@ -113,9 +116,11 @@ extern uint8_t zclSampleThermostat_ControlSequenceOfOperation;
 
 extern uint8_t zclSampleThermostat_SystemMode;
 
-extern uint16_t data_count;
+extern uint16_t data_light;
 
-extern uint8_t jsonData[128];
+extern uint16_t data_temp_c;
+
+extern uint16_t data_humid;
 
 /*********************************************************************
  * FUNCTIONS

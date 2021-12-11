@@ -50,7 +50,7 @@
 /* Driver configuration */
 #include "ti_drivers_config.h"
 
-#define JSON_MAXLEN 1023
+#define JSON_MAXLEN 1024
 
 /*********************************************************************
  * EXTERNAL VARIABLES
@@ -65,8 +65,8 @@ UART_Handle bb_uartHandle = NULL;
 /*********************************************************************
  * LOCAL VARIABLES
  */
-char buf_recieve[JSON_MAXLEN + 1];
-char buf_output[JSON_MAXLEN + 8];
+char buf_recieve[JSON_MAXLEN];
+char buf_output[JSON_MAXLEN + 7];
 
 /*********************************************************************
  * GLOBAL FUNCTIONS
@@ -81,6 +81,8 @@ int_fast32_t bb_uartWrite(void *buf, size_t count);
 void *bb_uartRead_thread(void *arg0)
 {
     int i = 0;
+
+    bb_uartWrite("BB: uart thread alive\r\n", strlen("BB: uart thread alive\r\n"));
 
     /* Loop forever reading */
     while (1) {
@@ -106,8 +108,6 @@ void bb_uartInit() {
     buf_output[0] = '\0';
     strcpy(buf_output, "Echo: ");
 
-    while (gRedLedHandle == NULL) { } //stall init until red led is initialized by zstack
-
     /* Call driver init functions */
     GPIO_init();
     UART_init();
@@ -123,7 +123,7 @@ void bb_uartInit() {
 
     if (bb_uartHandle == NULL) {
         /* UART_open() failed */
-        while(1) { LED_startBlinking(gRedLedHandle, 1000, LED_BLINK_FOREVER); }
+        while(1) { LED_startBlinking(gRedLedHandle, 500, LED_BLINK_FOREVER); }
     }
 
     /* Turn on user LED to indicate successful initialization */

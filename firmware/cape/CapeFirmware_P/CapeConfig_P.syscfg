@@ -80,10 +80,10 @@ SHA21.$name = "CONFIG_SHA2_0";
 TRNG1.$name = "CONFIG_TRNG_0";
 
 UART1.$name               = "CONFIG_DISPLAY_UART";
-UART1.txPinInstance.$name = "CONFIG_PIN_UART_TX";
-UART1.rxPinInstance.$name = "CONFIG_PIN_UART_RX";
 UART1.uart.txPin.$assign  = "boosterpack.6";
 UART1.uart.rxPin.$assign  = "boosterpack.5";
+UART1.txPinInstance.$name = "CONFIG_PIN_UART_TX";
+UART1.rxPinInstance.$name = "CONFIG_PIN_UART_RX";
 
 UART2.$name               = "CONFIG_UART_0";
 UART2.$hardware           = system.deviceData.board.components.XDS110UART;
@@ -92,8 +92,8 @@ UART2.rxPinInstance.$name = "CONFIG_PIN_2";
 
 Button1.$name                     = "CONFIG_BTN_LEFT";
 Button1.$hardware                 = system.deviceData.board.components["BTN-1"];
-Button1.gpioPin.$name             = "CONFIG_GPIO_BTN1";
-Button1.gpioPin.pinInstance.$name = "CONFIG_PIN_BTN1";
+Button1.gpioPin.$name             = "CONFIG_GPIO_1";
+Button1.gpioPin.pinInstance.$name = "CONFIG_PIN_3";
 
 Button2.$name                     = "CONFIG_BTN_RIGHT";
 Button2.$hardware                 = system.deviceData.board.components["BTN-2"];
@@ -102,15 +102,11 @@ Button2.gpioPin.pinInstance.$name = "CONFIG_PIN_BTN2";
 
 LED1.$name                     = "CONFIG_LED_RED";
 LED1.$hardware                 = system.deviceData.board.components.LED_RED;
-LED1.gpioPin.$name             = "CONFIG_GPIO_RLED";
-LED1.gpioPin.pinInstance.$name = "CONFIG_PIN_RLED";
-LED1.gpioPin.gpioPin.$assign   = "boosterpack.39";
+LED1.gpioPin.pinInstance.$name = "CONFIG_PIN_4";
 
 LED2.$name                     = "CONFIG_LED_GREEN";
 LED2.$hardware                 = system.deviceData.board.components.LED_GREEN;
-LED2.gpioPin.$name             = "CONFIG_GPIO_GLED";
-LED2.gpioPin.pinInstance.$name = "CONFIG_PIN_GLED";
-LED2.gpioPin.gpioPin.$assign   = "boosterpack.40";
+LED2.gpioPin.pinInstance.$name = "CONFIG_PIN_5";
 
 const NVSSPI25XDevice                                      = scripting.addModule("/ti/drivers/nvs/NVSSPI25XDevice", {}, false);
 const NVSSPI25XDevice1                                     = NVSSPI25XDevice.addInstance({}, false);
@@ -151,6 +147,8 @@ UART2.uart.txPin.$suggestSolution        = "boosterpack.4";
 UART2.uart.rxPin.$suggestSolution        = "boosterpack.3";
 Button1.gpioPin.gpioPin.$suggestSolution = "boosterpack.13";
 Button2.gpioPin.gpioPin.$suggestSolution = "boosterpack.12";
+LED1.gpioPin.gpioPin.$suggestSolution    = "boosterpack.39";
+LED2.gpioPin.gpioPin.$suggestSolution    = "boosterpack.40";
 SPI1.spi.$suggestSolution                = "SSI0";
 SPI1.spi.sclkPin.$suggestSolution        = "boosterpack.7";
 SPI1.spi.misoPin.$suggestSolution        = "boosterpack.14";

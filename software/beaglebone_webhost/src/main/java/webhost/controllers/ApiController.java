@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@CrossOrigin(maxAge=3600)
 @RequestMapping(value = "/api")
 public class ApiController {
     
@@ -119,8 +120,24 @@ public class ApiController {
     
     /* *************************************************** START DELETE MAPPINGS *************************************************** */
     
-    
-    
+    @DeleteMapping("/delete-all")
+    @ResponseBody
+    public ReturnObjectWrapper<Boolean> delete_clearDatabase() {
+
+        Boolean result = new Boolean(true);
+        try { result = apiService.clearDatabase(); }
+        catch (Exception e) {
+            UpdateExceptionWrapper exception = GlobalUtils.generateExceptionMap(e.getClass(), WebHostExceptionType.SYSTEM, 550, e.getMessage());
+            log.error(e.getMessage(), e);
+            ArrayList<UpdateExceptionWrapper> exceptionList = new ArrayList<>();
+            exceptionList.add(exception);
+            return new ReturnObjectWrapper<>(550, null, exceptionList);
+        }
+        String logMessage = "Cleared database";
+        GlobalUtils.successHandler(log, logMessage, logMessage);
+        return new ReturnObjectWrapper<>(200, result, null);
+    }
+
     /* **************************************************** END DELETE MAPPINGS **************************************************** */
     
     /* **************************************************** END INDEX CONTROLLER *************************************************** */

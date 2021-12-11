@@ -1,11 +1,16 @@
 package webhost.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import webhost.components.GlobalUtils;
+import webhost.components.JsonDateSerializer;
 import webhost.enums.DataPayloadType;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -19,22 +24,25 @@ public class DataPayload {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Integer id_db;
-    
-    @JsonBackReference
-    @ManyToOne(targetEntity = EndDevice.class)
+
+    @ManyToOne(targetEntity = EndDevice.class, fetch = FetchType.EAGER)
     private EndDevice device;
     
     @Column(name="type")
-    private DataPayloadType dataType;
-    
-    @ElementCollection(targetClass=Double.class)
+    private DataPayloadType type;
+
     @Column(name="value")
-    private List<Double> dataValue;
+    private Double value;
+
+    @Column(name="timestamp")
+    @JsonSerialize(using = JsonDateSerializer.class)
+    private Date timestamp;
     
     public DataPayload() {
         this.setDevice(null);
-        this.setDataType(DataPayloadType.NONE);
-        this.setDataValue(new ArrayList<>());
+        this.setType(DataPayloadType.NONE);
+        this.setValue(new Double(0.0));
+        this.setTimestamp(null);
     }
     
     public Integer getId_db() { return id_db; }
@@ -43,9 +51,12 @@ public class DataPayload {
     public EndDevice getDevice() { return device; }
     public void setDevice(EndDevice device) { this.device = device; }
     
-    public DataPayloadType getDataType() { return dataType; }
-    public void setDataType(DataPayloadType dataType) { this.dataType = dataType; }
+    public DataPayloadType getType() { return type; }
+    public void setType(DataPayloadType type) { this.type = type; }
     
-    public List<Double> getDataValue() { return dataValue; }
-    public void setDataValue(ArrayList<Double> dataValue) { this.dataValue = dataValue; }
+    public Double getValue() { return value; }
+    public void setValue(Double value) { this.value = value; }
+
+    public Date getTimestamp() { return timestamp; }
+    public void setTimestamp(Date timestamp) { this.timestamp = timestamp; }
 }
