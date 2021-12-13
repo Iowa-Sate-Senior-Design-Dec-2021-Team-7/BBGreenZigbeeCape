@@ -23,6 +23,14 @@ See CHANGELOG.md for official release updates/changes
 
 ---
 
+### For a description of devices and code used, go to the Wiki:
+[Wiki: Home](https://github.com/iowa-state-senior-design-dec-2021-proj7/BBGreenZigbeeCape/wiki)
+
+### To get started, go to the `Getting Started` Wiki:
+[Wiki: Getting Started](https://github.com/iowa-state-senior-design-dec-2021-proj7/BBGreenZigbeeCape/wiki/Getting-Started)
+
+---
+
 ### Scope:
 	Research a new or existing wireless technology and add it to the BeagleBone Green and build an IoT network to demonstrate its new capabilities.
 
