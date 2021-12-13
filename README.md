@@ -3,10 +3,10 @@
 ---
 
 ## Website
-https://sddec21-07.sd.ece.iastate.edu
+[Iowa State Senior Design: Group 7](https://sddec21-07.sd.ece.iastate.edu)
 
 ## Hackster.io page
-https://www.hackster.io/iowa-state-senior-design-dec-2021-proj7/BeagleBone-green-wireless-zigbee-cape-c2da61
+[Hackster.io: BeagleBone Green Wireless Zigbee Cape](https://www.hackster.io/iowa-state-senior-design-dec-2021-proj7/BeagleBone-green-wireless-zigbee-cape-c2da61)
 
 ## Project email
 sddec21-07@iastate.edu
@@ -28,6 +28,14 @@ See CHANGELOG.md for official release updates/changes
 
 ### To get started, go to the `Getting Started` Wiki:
 [Wiki: Getting Started](https://github.com/iowa-state-senior-design-dec-2021-proj7/BBGreenZigbeeCape/wiki/Getting-Started)
+
+---
+
+### Directory Roles:
+	- `hardware/`: for pcb designs created and other hardware-specific resources
+	- `firmware/`: for code being deployed on the BeagleBone Green Gateway, IoT cape, or other created daughter boards
+	- `software/`: for code not being deployed on a hardware module. i.e. web-servers, apps, and other non-controller code
+	- `docs/`: for project documents
 
 ---
 
@@ -61,13 +69,5 @@ See CHANGELOG.md for official release updates/changes
 	5. Build in support for IFTT using the BeagleBone as an interface for devices on the Cape's Zigbee network
 	6. Build in support for MQTT using the BeagleBone as an interface for devices on the Cape's Zigbee network
 	7. Build in support for home automation software (HomeAssistant and/or OpenHAB) using the BeagleBone as an interface for devices on the Cape's Zigbee network
-
----
-
-### Directory Roles:
-	- hardware: for pcb designs created and other hardware-specific resources
-	- firmware: for code being deployed on the BeagleBone Green Gateway, IoT cape, or other created daughter boards
-	- software: for code not being deployed on a hardware module. i.e. web-servers, apps, and other non-controller code
-	- docs: for project documents
 
 ---
