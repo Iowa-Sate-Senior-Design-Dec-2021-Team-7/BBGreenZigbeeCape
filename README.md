@@ -1,9 +1,9 @@
-# Senior Design -- BeagleBone Green Gateway IoT Hub
+# Iowa State Senior Design December 2021 -- BeagleBone Green Gateway IoT Hub
 
 ---
 
 ## Website
-[Iowa State Senior Design: Group 7](https://sddec21-07.sd.ece.iastate.edu)
+[Iowa State Senior Design December 2021: Group 7](https://sddec21-07.sd.ece.iastate.edu)
 
 ## Hackster.io page
 [Hackster.io: BeagleBone Green Wireless Zigbee Cape](https://www.hackster.io/iowa-state-senior-design-dec-2021-proj7/BeagleBone-green-wireless-zigbee-cape-c2da61)
